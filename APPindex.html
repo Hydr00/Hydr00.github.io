@@ -2,107 +2,65 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title></title>
-		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+		<title>猫眼易购</title>
 		<style type="text/css">
-			#head_nav{
-				/* background: rgb(200,90,90); */
-				background: linear-gradient(90deg,rgb(150,10,10),rgb(250,60,60) 60%);
-				height: 100px;
+			#headder {
+				height: 320px;
+				position: relative;
+				background: linear-gradient(90deg, rgb(251, 76, 1), rgb(253, 102, 1), rgb(251, 76, 1));
 				text-align: center;
-				padding-bottom: 3px;
-				padding-top: 3px;
-				color: white;
-				font:13px Helvetica Neue,Helvetica,Arial,Microsoft Yahei,Hiragino Sans GB,Heiti SC,WenQuanYi Micro Hei,sans-serif;
+				overflow: hidden;
 			}
-			#first_nav{
-				height: 30px;
-				margin-top: 5px;
-				/* width: 100%; */
-				/* margin:auto; */
-				/* 无效CSS */
+			#headder_mask{
+				position: absolute;
+				height: 100%;
+				width: 100%;
+				z-index: 1;
 			}
-			#search{
-				width: 70%;
-				height: 30px;
-				background:white;
-				border-radius:15px;
-				margin:auto;
-				color: gainsboro;
+			#headder_background_overlay{
+				position: absolute;
+				mix-blend-mode: overlay;
+				opacity: 0.5;
 			}
-			#sec_nav{
-				height: 20px;
-				flex-direction: row;
-				flex-wrap: nowrap;
-				justify-content: flex-start;
-				align-items: auto;
+
+			#headder_logocontainer {
+				position: absolute;
+				margin: auto;
+				top: 30px;
+				left: 23%;
 			}
-			.nav_items{
-				margin-top: 15px;
-				width:40px;
-				height: 20px;
-				background: #FFFFFF;
-				border-radius: 10px;
-				display: inline-flex;
-				text-align: center;
+			#headder_scaniconcontaier{
+				position: absolute;
+				right: 5px;
+				top:15px;
+				z-index: 2;
+				transition-duration: 120ms;
+				transform-origin: center;
 			}
-			.nav_items_texts{
-				text-align: center;
-				font-size: 7px;
-				color: black;
-				margin:auto;
+			#headder_icon{
+				height: 130px;
+				width: 130px;
 			}
-			
+			#headder_scaniconcontaier:active{
+				transform:scale(1.1);
+			}
 		</style>
-		
 	</head>
 	<body>
-		<div id = "head_nav">
-			浩克山东欢饮您
-			<div id="first_nav">
-				<div id="search">
-					搜索
-				</div>
-			</div>
-			<div id="sec_nav">
-				<div class = "nav_items" style="order: 1;">
-					<div class="nav_items_texts">
-						品类1
-					</div>
-				</div>
-				<div class = "nav_items" style="order: 2;">
-					<div class="nav_items_texts">
-						品类2
-					</div>
-				</div>
-				<div class = "nav_items" style="order: 3;">
-					<div class="nav_items_texts">
-						品类3
-					</div>
-				</div>
-				<div class = "nav_items" style="order: 4;">
-					<div class="nav_items_texts">
-						品类4
-					</div>
-				</div>
-				<div class = "nav_items" style="order: 5;">
-					<div class="nav_items_texts">
-						品类5
-					</div>
-				</div>
-				<div class = "nav_items" style="order: 6;">
-					<div class="nav_items_texts">
-						品类6
-					</div>
-				</div>
-				
+		<div id="headder">
+			<div id="headder_mask">
 				
 			</div>
-			
-			
+			<div id="headder_background_overlay">
+				<img src="http://a4.qpic.cn/psb?/V11F0U9a0bZGws/MHpAPP.x6YyABODWbBNXz7MhGjKhtgm5F3mB3WOqJEg!/b/dL8AAAAAAAAA&ek=1&kp=1&pt=0&bo=*AHOAfwBzgEDGTw!&tl=1&vuin=2938748991&tm=1567749600&sce=60-2-2&rf=viewer_4" >
+			</div>
+			<div id="headder_logocontainer">
+				<img src="http://m.qpic.cn/psb?/V11F0U9a0bZGws/D8xWZbd2lf*Xfo8ABqpGi6BhmD2b.toedLNYyLlH5iU!/b/dDABAAAAAAAA&bo=JwLfACcC3wADCSw!&rf=viewer_4">
+			</div>
+			<div id="headder_scaniconcontaier">
+				<img id="headder_icon" src="http://m.qpic.cn/psb?/V11F0U9a0bZGws/pAOHZMXOeKxrcn1QVe*UE.*HlVcb74Om1bvEXql2g80!/b/dD4BAAAAAAAA&bo=sQOxA7EDsQMDORw!&rf=viewer_4" >
+			</div>
 		</div>
-		
+
 	</body>
-	
-	
 </html>
