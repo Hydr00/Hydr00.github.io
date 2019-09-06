@@ -13,7 +13,7 @@
 			}
 
 			#headder {
-				height: 9vh;
+				height: 10vh;
 				width: 100vw;
 				position: relative;
 				background: linear-gradient(90deg, rgb(251, 76, 1), rgb(253, 102, 1), rgb(251, 76, 1));
@@ -124,6 +124,34 @@
 				background-color: #FFFFFF;
 				border-radius: 10px;
 			}
+			
+			
+			/* ======================================================= */
+			#sec_nav{
+				height: 5px;
+				flex-direction: row;
+				flex-wrap: nowrap;
+				justify-content: flex-start;
+				align-items: auto;
+			}
+			.nav_items{
+				width:40px;
+				height: 5px;
+/* 				background: #FFFFFF;
+				border-radius: 10px; */
+				display: inline-flex;
+				text-align: center;
+			}
+			.nav_items_texts{
+				text-align: center;
+				font-size: 10px;
+				color: white;
+				margin:auto;
+			}
+			/* =========================================================== */
+			
+			
+			
 		</style>
 	</head>
 	<body>
@@ -140,6 +168,40 @@
 			<div id="headder_scaniconcontaier">
 				<img id="headder_icon" src="http://m.qpic.cn/psb?/V11F0U9a0bZGws/pAOHZMXOeKxrcn1QVe*UE.*HlVcb74Om1bvEXql2g80!/b/dD4BAAAAAAAA&bo=sQOxA7EDsQMDORw!&rf=viewer_4">
 			</div>
+			<div id="sec_nav">
+				<div class = "nav_items" style="order: 1;">
+					<div class="nav_items_texts">
+						品类1
+					</div>
+				</div>
+				<div class = "nav_items" style="order: 2;">
+					<div class="nav_items_texts">
+						品类2
+					</div>
+				</div>
+				<div class = "nav_items" style="order: 3;">
+					<div class="nav_items_texts">
+						品类3
+					</div>
+				</div>
+				<div class = "nav_items" style="order: 4;">
+					<div class="nav_items_texts">
+						品类4
+					</div>
+				</div>
+				<div class = "nav_items" style="order: 5;">
+					<div class="nav_items_texts">
+						品类5
+					</div>
+				</div>
+				<div class = "nav_items" style="order: 6;">
+					<div class="nav_items_texts">
+						品类6
+					</div>
+				</div>
+			</div>
+			
+			
 		</div>
 
 		<!-- //============================================== -->
@@ -183,6 +245,9 @@
 
 	</body>
 	<script type="text/javascript">
+		document.addEventListener( "plusready", function(){plus.navigator.setStatusBarBackground('rgb(251, 76, 1)');})
+		
+		
 		var mySwiper = new Swiper('.swiper-container', {
 			autoplay: true,
 			autoplay: {
@@ -197,4 +262,3 @@
 	</script>
 
 </html>
-
