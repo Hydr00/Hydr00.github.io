@@ -3,70 +3,149 @@
 	<head>
 		<meta charset="utf-8">
 		<title>猫眼易购</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+
 		<style type="text/css">
+			* {
+				font: 12px Helvetica Neue, Helvetica, Arial, Microsoft Yahei, Hiragino Sans GB, Heiti SC, WenQuanYi Micro Hei, sans-serif;
+			}
+
 			#headder {
-				height: 320px;
+				height: 13vh;
+				width: 100vw;
 				position: relative;
 				background: linear-gradient(90deg, rgb(251, 76, 1), rgb(253, 102, 1), rgb(251, 76, 1));
 				text-align: center;
 				overflow: hidden;
 			}
-			#headder_mask{
+
+			#headder_mask {
 				position: absolute;
 				height: 100%;
 				width: 100%;
 				z-index: 1;
 			}
-			#headder_background_overlay{
+
+			#headder_background_overlay {
 				position: absolute;
 				mix-blend-mode: overlay;
 				opacity: 0.5;
 				width: 30%;
 			}
-			
+
+			#overlay {
+				max-width: 100%;
+			}
+
 			#headder_logocontainer {
 				position: absolute;
 				margin: auto;
 				top: 10%;
-				left: 20%;
+				left: 23%;
+				width: 50%;
 			}
-			#logo{
-				height: 50%;
+
+			#logo {
+				max-width: 100%;
 			}
-			#headder_scaniconcontaier{
+
+			#headder_scaniconcontaier {
 				position: absolute;
 				right: 1%;
-				top:6%;
+				top: 6%;
 				z-index: 2;
 				transition-duration: 120ms;
 				transform-origin: center;
-				height: 100px;
-				width: 100px;
+				height: 30px;
+				width: 30px;
 			}
-			#headder_icon{
+
+			#headder_icon {
 				height: 100%;
 				width: 100%;
 			}
-			#headder_scaniconcontaier:active{
-				transform:scale(1.1);
+
+			#headder_scaniconcontaier:active {
+				transform: scale(1.1);
+			}
+
+			#recommanded {
+				position: relative;
+				width: 100vw;
+				overflow: hidden;
+			}
+
+			#recommanded_movecontainer {
+				width: 200vw;
+			}
+
+			.recommanded_goods {
+				width: 100vw;
+				float:left;
+				z-index: 1;
+			}
+/* //做一个适应屏幕的轮播图 */
+
+
+			#recommanded_stylediv {
+				position: absolute;
+				z-index: 2;
+				width: 100%;
+				height: 8%;
+				bottom: 0;
+				border-top-left-radius: 50%;
+				border-top-right-radius: 50%;
+				background-color: gainsboro;
 			}
 		</style>
 	</head>
-	<body>
+	<body style="background: black;">
 		<div id="headder">
 			<div id="headder_mask">
-				
+
 			</div>
 			<div id="headder_background_overlay">
-				<img id = "overlay" src="http://a4.qpic.cn/psb?/V11F0U9a0bZGws/MHpAPP.x6YyABODWbBNXz7MhGjKhtgm5F3mB3WOqJEg!/b/dL8AAAAAAAAA&ek=1&kp=1&pt=0&bo=*AHOAfwBzgEDGTw!&tl=1&vuin=2938748991&tm=1567749600&sce=60-2-2&rf=viewer_4" >
+				<img id="overlay" src="http://a4.qpic.cn/psb?/V11F0U9a0bZGws/MHpAPP.x6YyABODWbBNXz7MhGjKhtgm5F3mB3WOqJEg!/b/dL8AAAAAAAAA&ek=1&kp=1&pt=0&bo=*AHOAfwBzgEDGTw!&tl=1&vuin=2938748991&tm=1567749600&sce=60-2-2&rf=viewer_4">
 			</div>
 			<div id="headder_logocontainer">
 				<img id="logo" src="http://m.qpic.cn/psb?/V11F0U9a0bZGws/D8xWZbd2lf*Xfo8ABqpGi6BhmD2b.toedLNYyLlH5iU!/b/dDABAAAAAAAA&bo=JwLfACcC3wADCSw!&rf=viewer_4">
 			</div>
 			<div id="headder_scaniconcontaier">
-				<img id="headder_icon" src="http://m.qpic.cn/psb?/V11F0U9a0bZGws/pAOHZMXOeKxrcn1QVe*UE.*HlVcb74Om1bvEXql2g80!/b/dD4BAAAAAAAA&bo=sQOxA7EDsQMDORw!&rf=viewer_4" >
+				<img id="headder_icon" src="http://m.qpic.cn/psb?/V11F0U9a0bZGws/pAOHZMXOeKxrcn1QVe*UE.*HlVcb74Om1bvEXql2g80!/b/dD4BAAAAAAAA&bo=sQOxA7EDsQMDORw!&rf=viewer_4">
 			</div>
 		</div>
+
+		<!-- //============================================== -->
+		<div id="recommanded">
+			<div id="recommanded_stylediv">
+			</div>
+
+			<div id="recommanded_movecontainer">
+				<img class="recommanded_goods" id="recommanded_goods_1" src="http://r.photo.store.qq.com/psb?/V11F0U9a0bZGws/o89RSifeeat*CDnosKt3uD7xcsnm3Ztb.uMLM*w.kis!/r/dMMAAAAAAAAA">
+				<img class="recommanded_goods" id="recommanded_goods_2" src="http://r.photo.store.qq.com/psb?/V11F0U9a0bZGws/o89RSifeeat*CDnosKt3uD7xcsnm3Ztb.uMLM*w.kis!/r/dMMAAAAAAAAA">
+			</div>
+
+		</div>
+
+
+
+
+
+
+
+
+		<!-- 轮播图CSS -->
+		<style type="text/css">
+
+
+
+		</style>
+		<script type="text/javascript">
+			function recommandedroll() {
+				document.getElementById()
+			}
+		</script>
+
 
 	</body>
 </html>
