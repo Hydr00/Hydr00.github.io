@@ -19,7 +19,7 @@
 				background: linear-gradient(90deg, rgb(251, 76, 1), rgb(253, 102, 1), rgb(251, 76, 1));
 				text-align: center;
 				overflow: hidden;
-/* 				flex-direction: row;
+				/* 				flex-direction: row;
 				flex-wrap: nowrap;
 				justify-content: space-around;
 				align-items: center; */
@@ -66,7 +66,7 @@
 				width: 40px;
 				top: 50%;
 				transform: translateY(-50%);
-				
+
 			}
 
 			#headder_icon {
@@ -113,25 +113,6 @@
 				background-color: #efefef;
 			}
 
-			#mainshower {
-				background-color: #efefef;
-				height: 200vh;
-				text-align: center;
-			}
-
-			#main_functions {
-				height: 20vh;
-			}
-
-			#common_shower {
-				margin: auto;
-				height: 100vh;
-				width: 95vw;
-				background-color: #FFFFFF;
-				border-radius: 10px;
-			}
-
-
 			/* ======================================================= */
 			#nav_overall_container {
 				position: relative;
@@ -161,7 +142,7 @@
 				height: 100%;
 				width: 15vw;
 				right: 0;
-				background: linear-gradient(90deg, rgba(251, 76, 1,0), rgb(244, 60, 1) 30%);
+				background: linear-gradient(90deg, rgba(251, 76, 1, 0), rgb(244, 60, 1) 30%);
 				text-align: center;
 				z-index: 2;
 				/* mix-blend-mode: overlay; */
@@ -278,13 +259,18 @@
 								电器
 							</p>
 						</div>
+						<div class="nav_items swiper-slide">
+							<p class="nav_items_texts">
+
+							</p>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 
 
-
+<!-- 这里写一个切换的div，当用户选择某个页面时，跳转到相应的页面 -->
 		<!-- //============================================== -->
 		<div id="recommanded">
 			<div id="recommanded_stylediv">
@@ -298,7 +284,7 @@
 						<img class="recommanded_goods" id="recommanded_goods_2" src="http://r.photo.store.qq.com/psb?/V11F0U9a0bZGws/o89RSifeeat*CDnosKt3uD7xcsnm3Ztb.uMLM*w.kis!/r/dMMAAAAAAAAA">
 					</div>
 					<div class="swiper-slide">
-						<img class="recommanded_goods" id="recommanded_goods_3" src="http://r.photo.store.qq.com/psb?/V11F0U9a0bZGws/o89RSifeeat*CDnosKt3uD7xcsnm3Ztb.uMLM*w.kis!/r/dMMAAAAAAAAA">
+						<img class="recommanded_goods" id="recommanded_goods_3" src="http://m.qpic.cn/psb?/V11F0U9a0bZGws/VA8Q6duROW.sqJdHiamzZJa4OSaOtkSqMUhG4E6L8is!/b/dL4AAAAAAAAA&bo=OAR4ATgEeAEDGTw!&rf=viewer_4">
 					</div>
 					<div class="swiper-slide">
 						<img class="recommanded_goods" id="recommanded_goods_4" src="http://r.photo.store.qq.com/psb?/V11F0U9a0bZGws/o89RSifeeat*CDnosKt3uD7xcsnm3Ztb.uMLM*w.kis!/r/dMMAAAAAAAAA">
@@ -309,11 +295,243 @@
 
 		</div>
 		<!-- ================================================== -->
-		<div id="mainshower">
-			<div id="main_functions">
+		<style type="text/css">
+			#mainshower {
+				background-color: #efefef;
+				height: 200vh;
+				text-align: center;
+			}
 
+			.main_functions_showcase {
+				margin-bottom: 3vh;
+				height: 8vh;
+				flex-direction: row;
+				flex-wrap: nowrap;
+				align-items: center;
+				justify-content: space-around;
+				display: flex;
+			}
+
+			#common_shower {
+				margin: auto;
+				height: 100vh;
+				width: 95vw;
+				background-color: #FFFFFF;
+				border-radius: 10px;
+			}
+
+			/* px单位警告 */
+			.functionicon {
+				position: relative;
+				text-align: center;
+				height: 40px;
+				width: 40px;
+				margin-top: 1vh;
+				margin-left: 5vw;
+				margin-right: 5vw;
+				display: inline-block;
+				background-image: url(http://r.photo.store.qq.com/psb?/V11F0U9a0bZGws/JCfgnY4P4woxHjAlBt.LZMSYN4amyhwXGHibmcKtevU!/r/dEwBAAAAAAAA);
+				transform-origin: center;
+				transition-duration: 100ms;
+			}
+
+			.functionicon:after {
+				content: "测试文本";
+				display: block;
+				width: 130%;
+				font-size: 3vw;
+				color: gray;
+				position: absolute;
+				top: 40px;
+				right: -7px;
+			}
+
+			.functionicon:active {
+				transform: scale(1.1);
+			}
+
+			#function1 {
+				background-position: -141px -75px;
+				order: 1;
+			}
+
+			#function2 {
+				background-position: -141px -140px;
+				order: 2;
+			}
+
+			#function3 {
+				background-position: -141px -203px;
+				order: 3;
+			}
+
+			#function4 {
+				background-position: -141px -266px;
+				order: 4;
+			}
+		</style>
+
+
+
+		<div id="mainshower">
+			<div class="main_functions_showcase">
+				<div id="function1" class="functionicon">
+
+				</div>
+				<div id="function2" class="functionicon">
+
+				</div>
+				<div id="function3" class="functionicon">
+
+				</div>
+				<div id="function4" class="functionicon">
+
+				</div>
 			</div>
+			<div class="main_functions_showcase">
+				<div id="function1" class="functionicon">
+
+				</div>
+				<div id="function2" class="functionicon">
+
+				</div>
+				<div id="function3" class="functionicon">
+
+				</div>
+				<div id="function4" class="functionicon">
+
+				</div>
+			</div>
+			
+			<style type="text/css">
+							.common_goods_shower{
+								width: 45vw;
+								height: 35vh;
+								background: white;
+								position: relative;
+								border-radius: 2vw;
+								overflow: hidden;
+								display: inline-block;
+								text-align: left;
+								box-shadow: 0px 0px 1px 1px rgba(0,0,0,0.1);
+								margin: 1vw;
+							}
+							.common_goods_img{
+								display: block;
+								width: 100%;
+								height: 20vh;
+								background-image: url(http://r.photo.store.qq.com/psb?/V11F0U9a0bZGws/mf1MIfZMZENtkQOOF4oMaDmDPZ5ZmaIJjyviBFYYkP4!/r/dL4AAAAAAAAA);
+								background-size: 100%;
+							}
+							.common_goods_desbox{
+								width: 100%;
+								padding: 5%;
+							}
+							.common_goods_title{
+								display: block;
+								font-size: 3.5vw;
+								color: #000000;
+							}
+							.verygood_goods:after{
+								display: block;
+								width: 8vw;
+								font-size: 0.8vw;
+								padding-left: 5%;
+								padding-right: 5%;
+								border-radius: 5vw;
+								border-width: 1px;
+								border-color: #ff9646;
+								color:#ff9646;
+								border-style: solid;
+								content: "猫眼认证";
+							}
+							.sellingwell_goods:after{
+								display: block;
+								width: 8vw;
+								font-size: 0.8vw;
+								padding-left: 5%;
+								padding-right: 5%;
+								border-radius: 5vw;
+								border-width: 1px;
+								border-color: #03c0d7;
+								color:#03c0d7;
+								border-style: solid;
+								content: "广受好评";
+							}
+							.common_goods_price{
+								width: 100%;
+								position: absolute;
+								margin-bottom: 5%;
+								bottom: 0;
+								font-weight: 500;
+								display: block;
+								font-size: 5vw;
+								color: rgb(255,150,70);
+							}
+							.common_goods_price:after{
+								content: "999人付款";
+								font-size: 1.5vw;
+								color: #808080;
+								margin-left: 2%;
+							}
+			</style>
+
+			
+			
+			
 			<div id="common_shower">
+			<div class="common_goods_shower">
+				<div class="common_goods_img">
+				</div>
+				<div class="common_goods_desbox">
+					<div class="common_goods_title verygood_goods">
+						【死喷乱涂2】Splatooon2 amibo 绿色乌贼 全新
+					</div>
+					<div class="common_goods_price">
+						$9999999
+					</div>
+				</div>
+			</div>
+			
+			<div class="common_goods_shower">
+				<div class="common_goods_img">
+				</div>
+				<div class="common_goods_desbox">
+					<div class="common_goods_title sellingwell_goods">
+						【死喷乱涂2】Splatooon2 amibo 绿色乌贼 全新
+					</div>
+					<div class="common_goods_price">
+						$9999999
+					</div>
+				</div>
+			</div>
+			
+			
+			<div class="common_goods_shower">
+				<div class="common_goods_img">
+				</div>
+				<div class="common_goods_desbox">
+					<div class="common_goods_title">
+						【死喷乱涂2】Splatooon2 amibo 绿色乌贼 全新
+					</div>
+					<div class="common_goods_price">
+						$9999999
+					</div>
+				</div>
+			</div>
+			<div class="common_goods_shower">
+				<div class="common_goods_img">
+				</div>
+				<div class="common_goods_desbox">
+					<div class="common_goods_title">
+						【死喷乱涂2】Splatooon2 amibo 绿色乌贼 全新
+					</div>
+					<div class="common_goods_price">
+						$9999999
+					</div>
+				</div>
+			</div>
+
 
 			</div>
 		</div>
@@ -345,4 +563,3 @@
 	</script>
 
 </html>
-
