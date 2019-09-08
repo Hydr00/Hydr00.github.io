@@ -270,7 +270,7 @@
 		</div>
 
 
-<!-- 这里写一个切换的div，当用户选择某个页面时，跳转到相应的页面 -->
+		<!-- 这里写一个切换的div，当用户选择某个页面时，跳转到相应的页面 -->
 		<!-- //============================================== -->
 		<div id="recommanded">
 			<div id="recommanded_stylediv">
@@ -314,8 +314,10 @@
 
 			#common_shower {
 				margin: auto;
-				height: 100vh;
+				/* height: 100vh; */
+				/* 这里设为非固定长度的 */
 				width: 98vw;
+				padding-top: 2vh;
 				background-color: #FFFFFF;
 				border-radius: 10px;
 			}
@@ -404,25 +406,30 @@
 			</div>
 			<!-- 优惠券 -->
 			<style type="text/css">
-				#coupon{
+
+				#coupon {
 					width: 90vw;
-					margin-top:3vh ;
 					margin-bottom: 2vh;
+					margin-left: 5vw;
+					margin-right: 5vw;
 					height: 6vh;
-					box-shadow: 2vw 1vh 2px 2px rgba(0,0,0,0.07);
+					box-shadow: 0 2vw 2px 2px rgba(0, 0, 0, 0.07);
 					display: flex;
 					align-items: center;
 				}
-				#coupon_left{
-					order:1
+
+				#coupon_left {
+					order: 1 ;
 					display: inline-block;
-					background: linear-gradient(90deg, rgb(251, 76, 1), rgb(255, 120, 5));;
+					background: linear-gradient(90deg, rgb(251, 76, 1), rgb(255, 120, 5));
+					;
 					height: 100%;
 					width: 70vw;
 					font-size: 5vw;
 					color: #FFFFFF;
 				}
-				#coupon_right{
+
+				#coupon_right {
 					order: 2;
 					display: inline-block;
 					border-left-width: 0.5vw;
@@ -438,148 +445,266 @@
 					color: #FFFFFF;
 				}
 			</style>
-			<div id="coupon">
-				<div id="coupon_left">
-					￥20优惠券
-				</div>
-				<div id="coupon_right">
-					点击领取
-				</div>
-			</div>
-			
-			
-			
-			
 			<!-- /优惠券 -->
 			<style type="text/css">
-							.common_goods_shower{
-								width: 45vw;
-								height: 35vh;
-								background: white;
-								position: relative;
-								border-radius: 2vw;
-								overflow: hidden;
-								display: inline-block;
-								text-align: left;
-								box-shadow: 0px 0px 1px 1px rgba(0,0,0,0.1);
-								margin: 1vw;
-								margin-top: 2vw;
-								margin-bottom: 0;
-							}
-							.common_goods_img{
-								display: block;
-								width: 100%;
-								height: 20vh;
-								background-image: url(http://r.photo.store.qq.com/psb?/V11F0U9a0bZGws/mf1MIfZMZENtkQOOF4oMaDmDPZ5ZmaIJjyviBFYYkP4!/r/dL4AAAAAAAAA);
-								background-size: 100%;
-							}
-							.common_goods_desbox{
-								width: 100%;
-								padding: 5%;
-							}
-							.common_goods_title{
-								display: block;
-								font-size: 3.5vw;
-								color: #000000;
-							}
-							.verygood_goods:after{
-								display: block;
-								width: 10vw;
-								font-size: 2vw;
-								padding-left: 2%;
-								padding-right: 2%;
-								border-radius: 5vw;
-								border-width: 1px;
-								border-color: #ff9646;
-								color:#ff9646;
-								border-style: solid;
-								content: "猫眼认证";
-								text-align: center;
-							}
-							.sellingwell_goods:after{
-								display: block;
-								width: 10vw;
-								font-size: 2vw;
-								padding-left: 2%;
-								padding-right: 2%;
-								border-radius: 5vw;
-								border-width: 1px;
-								border-color: #03c0d7;
-								color:#03c0d7;
-								border-style: solid;
-								content: "广受好评";
-								text-align: center;
-							}
-							.common_goods_price{
-								width: 100%;
-								position: absolute;
-								margin-bottom: 5%;
-								bottom: 0;
-								font-weight: 500;
-								display: block;
-								font-size: 5vw;
-								color: rgb(255,150,70);
-							}
-							.common_goods_price:after{
-								content: "999人付款";
-								font-size: 2vw;
-								color: #808080;
-								margin-left: 2%;
-							}
+				.common_goods_shower {
+					width: 45vw;
+					height: 35vh;
+					background: white;
+					position: relative;
+					border-radius: 2vw;
+					overflow: hidden;
+					display: inline-block;
+					text-align: left;
+					box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.1);
+					margin: 1vw;
+					margin-top: 2vw;
+					margin-bottom: 0;
+				}
+
+				.common_goods_img {
+					display: block;
+					width: 100%;
+					height: 20vh;
+					background-image: url(http://r.photo.store.qq.com/psb?/V11F0U9a0bZGws/mf1MIfZMZENtkQOOF4oMaDmDPZ5ZmaIJjyviBFYYkP4!/r/dL4AAAAAAAAA);
+					background-size: 100%;
+				}
+
+				.common_goods_desbox {
+					width: 100%;
+					padding: 5%;
+				}
+
+				.common_goods_title {
+					display: block;
+					font-size: 3.5vw;
+					color: #000000;
+				}
+
+				.verygood_goods:after {
+					display: block;
+					width: 10vw;
+					font-size: 2vw;
+					padding-left: 2%;
+					padding-right: 2%;
+					border-radius: 5vw;
+					border-width: 1px;
+					border-color: #ff9646;
+					color: #ff9646;
+					border-style: solid;
+					content: "猫眼认证";
+					text-align: center;
+				}
+
+				.sellingwell_goods:after {
+					display: block;
+					width: 10vw;
+					font-size: 2vw;
+					padding-left: 2%;
+					padding-right: 2%;
+					border-radius: 5vw;
+					border-width: 1px;
+					border-color: #03c0d7;
+					color: #03c0d7;
+					border-style: solid;
+					content: "广受好评";
+					text-align: center;
+				}
+
+				.common_goods_price {
+					width: 100%;
+					position: absolute;
+					margin-bottom: 5%;
+					bottom: 0;
+					font-weight: 500;
+					display: block;
+					font-size: 5vw;
+					color: rgb(255, 150, 70);
+				}
+
+				.common_goods_price:after {
+					content: "999人付款";
+					font-size: 2vw;
+					color: #808080;
+					margin-left: 2%;
+				}
 			</style>
-			
+
 			<div id="common_shower">
-			<div class="common_goods_shower">
-				<div class="common_goods_img">
-				</div>
-				<div class="common_goods_desbox">
-					<div class="common_goods_title verygood_goods">
-						【死喷乱涂2】Splatooon2 amibo 绿色乌贼 全新
+					<div id="coupon">
+						<div id="coupon_left">
+							￥20优惠券
+						</div>
+						<div id="coupon_right">
+							点击领取
+						</div>
 					</div>
-					<div class="common_goods_price">
-						$9999999
+				
+				
+				
+				<div class="common_goods_shower">
+					<div class="common_goods_img">
 					</div>
-				</div>
-			</div>
-			
-			<div class="common_goods_shower">
-				<div class="common_goods_img">
-				</div>
-				<div class="common_goods_desbox">
-					<div class="common_goods_title sellingwell_goods">
-						【死喷乱涂2】Splatooon2 amibo 绿色乌贼 全新
-					</div>
-					<div class="common_goods_price">
-						$9999999
-					</div>
-				</div>
-			</div>
-			
-			
-			<div class="common_goods_shower">
-				<div class="common_goods_img">
-				</div>
-				<div class="common_goods_desbox">
-					<div class="common_goods_title">
-						【死喷乱涂2】Splatooon2 amibo 绿色乌贼 全新
-					</div>
-					<div class="common_goods_price">
-						$9999999
+					<div class="common_goods_desbox">
+						<div class="common_goods_title verygood_goods">
+							【死喷乱涂2】Splatooon2 amibo 绿色乌贼 全新
+						</div>
+						<div class="common_goods_price">
+							$9999999
+						</div>
 					</div>
 				</div>
-			</div>
-			<div class="common_goods_shower">
-				<div class="common_goods_img">
-				</div>
-				<div class="common_goods_desbox">
-					<div class="common_goods_title">
-						【死喷乱涂2】Splatooon2 amibo 绿色乌贼 全新
+				<div class="common_goods_shower">
+					<div class="common_goods_img">
 					</div>
-					<div class="common_goods_price">
-						$9999999
+					<div class="common_goods_desbox">
+						<div class="common_goods_title sellingwell_goods">
+							【死喷乱涂2】Splatooon2 amibo 绿色乌贼 全新
+						</div>
+						<div class="common_goods_price">
+							$9999999
+						</div>
 					</div>
 				</div>
-			</div>
+
+
+				<div class="common_goods_shower">
+					<div class="common_goods_img">
+					</div>
+					<div class="common_goods_desbox">
+						<div class="common_goods_title">
+							【死喷乱涂2】Splatooon2 amibo 绿色乌贼 全新
+						</div>
+						<div class="common_goods_price">
+							$9999999
+						</div>
+					</div>
+				</div>
+				<div class="common_goods_shower">
+					<div class="common_goods_img">
+					</div>
+					<div class="common_goods_desbox">
+						<div class="common_goods_title">
+							【死喷乱涂2】Splatooon2 amibo 绿色乌贼 全新
+						</div>
+						<div class="common_goods_price">
+							$9999999
+						</div>
+					</div>
+				</div>
+
+
+				<div class="common_goods_shower">
+					<div class="common_goods_img">
+					</div>
+					<div class="common_goods_desbox">
+						<div class="common_goods_title">
+							【死喷乱涂2】Splatooon2 amibo 绿色乌贼 全新
+						</div>
+						<div class="common_goods_price">
+							$9999999
+						</div>
+					</div>
+				</div>
+				<div class="common_goods_shower">
+					<div class="common_goods_img">
+					</div>
+					<div class="common_goods_desbox">
+						<div class="common_goods_title">
+							【死喷乱涂2】Splatooon2 amibo 绿色乌贼 全新
+						</div>
+						<div class="common_goods_price">
+							$9999999
+						</div>
+					</div>
+				</div>
+
+
+
+				<div class="common_goods_shower">
+					<div class="common_goods_img">
+					</div>
+					<div class="common_goods_desbox">
+						<div class="common_goods_title">
+							【死喷乱涂2】Splatooon2 amibo 绿色乌贼 全新
+						</div>
+						<div class="common_goods_price">
+							$9999999
+						</div>
+					</div>
+				</div>
+				<div class="common_goods_shower">
+					<div class="common_goods_img">
+					</div>
+					<div class="common_goods_desbox">
+						<div class="common_goods_title">
+							【死喷乱涂2】Splatooon2 amibo 绿色乌贼 全新
+						</div>
+						<div class="common_goods_price">
+							$9999999
+						</div>
+					</div>
+				</div>
+
+
+
+				<div class="common_goods_shower">
+					<div class="common_goods_img">
+					</div>
+					<div class="common_goods_desbox">
+						<div class="common_goods_title">
+							【死喷乱涂2】Splatooon2 amibo 绿色乌贼 全新
+						</div>
+						<div class="common_goods_price">
+							$9999999
+						</div>
+					</div>
+				</div>
+				<div class="common_goods_shower">
+					<div class="common_goods_img">
+					</div>
+					<div class="common_goods_desbox">
+						<div class="common_goods_title">
+							【死喷乱涂2】Splatooon2 amibo 绿色乌贼 全新
+						</div>
+						<div class="common_goods_price">
+							$9999999
+						</div>
+					</div>
+				</div>
+
+
+				<div class="common_goods_shower">
+					<div class="common_goods_img">
+					</div>
+					<div class="common_goods_desbox">
+						<div class="common_goods_title">
+							【死喷乱涂2】Splatooon2 amibo 绿色乌贼 全新
+						</div>
+						<div class="common_goods_price">
+							$9999999
+						</div>
+					</div>
+				</div>
+				<div class="common_goods_shower">
+					<div class="common_goods_img">
+					</div>
+					<div class="common_goods_desbox">
+						<div class="common_goods_title">
+							【死喷乱涂2】Splatooon2 amibo 绿色乌贼 全新
+						</div>
+						<div class="common_goods_price">
+							$9999999
+						</div>
+					</div>
+				</div>
+
+
+
+
+
+
+
 
 
 			</div>
