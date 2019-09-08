@@ -2,42 +2,738 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>海浊的github主页</title>
+		<title>猫眼易购</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+		<link href="https://cdn.bootcss.com/Swiper/4.5.0/css/swiper.min.css" rel="stylesheet">
+		<script src="https://cdn.bootcss.com/Swiper/4.5.0/js/swiper.min.js"></script>
 		<style type="text/css">
 			* {
-				text-align: center;
-				}
-			#showdiv {
-				background-color: #DCDCDC;
-				height: 300px;
-				width: 100%;
+				margin: 0;
+				font: 12px Helvetica Neue, Helvetica, Arial, Microsoft Yahei, Hiragino Sans GB, Heiti SC, WenQuanYi Micro Hei, sans-serif;
 			}
-			.items{
-				background-color: #FFFFFF;
-				height: 30px;
-				border-radius: 15px;
-				width: 50%;
+
+			#headder {
+				height: 8vh;
+				width: 100vw;
+				position: relative;
+				background: linear-gradient(90deg, rgb(251, 76, 1), rgb(253, 102, 1), rgb(251, 76, 1));
 				text-align: center;
+				overflow: hidden;
+				/* 				flex-direction: row;
+				flex-wrap: nowrap;
+				justify-content: space-around;
+				align-items: center; */
+			}
+
+			#headder_mask {
+				position: absolute;
+				height: 100%;
+				width: 100%;
+				z-index: 1;
+			}
+
+			#headder_background_overlay {
+				position: absolute;
+				mix-blend-mode: overlay;
+				opacity: 0.6;
+				width: 50%;
+				left: -10%;
+			}
+
+			#overlay {
+				max-width: 100%;
+			}
+
+			#headder_logocontainer {
+				order: 1;
 				margin: auto;
+				margin-top: 2%;
+				width: 25%;
+			}
+
+			#logo {
+				max-width: 100%;
+			}
+
+			#headder_scaniconcontaier {
+				order: 2;
+				position: absolute;
+				right: 2%;
+				z-index: 2;
 				transition-duration: 120ms;
 				transform-origin: center;
+				height: 40px;
+				width: 40px;
+				top: 50%;
+				transform: translateY(-50%);
+
 			}
-			.items:hover{
+
+			#headder_icon {
+				height: 100%;
+				width: 100%;
+			}
+
+			#headder_scaniconcontaier:active {
+				transform: translateY(-50%) scale(1.1);
+			}
+
+			#recommanded {
+				position: relative;
+				width: 100vw;
+				overflow: hidden;
+			}
+
+			#recommanded_movecontainer {
+				width: 400vw;
+			}
+
+			.recommanded_goods {
+				width: 100vw;
+				z-index: 1;
+			}
+
+			#Pseudo_shadow_effect_div {
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				background: linear-gradient(black, white 10%);
+				mix-blend-mode: darken;
+				opacity: 0.4;
+			}
+
+			#recommanded_stylediv {
+				position: absolute;
+				z-index: 2;
+				width: 100%;
+				height: 8%;
+				bottom: 0;
+				border-top-left-radius: 50%;
+				border-top-right-radius: 50%;
+				background-color: #efefef;
+			}
+
+			/* ======================================================= */
+			#nav_overall_container {
+				position: relative;
+				height: 5vh;
+				background-color: rgb(251, 76, 1);
+			}
+
+			#div_used_for_zindex {
+				position: absolute;
+				height: 100%;
+				width: 100vw;
+				overflow: hidden;
+				z-index: 1;
+			}
+
+			#nav_type_container {
+				height: 100%;
+			}
+
+			#nav_movecontainer {
+				position: absolute;
+				top: 0;
+			}
+
+			#more_items {
+				position: absolute;
+				height: 100%;
+				width: 15vw;
+				right: 0;
+				background: linear-gradient(90deg, rgba(251, 76, 1, 0), rgb(244, 60, 1) 30%);
+				text-align: center;
+				z-index: 2;
+				/* mix-blend-mode: overlay; */
+			}
+
+			#more_items_texts {
+				position: absolute;
+				font-size: 4vw;
+				color: white;
+				top: 50%;
+				right: 5%;
+				transform: translateY(-50%);
+			}
+
+			.nav_items {
+				position: relative;
+				height: 80%;
+				margin: auto;
+			}
+
+			.nav_chosed_items {
+				height: 80%;
+				margin: auto;
+				border-color: rgba(0, 0, 0, 0);
+				border-style: solid;
+				border-bottom: 2px solid #FFFFFF;
+			}
+
+			.nav_items_texts {
+				margin: auto;
+				font-size: 4vw;
+				color: white;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+			}
+
+			.nav_chosed_items_texts {
+				margin: auto;
+				font-size: 4vw;
+				color: white;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+			}
+
+			/* =========================================================== */
+		</style>
+	</head>
+	<body>
+		<div id="headder">
+			<div id="headder_mask">
+
+			</div>
+			<div id="headder_background_overlay">
+				<img id="overlay" src="http://a4.qpic.cn/psb?/V11F0U9a0bZGws/MHpAPP.x6YyABODWbBNXz7MhGjKhtgm5F3mB3WOqJEg!/b/dL8AAAAAAAAA&ek=1&kp=1&pt=0&bo=*AHOAfwBzgEDGTw!&tl=1&vuin=2938748991&tm=1567749600&sce=60-2-2&rf=viewer_4">
+			</div>
+			<div id="headder_logocontainer">
+				<img id="logo" src="http://m.qpic.cn/psb?/V11F0U9a0bZGws/D8xWZbd2lf*Xfo8ABqpGi6BhmD2b.toedLNYyLlH5iU!/b/dDABAAAAAAAA&bo=JwLfACcC3wADCSw!&rf=viewer_4">
+			</div>
+			<div id="headder_scaniconcontaier">
+				<img id="headder_icon" src="http://m.qpic.cn/psb?/V11F0U9a0bZGws/pAOHZMXOeKxrcn1QVe*UE.*HlVcb74Om1bvEXql2g80!/b/dD4BAAAAAAAA&bo=sQOxA7EDsQMDORw!&rf=viewer_4">
+			</div>
+		</div>
+		<!-- ========================================================== -->
+		<div id="nav_overall_container">
+			<div id="more_items">
+				<div id="more_items_texts">
+					➕更多
+				</div>
+			</div>
+			<div id="div_used_for_zindex">
+				<div id="nav_type_container" class="nav-swiper-container">
+					<div class="swiper-wrapper" id="nav_movecontainer">
+						<div class="nav_items swiper-slide">
+							<p class="nav_items_texts">
+								首页
+							</p>
+						</div>
+						<div class="nav_chosed_items swiper-slide">
+							<p class="nav_chosed_items_texts">
+								箱包
+							</p>
+						</div>
+						<div class="nav_items swiper-slide">
+							<p class="nav_items_texts">
+								生鲜
+							</p>
+						</div>
+						<div class="nav_items swiper-slide">
+							<p class="nav_items_texts">
+								洗护
+							</p>
+						</div>
+						<div class="nav_items swiper-slide">
+							<p class="nav_items_texts">
+								数码
+							</p>
+						</div>
+						<div class="nav_items swiper-slide">
+							<p class="nav_items_texts">
+								食品
+							</p>
+						</div>
+						<div class="nav_items swiper-slide">
+							<p class="nav_items_texts">
+								鞋靴
+							</p>
+						</div>
+						<div class="nav_items swiper-slide">
+							<p class="nav_items_texts">
+								电器
+							</p>
+						</div>
+						<div class="nav_items swiper-slide">
+							<p class="nav_items_texts">
+
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<!-- 这里写一个切换的div，当用户选择某个页面时，跳转到相应的页面 -->
+		<!-- //============================================== -->
+		<div id="recommanded">
+			<div id="recommanded_stylediv">
+			</div>
+			<div class="recommanded-swiper-container">
+				<div class="swiper-wrapper" id="recommanded_movecontainer">
+					<div class="swiper-slide">
+						<img class="recommanded_goods" id="recommanded_goods_1" src="http://r.photo.store.qq.com/psb?/V11F0U9a0bZGws/o89RSifeeat*CDnosKt3uD7xcsnm3Ztb.uMLM*w.kis!/r/dMMAAAAAAAAA">
+					</div>
+					<div class="swiper-slide">
+						<img class="recommanded_goods" id="recommanded_goods_2" src="http://r.photo.store.qq.com/psb?/V11F0U9a0bZGws/o89RSifeeat*CDnosKt3uD7xcsnm3Ztb.uMLM*w.kis!/r/dMMAAAAAAAAA">
+					</div>
+					<div class="swiper-slide">
+						<img class="recommanded_goods" id="recommanded_goods_3" src="http://m.qpic.cn/psb?/V11F0U9a0bZGws/VA8Q6duROW.sqJdHiamzZJa4OSaOtkSqMUhG4E6L8is!/b/dL4AAAAAAAAA&bo=OAR4ATgEeAEDGTw!&rf=viewer_4">
+					</div>
+					<div class="swiper-slide">
+						<img class="recommanded_goods" id="recommanded_goods_4" src="http://r.photo.store.qq.com/psb?/V11F0U9a0bZGws/o89RSifeeat*CDnosKt3uD7xcsnm3Ztb.uMLM*w.kis!/r/dMMAAAAAAAAA">
+					</div>
+				</div>
+				<div class="swiper-pagination"></div>
+			</div>
+
+		</div>
+		<!-- ================================================== -->
+		<style type="text/css">
+			#mainshower {
+				background-color: #efefef;
+				height: 200vh;
+				text-align: center;
+			}
+
+			.main_functions_showcase {
+				margin-bottom: 3vh;
+				height: 8vh;
+				flex-direction: row;
+				flex-wrap: nowrap;
+				align-items: center;
+				justify-content: space-around;
+				display: flex;
+			}
+
+			#common_shower {
+				margin: auto;
+				/* height: 100vh; */
+				/* 这里设为非固定长度的 */
+				width: 98vw;
+				padding-top: 2vh;
+				background-color: #FFFFFF;
+				border-radius: 10px;
+			}
+
+			/* px单位警告 */
+			.functionicon {
+				position: relative;
+				text-align: center;
+				height: 40px;
+				width: 40px;
+				margin-top: 1vh;
+				margin-left: 5vw;
+				margin-right: 5vw;
+				display: inline-block;
+				background-image: url(http://r.photo.store.qq.com/psb?/V11F0U9a0bZGws/JCfgnY4P4woxHjAlBt.LZMSYN4amyhwXGHibmcKtevU!/r/dEwBAAAAAAAA);
+				transform-origin: center;
+				transition-duration: 100ms;
+			}
+
+			.functionicon:after {
+				content: "测试文本";
+				display: block;
+				width: 130%;
+				font-size: 3vw;
+				color: gray;
+				position: absolute;
+				top: 40px;
+				right: -7px;
+			}
+
+			.functionicon:active {
 				transform: scale(1.1);
 			}
-			a{
-				display: inline-block;
-				white-space: nowrap;
+
+			#function1 {
+				background-position: -141px -75px;
+				order: 1;
+			}
+
+			#function2 {
+				background-position: -141px -140px;
+				order: 2;
+			}
+
+			#function3 {
+				background-position: -141px -203px;
+				order: 3;
+			}
+
+			#function4 {
+				background-position: -141px -266px;
+				order: 4;
 			}
 		</style>
 
-	</head>
-	<body>
-		<div id="showdiv">
-			<h1>海浊的Github主页</h1>
-			<div class="items">
-					<a href="/Cateye_index.html">前往APP首页</a>
+
+
+		<div id="mainshower">
+			<div class="main_functions_showcase">
+				<div id="function1" class="functionicon">
+
+				</div>
+				<div id="function2" class="functionicon">
+
+				</div>
+				<div id="function3" class="functionicon">
+
+				</div>
+				<div id="function4" class="functionicon">
+
+				</div>
+			</div>
+			<div class="main_functions_showcase">
+				<div id="function1" class="functionicon">
+
+				</div>
+				<div id="function2" class="functionicon">
+
+				</div>
+				<div id="function3" class="functionicon">
+
+				</div>
+				<div id="function4" class="functionicon">
+
+				</div>
+			</div>
+			<!-- 优惠券 -->
+			<style type="text/css">
+
+				#coupon {
+					width: 90vw;
+					margin-bottom: 2vh;
+					margin-left: 5vw;
+					margin-right: 5vw;
+					height: 6vh;
+					box-shadow: 0 2vw 2px 2px rgba(0, 0, 0, 0.07);
+					display: flex;
+					align-items: center;
+				}
+
+				#coupon_left {
+					order: 1 ;
+					display: inline-block;
+					background: linear-gradient(90deg, rgb(251, 76, 1), rgb(255, 120, 5));
+					;
+					height: 100%;
+					width: 70vw;
+					font-size: 5vw;
+					color: #FFFFFF;
+				}
+
+				#coupon_right {
+					order: 2;
+					display: inline-block;
+					border-left-width: 0.5vw;
+					border-left-style: dashed;
+					border-left-color: #FFFFFF;
+					border-right-width: 1vw;
+					border-right-style: solid;
+					border-right-color: #FFFFFF;
+					height: 100%;
+					background: rgb(270, 120, 5);
+					width: 19.5vw;
+					font-size: 3vw;
+					color: #FFFFFF;
+				}
+			</style>
+			<!-- /优惠券 -->
+			<style type="text/css">
+				.common_goods_shower {
+					width: 45vw;
+					height: 35vh;
+					background: white;
+					position: relative;
+					border-radius: 2vw;
+					overflow: hidden;
+					display: inline-block;
+					text-align: left;
+					box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.1);
+					margin: 1vw;
+					margin-top: 2vw;
+					margin-bottom: 0;
+				}
+
+				.common_goods_img {
+					display: block;
+					width: 100%;
+					height: 20vh;
+					background-image: url(http://r.photo.store.qq.com/psb?/V11F0U9a0bZGws/mf1MIfZMZENtkQOOF4oMaDmDPZ5ZmaIJjyviBFYYkP4!/r/dL4AAAAAAAAA);
+					background-size: 100%;
+				}
+
+				.common_goods_desbox {
+					width: 100%;
+					padding: 5%;
+				}
+
+				.common_goods_title {
+					display: block;
+					font-size: 3.5vw;
+					color: #000000;
+				}
+
+				.verygood_goods:after {
+					display: block;
+					width: 10vw;
+					font-size: 2vw;
+					padding-left: 2%;
+					padding-right: 2%;
+					border-radius: 5vw;
+					border-width: 1px;
+					border-color: #ff9646;
+					color: #ff9646;
+					border-style: solid;
+					content: "猫眼认证";
+					text-align: center;
+				}
+
+				.sellingwell_goods:after {
+					display: block;
+					width: 10vw;
+					font-size: 2vw;
+					padding-left: 2%;
+					padding-right: 2%;
+					border-radius: 5vw;
+					border-width: 1px;
+					border-color: #03c0d7;
+					color: #03c0d7;
+					border-style: solid;
+					content: "广受好评";
+					text-align: center;
+				}
+
+				.common_goods_price {
+					width: 100%;
+					position: absolute;
+					margin-bottom: 5%;
+					bottom: 0;
+					font-weight: 500;
+					display: block;
+					font-size: 5vw;
+					color: rgb(255, 150, 70);
+				}
+
+				.common_goods_price:after {
+					content: "999人付款";
+					font-size: 2vw;
+					color: #808080;
+					margin-left: 2%;
+				}
+			</style>
+
+			<div id="common_shower">
+					<div id="coupon">
+						<div id="coupon_left">
+							￥20优惠券
+						</div>
+						<div id="coupon_right">
+							点击领取
+						</div>
+					</div>
+				
+				
+				
+				<div class="common_goods_shower">
+					<div class="common_goods_img">
+					</div>
+					<div class="common_goods_desbox">
+						<div class="common_goods_title verygood_goods">
+							【死喷乱涂2】Splatooon2 amibo 绿色乌贼 全新
+						</div>
+						<div class="common_goods_price">
+							$9999999
+						</div>
+					</div>
+				</div>
+				<div class="common_goods_shower">
+					<div class="common_goods_img">
+					</div>
+					<div class="common_goods_desbox">
+						<div class="common_goods_title sellingwell_goods">
+							【死喷乱涂2】Splatooon2 amibo 绿色乌贼 全新
+						</div>
+						<div class="common_goods_price">
+							$9999999
+						</div>
+					</div>
+				</div>
+
+
+				<div class="common_goods_shower">
+					<div class="common_goods_img">
+					</div>
+					<div class="common_goods_desbox">
+						<div class="common_goods_title">
+							【死喷乱涂2】Splatooon2 amibo 绿色乌贼 全新
+						</div>
+						<div class="common_goods_price">
+							$9999999
+						</div>
+					</div>
+				</div>
+				<div class="common_goods_shower">
+					<div class="common_goods_img">
+					</div>
+					<div class="common_goods_desbox">
+						<div class="common_goods_title">
+							【死喷乱涂2】Splatooon2 amibo 绿色乌贼 全新
+						</div>
+						<div class="common_goods_price">
+							$9999999
+						</div>
+					</div>
+				</div>
+
+
+				<div class="common_goods_shower">
+					<div class="common_goods_img">
+					</div>
+					<div class="common_goods_desbox">
+						<div class="common_goods_title">
+							【死喷乱涂2】Splatooon2 amibo 绿色乌贼 全新
+						</div>
+						<div class="common_goods_price">
+							$9999999
+						</div>
+					</div>
+				</div>
+				<div class="common_goods_shower">
+					<div class="common_goods_img">
+					</div>
+					<div class="common_goods_desbox">
+						<div class="common_goods_title">
+							【死喷乱涂2】Splatooon2 amibo 绿色乌贼 全新
+						</div>
+						<div class="common_goods_price">
+							$9999999
+						</div>
+					</div>
+				</div>
+
+
+
+				<div class="common_goods_shower">
+					<div class="common_goods_img">
+					</div>
+					<div class="common_goods_desbox">
+						<div class="common_goods_title">
+							【死喷乱涂2】Splatooon2 amibo 绿色乌贼 全新
+						</div>
+						<div class="common_goods_price">
+							$9999999
+						</div>
+					</div>
+				</div>
+				<div class="common_goods_shower">
+					<div class="common_goods_img">
+					</div>
+					<div class="common_goods_desbox">
+						<div class="common_goods_title">
+							【死喷乱涂2】Splatooon2 amibo 绿色乌贼 全新
+						</div>
+						<div class="common_goods_price">
+							$9999999
+						</div>
+					</div>
+				</div>
+
+
+
+				<div class="common_goods_shower">
+					<div class="common_goods_img">
+					</div>
+					<div class="common_goods_desbox">
+						<div class="common_goods_title">
+							【死喷乱涂2】Splatooon2 amibo 绿色乌贼 全新
+						</div>
+						<div class="common_goods_price">
+							$9999999
+						</div>
+					</div>
+				</div>
+				<div class="common_goods_shower">
+					<div class="common_goods_img">
+					</div>
+					<div class="common_goods_desbox">
+						<div class="common_goods_title">
+							【死喷乱涂2】Splatooon2 amibo 绿色乌贼 全新
+						</div>
+						<div class="common_goods_price">
+							$9999999
+						</div>
+					</div>
+				</div>
+
+
+				<div class="common_goods_shower">
+					<div class="common_goods_img">
+					</div>
+					<div class="common_goods_desbox">
+						<div class="common_goods_title">
+							【死喷乱涂2】Splatooon2 amibo 绿色乌贼 全新
+						</div>
+						<div class="common_goods_price">
+							$9999999
+						</div>
+					</div>
+				</div>
+				<div class="common_goods_shower">
+					<div class="common_goods_img">
+					</div>
+					<div class="common_goods_desbox">
+						<div class="common_goods_title">
+							【死喷乱涂2】Splatooon2 amibo 绿色乌贼 全新
+						</div>
+						<div class="common_goods_price">
+							$9999999
+						</div>
+					</div>
+				</div>
+
+
+
+
+
+
+
+
+
 			</div>
 		</div>
+
+
+
+
+
+
+
 	</body>
+	<script type="text/javascript">
+		var recommanded_swiper = new Swiper('.recommanded-swiper-container', {
+			autoplay: true,
+			autoplay: {
+				delay: 2500,
+				disableOnInteraction: false,
+			},
+			pagination: {
+				el: '.swiper-pagination',
+				clickable: true,
+			},
+		});
+		var nav_items_swiper = new Swiper('.nav-swiper-container', {
+			freeMode: true,
+			slidesPerView: 5,
+			// centeredSlides : true,
+		})
+	</script>
+
 </html>
