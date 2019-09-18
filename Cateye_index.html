@@ -19,7 +19,7 @@
 				background: linear-gradient(90deg, rgb(251, 76, 1), rgb(253, 102, 1), rgb(251, 76, 1));
 				text-align: center;
 				overflow: hidden;
-				/* 				flex-direction: row;
+				/* 	flex-direction: row;
 				flex-wrap: nowrap;
 				justify-content: space-around;
 				align-items: center; */
@@ -200,13 +200,13 @@
 
 			</div>
 			<div id="headder_background_overlay">
-				<img id="overlay" src="http://a4.qpic.cn/psb?/V11F0U9a0bZGws/MHpAPP.x6YyABODWbBNXz7MhGjKhtgm5F3mB3WOqJEg!/b/dL8AAAAAAAAA&ek=1&kp=1&pt=0&bo=*AHOAfwBzgEDGTw!&tl=1&vuin=2938748991&tm=1567749600&sce=60-2-2&rf=viewer_4">
+				<img id="overlay" src="https://user-gold-cdn.xitu.io/2019/9/17/16d3ec17085c19c3?w=508&h=462&f=png&s=10246">
 			</div>
 			<div id="headder_logocontainer">
-				<img id="logo" src="http://m.qpic.cn/psb?/V11F0U9a0bZGws/D8xWZbd2lf*Xfo8ABqpGi6BhmD2b.toedLNYyLlH5iU!/b/dDABAAAAAAAA&bo=JwLfACcC3wADCSw!&rf=viewer_4">
+				<img id="logo" src="http://r.photo.store.qq.com/psb?/V11F0U9a0bZGws/D8xWZbd2lf*Xfo8ABqpGi6BhmD2b.toedLNYyLlH5iU!/r/dDABAAAAAAAA">
 			</div>
 			<div id="headder_scaniconcontaier">
-				<img id="headder_icon" src="http://m.qpic.cn/psb?/V11F0U9a0bZGws/pAOHZMXOeKxrcn1QVe*UE.*HlVcb74Om1bvEXql2g80!/b/dD4BAAAAAAAA&bo=sQOxA7EDsQMDORw!&rf=viewer_4">
+				<img id="headder_icon" src="http://r.photo.store.qq.com/psb?/V11F0U9a0bZGws/pAOHZMXOeKxrcn1QVe*UE.*HlVcb74Om1bvEXql2g80!/r/dD4BAAAAAAAA">
 			</div>
 		</div>
 		<!-- ========================================================== -->
@@ -284,7 +284,7 @@
 						<img class="recommanded_goods" id="recommanded_goods_2" src="http://r.photo.store.qq.com/psb?/V11F0U9a0bZGws/o89RSifeeat*CDnosKt3uD7xcsnm3Ztb.uMLM*w.kis!/r/dMMAAAAAAAAA">
 					</div>
 					<div class="swiper-slide">
-						<img class="recommanded_goods" id="recommanded_goods_3" src="http://m.qpic.cn/psb?/V11F0U9a0bZGws/VA8Q6duROW.sqJdHiamzZJa4OSaOtkSqMUhG4E6L8is!/b/dL4AAAAAAAAA&bo=OAR4ATgEeAEDGTw!&rf=viewer_4">
+						<img class="recommanded_goods" id="recommanded_goods_3" src="http://r.photo.store.qq.com/psb?/V11F0U9a0bZGws/VA8Q6duROW.sqJdHiamzZJa4OSaOtkSqMUhG4E6L8is!/r/dL4AAAAAAAAA">
 					</div>
 					<div class="swiper-slide">
 						<img class="recommanded_goods" id="recommanded_goods_4" src="http://r.photo.store.qq.com/psb?/V11F0U9a0bZGws/o89RSifeeat*CDnosKt3uD7xcsnm3Ztb.uMLM*w.kis!/r/dMMAAAAAAAAA">
@@ -535,7 +535,7 @@
 					color: #FFFFFF;
 				}
 
-				< !-- 优惠券 -->
+				/* < !-- 优惠券 --> */
 			</style>
 			<div id="common_shower">
 				<div id="coupon" onclick="disappear()">
@@ -559,7 +559,7 @@
 
 				<div class="common_goods_movecontainer">
 
-
+					<a href="https://www.bilibili.com/">
 					<div class="common_goods_shower">
 						<div class="common_goods_img">
 						</div>
@@ -572,6 +572,10 @@
 							</div>
 						</div>
 					</div>
+					</a>
+					
+					
+					<a href="Cateye_goods.html">
 					<div class="common_goods_shower">
 						<div class="common_goods_img">
 						</div>
@@ -584,7 +588,7 @@
 							</div>
 						</div>
 					</div>
-
+					</a>
 
 					<div class="common_goods_shower">
 						<div class="common_goods_img">
@@ -735,7 +739,9 @@
 
 
 	</body>
-	<script type="text/javascript">
+	
+
+</html><script type="text/javascript">
 		var recommanded_swiper = new Swiper('.recommanded-swiper-container', {
 			autoplay: true,
 			autoplay: {
@@ -752,6 +758,16 @@
 			slidesPerView: 5,
 			// centeredSlides : true,
 		})
+		
+		
+		// document.getElementsByClassName("common_goods_shower").href = "https://www.bilibili.com/";
+		
+		// var addlink = document.getElementsByTagName("a");
+		// var i = 0;
+		// for(i=0;i<addlink.length;i++)
+		// {
+		// 	// addlink[i].href = "www.bilibili.com";
+		// 	addlink[i].setAttribute("href","https://www.bilibili.com/")
+		// 	console.log("添加了url!");
+		// }
 	</script>
-
-</html>
