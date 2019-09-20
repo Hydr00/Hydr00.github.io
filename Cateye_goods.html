@@ -37,7 +37,7 @@
 				margin-left: 2%;
 				margin-right: 2%;
 				text-align: center;
-				font-size: 1vw;
+				font-size: 3vw;
 				color: white;
 			}
 
@@ -61,7 +61,7 @@
 		<link href="https://cdn.bootcss.com/Swiper/4.5.0/css/swiper.min.css" rel="stylesheet">
 		<script src="https://cdn.bootcss.com/Swiper/4.5.0/js/swiper.min.js"></script>
 	</head>
-	<body style="background-color: #DCDCDC;">
+	<body style="background-color: #f3f3f3;height: 200vh;">
 		<div id="firstcardoverall">
 			<div id="bigpiccontainer_overall">
 				<div id="notrealbigpiccontainer">
@@ -98,7 +98,6 @@
 					color: #f44336;
 					font-size: 5vw;
 					font-weight: 500;
-					margin-top: 2vw;
 				}
 
 				#pricebox:before {
@@ -113,26 +112,169 @@
 					margin-top: 1vw;
 					font-weight: 600;
 				}
-				#firstcardoverall{
-					height: 80vh;
+
+				#firstcardoverall {
+					/* height: 90vh; */
 					background-color: #FFFFFF;
 				}
+
+				#actibox {
+					display: flex;
+					align-items: center;
+					/* margin-top: 1%; */
+					margin-bottom: 1%;
+					height: 4vh;
+					background: linear-gradient(90deg, #ef2626, #ff7105);
+				}
+
+				#actibox:before {
+					margin-left: 3%;
+					text-align: center;
+					padding-left: 2%;
+					padding-right: 2%;
+					border: 1px solid white;
+					color: white;
+					font-size: 3vw;
+					border-radius: 99px;
+					content: "店内满99减5元";
+				}
+
+				#actibox:after {
+					color: white;
+					content: "查看>";
+					position: absolute;
+					right: 3%;
+				}
+
+				#ratebox {
+					display: flex;
+					align-items: center;
+					height: 5vh;
+				}
+
+				#ratebox .info {
+					width: 50%;
+					text-align: center;
+					color: #A9A9A9;
+					height: 100%;
+					line-height: 5vh;
+					font-size: 4vw;
+				}
 			</style>
+			<div id="actibox">
+
+			</div>
 			<div id="infobox">
 				<div id="pricebox">
 					1000 - 26000
 				</div>
 				<div id="namebox">
-					我是测试用商品名称我很长长
+					我是测试用商品名称我很长我是测试用商品名称我很长我是测试用
 				</div>
 			</div>
-			
-
-
-
-
-
+			<!-- <div id="ratebox">
+					<div class="info">
+						👨9999人买过
+					</div>
+					<div class="info">
+						⭐平均评分4.5
+					</div>
+				</div> -->
 		</div>
+		<style type="text/css">
+			#chosecard {
+				margin-top: 1vh;
+				background: white;
+			}
+
+			.chosebox {
+				height: 5vh;
+				display: flex;
+				align-items: center;
+				font-size: 4vw;
+				line-height: 5vh;
+			}
+			.chosebox:before{
+				content: "参数";
+				color: #A9A9A9;
+				display:inline-block;
+				width: 15%;
+				height: 100%;
+				line-height: 5vh;
+				text-align: center;
+				font-size: 4vw;
+			}
+			
+		</style>
+
+		<div id="chosecard">
+			<div class="chosebox">
+					选择尺码、颜色分类
+			</div>
+			<div class="chosebox">
+					品牌、材质
+			</div>
+		</div>
+
+<style type="text/css">
+	#belowcard{
+		width: 100%;
+		position: fixed;
+		bottom: 0;
+		background-color: white;
+		height: 8vh;
+	}
+	#buy_or_in{
+		/* background: linear-gradient(90deg, #ef2626, #ff7105); */
+		width: 60%;
+		height: 100%;
+		position: absolute;
+		right: 0;
+		display: flex;
+		align-items: center;
+		color: white;
+
+	}
+	#init{
+		margin: 0;
+		width: 50%;
+		height: 85%;
+		display: inline-block;
+		background: #ff7105;
+		border-top-left-radius: 99px;
+		border-bottom-left-radius: 99px;
+		background: linear-gradient(90deg, #ffca1d, #ff8a12);
+		font-size: 4vw;
+		text-align: center;
+		line-height: 6.8vh;
+		font-weight: 600;
+		padding-left: 3%;
+	}
+	#buyit{
+		margin: 0;
+		width: 50%;
+		height: 85%;
+		display: inline-block;
+		background: linear-gradient(90deg, #ff7105, #ef2626);
+		border-top-right-radius: 99px;
+		border-bottom-right-radius: 99px;
+		font-size: 4vw;
+		text-align: center;
+		line-height: 6.8vh;
+		font-weight: 600;
+		padding-right: 3%;
+	}
+</style>
+
+<div id="belowcard">
+	
+	<div id="buy_or_in">
+		<div id="init">加入购物车</div><div id="buyit">立即购买</div>
+		<!-- 他妈啥鬼 -->
+	</div>
+</div>
+
+
 
 
 		<script type="text/javascript">
