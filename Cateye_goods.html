@@ -216,6 +216,71 @@
 			</div>
 		</div>
 
+
+<style type="text/css">
+	#commit_overall{
+		margin-top: 1vh;
+		height: 6vh;
+		position: relative;
+		display: flex;
+		align-items: center;
+	}
+	#more_commit{
+		position: absolute;
+		right: 0;
+		color: #0000009c;
+		font-size: 4vw;
+		font-weight: 600;
+		mix-blend-mode:overlay ;
+		z-index: 3;
+	}
+	#commitcontainer{
+		height: 100%;
+		background: white;
+		overflow: hidden;
+	}
+	.commitbox2{
+		color: white;
+		text-align: center;
+		background: #FFCA1D;
+		line-height: 6vh;
+		font-size: 6vw;
+		background: linear-gradient(90deg,#ffa605,#FFCA1D);
+	}
+	.commitbox1{
+		line-height: 6vh;
+		color: white;
+		text-align: center;
+		background: #FFCA1D;
+		font-size: 4vw;
+	}
+</style>
+<div id="commit_overall">
+	<div id="more_commit">
+		更多>
+	</div>
+	
+	
+	<div id="commitcontainer" class="commit-swiper-container">
+		<div id="commit_movecontainer" class="swiper-wrapper">
+			<div class="swiper-slide commitbox1">
+				东西很好，快递很快，五星好评
+			</div>
+			<div class="swiper-slide commitbox2">
+				在？为什么迫害爽哥
+			</div>
+			<div class="swiper-slide commitbox1">
+				钢普拉天下第一
+			</div>
+			<div class="swiper-slide commitbox2">
+				我和CCTV贴贴
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
 <style type="text/css">
 	#belowcard{
 		width: 100%;
@@ -267,7 +332,6 @@
 </style>
 
 <div id="belowcard">
-	
 	<div id="buy_or_in">
 		<div id="init">加入购物车</div><div id="buyit">立即购买</div>
 		<!-- 他妈啥鬼 -->
@@ -275,10 +339,22 @@
 </div>
 
 
-
-
 		<script type="text/javascript">
 			var bigpic_swiper = new Swiper('.bigpic-swiper-container', {
+				pagination: {
+					el: '.swiper-pagination',
+					clickable: true,
+				},
+			});
+			var commit_swiper = new Swiper('.commit-swiper-container', {
+				effect : "flip",
+				loop:true,
+				// freeMode: true,
+				autoplay: true,
+				autoplay: {
+					delay: 2500,
+					disableOnInteraction: true,
+				},
 				pagination: {
 					el: '.swiper-pagination',
 					clickable: true,
