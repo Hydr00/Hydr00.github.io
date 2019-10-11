@@ -5,6 +5,12 @@
 		<title></title>
 	</head>
 	<body>
+		<div id="scancontainer">
+		        <div style="height:40%"></div>
+		</div>
+		
+		
+		
 		<script type="text/javascript">
 			var scan;
 			if (window.plus) {
@@ -15,7 +21,7 @@
 			
 			function plusready() {
 				setTimeout(function() {
-					scan = new plus.barcode.Barcode('mask');
+					scan = new plus.barcode.Barcode('scancontainer');
 					scan.start();
 					scan.onmarked = function(type, result) {
 						if (result) {
