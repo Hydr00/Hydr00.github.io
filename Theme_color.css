@@ -1,18 +1,11 @@
 :root{
-	--theme_color_dark_headder: rgb(251, 76, 1);
-	/* 基本的深色，标题页*/
-	--theme_color_dark_headder_2: rgb(253, 102, 1);
-	/* 基本的较浅的深色，标题页*/
-	--theme_color_dark_headder_3:rgb(251, 76, 1);
-	/* 深的深色，用于导航栏*/
-	--theme_color_dark_headder_4:rgb(244, 60, 1);
-	/* 深的深色的深色，用于导航栏的“更多” */
-	--theme_color_dark_1:rgb(251, 76, 1);
-	/* 基本的深色 */
-	--theme_color_light_1:rgb(270, 120, 5);
-	/* 基本的浅色 */
-	--theme_color_light_2:rgb(255, 150, 70);
-	/* 文本的浅色 */
-	--nav_text_color: white;
-	--shadow_color:rgba(244, 60, 1,0.1);
-}
+    --theme_color_dark_headder: rgb(233, 158, 247);
+    --theme_color_dark_headder_2: rgb(0, 255, 255);
+    --theme_color_dark_headder_3: rgb(104, 211, 251);
+    --theme_color_dark_headder_4: rgb(231, 217, 252);
+    --theme_color_dark_1: rgb(233, 158, 247);
+    --theme_color_light_1: rgb(32, 255, 255);
+    --theme_color_light_2: rgb(166, 129, 255);
+    --nav_text_color: white;
+	--shadow_color:rgba(233, 158, 247,0.1);
+	}
