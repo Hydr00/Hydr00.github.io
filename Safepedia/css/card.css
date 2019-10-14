@@ -1,0 +1,31 @@
+.card {
+	width: 250px;
+	/* margin-right: 2%; */
+	transition-duration: 150ms;
+	transform-origin: center;
+}
+
+.card:hover {
+	box-shadow: 2px 5px 5px rgba(0,0,0,0.05);
+	transform: scale(1.03);
+	cursor: pointer;
+}
+
+.card-mask {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+}
+
+#card-zone {
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+
+.card-img-top{
+	width: 100%;
+}
+.card-title{
+	font-size: 2vw;
+}

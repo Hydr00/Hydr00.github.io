@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>BaikeOverRide</title>
+		<!-- 新 Bootstrap4 核心 CSS 文件 -->
+		<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/css/bootstrap.min.css">
+
+		<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+		<script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+
+		<!-- popper.min.js 用于弹窗、提示、下拉菜单 -->
+		<script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
+
+		<!-- 最新的 Bootstrap4 核心 JavaScript 文件 -->
+		<script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/theme_colors.css"/>
+
+		<style type="text/css">
+			#headder {
+				height: 350px;
+				text-align: center;
+				background: linear-gradient(to right, var(--themecolor_1), var(--themecolor_2));
+				box-shadow: 2px 2px 2px #D3D3D3;
+				color: #FFFFFF;
+				position: relative;
+			}
+			
+			#headder:hover {
+				cursor: default;
+			}
+			
+			#title{
+				font-size: 50px;
+				line-height: 200px;
+			}
+
+			#headdermask {
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				width: 100%;
+				height: 200px;
+				transition-duration: 0.15s;
+			}
+			
+			#search{
+				height: 150px;
+				text-align: center;
+			}
+		</style>
+
+	</head>
+	<body>
+		<div id="headder">
+			<div id="title">
+				百科综合查询页面
+			</div>
+			<div id="search">
+				<div class="input-group mb3 input-group-lg" style="margin-bottom: 20px;margin-left: auto; margin-right: auto; width: 80%;"><input type="text" class="form-control" id="searchtext"></div>
+				<button type="button" onclick="search()" class="btn btn-light" style="height: 60px;width: 160px;font-size: 20px;">GetThemAll!</button>
+			</div>
+			<div id="headdermask"></div>
+		</div>
+		<!-- 以上是头图 -->
+		
+		<!-- 展示区 -->
+		<iframe src="" width="100%" height="500px" id="baidu"></iframe>
+		<iframe src="" width="100%" height="500px" id="wiki"></iframe>
+		<iframe src="" width="100%" height="500px" id="MBA"></iframe>
+		
+		
+		
+		<script type="text/javascript">
+			function search(){
+				var text = document.getElementById("searchtext").value;
+				document.getElementById("baidu").src="https://baike.baidu.com/item/"+text;
+				document.getElementById("wiki").src="https://zh.wikipedia.org/wiki/"+text;
+				document.getElementById("MBA").src="https://wiki.mbalib.com/wiki/"+text;
+			}
+			document.addEventListener("keyup",ifisenter)
+			function ifisenter(event){
+				if(event.keyCode==13){search()}
+			}
+		</script>
+		
+		
+		
+	</body>
+</html>

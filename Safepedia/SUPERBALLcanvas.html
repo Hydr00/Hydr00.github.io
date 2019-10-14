@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			#canvas {
+			    border: 1px solid dodgerblue;
+			    margin: 10px auto 0;
+			    display: block;
+			}
+			
+			#datazone {
+				margin-top: 30px;
+				width: 80%;
+				margin-left: auto;
+				margin-right: auto;
+				height: 100px;
+			}
+
+			.databox {
+				background-color: black;
+				color: #FFFFFF;
+				text-align: center;
+				font-size: 40px;
+				display: inline-block;
+				float: left;
+				width: 25%;
+				height: 100px;
+			}
+		</style>
+
+	</head>
+	<body style="margin: 0px;">
+		<canvas id="canvas" width="900px" height="400px"></canvas>
+		<!-- canvas -->
+		<div id="datazone">
+			<div class="databox">
+				₿<div id="score">
+				</div>
+			</div>
+			<div class="databox">
+				∱<div id="time"></div>
+			</div>
+			<div class="databox">
+				✚<div id="life">
+				</div>
+			</div>
+			<div class="databox">
+				💀<div id="hard"></div>
+			</div>
+		</div>
+		<script type="text/javascript " src="SUPERBALLcanvas/prepare.js"></script>
+		<script type="text/javascript" src="SUPERBALLcanvas/Self_plane_space.js"></script>
+		<script type="text/javascript" src="SUPERBALLcanvas/Bullet_space.js"></script>
+		<script type="text/javascript" src="SUPERBALLcanvas/Bad_box_space.js"></script>
+		<script type="text/javascript" src="SUPERBALLcanvas/supercanvas2.1.js"></script>
+		<script type="text/javascript" src="SUPERBALLcanvas/canvas_controler.js"></script>
+	</body>
+</html>
