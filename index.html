@@ -54,17 +54,41 @@
 				height: 100%;
 				z-index: 2;
 			}
-
-			#titlebox p {
+			#titlebox{
+				position: relative;
+				height: 15vh;
+				width: 500px;
+			}
+			#titleboxtrigger{
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				z-index: 2;
+			}
+			#titleboxtrigger:hover{
+				cursor: pointer;
+			}
+			#title {
+				position: absolute;
+				z-index: 1;
 				color: white;
 				text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 				font-size: 60px;
 			}
-			#titlebox P:hover{
-				cursor: pointer;
+			#time{
+				z-index: 1;
+				opacity: 0;
+				position: absolute;
+				bottom: 50%;
+				left: 0;
+				transition-duration: 300ms;
+				color: white;
+				text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
+				font-weight: 530;
 			}
 
 			#showcasediv {
+				position: relative;
 				height: 300px;
 			}
 
@@ -75,7 +99,6 @@
 				width: 50%;
 				text-align: center;
 				line-height: 30px;
-				margin: auto;
 				transition-duration: 150ms;
 				transform-origin: center;
 				box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, 0.08);
@@ -110,7 +133,10 @@
 			</div>
 			<div id="contentbox">
 				<div id="titlebox">
-					<p>Hydro's Projects</p>
+					<div id="titleboxtrigger">
+					</div>
+					<p id="title">Hydro's Projects</p>
+					<p id="time"></p>
 				</div>
 				<div id="showcasediv">
 					<div class="items">
@@ -147,7 +173,17 @@
 			    transition: 0s;
 			}
 		</style>
-		
+		<script type="text/javascript">
+			var CurrentTime = new Date().toLocaleString();
+			var TimeBox = document.getElementById("time");
+			var showing = 0;
+			TimeBox.innerText= CurrentTime;
+			document.getElementById("titleboxtrigger").addEventListener("click",function(){showing = showtime(showing);});
+			function showtime(showing){
+				if(showing == 0){TimeBox.style.opacity = "1";TimeBox.style.bottom = "0%"; return 1}
+				else {TimeBox.style.opacity = "0";TimeBox.style.bottom = "50%";return 0;}
+			}
+		</script>
 		
 		
 	</body>

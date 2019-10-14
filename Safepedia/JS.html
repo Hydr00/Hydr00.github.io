@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>JS加密</title>
+		<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+		<style type="text/css">
+			* {
+				margin: 0;
+			}
+
+			#headder {
+				height: 80px;
+				text-align: center;
+				background: #ffbb00;
+				box-shadow: 2px 2px 2px #D3D3D3;
+				position: relative;
+				text-align: center;
+				color: white;
+				font-size: 2vw;
+				line-height: 80px;
+			}
+
+			#UIcontainer {
+				height: 300px;
+				width: 100%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+
+			textarea[name="Plaintext"] {
+				order: 1;
+			}
+
+			textarea[name="Ciphertext"] {
+				order: 3;
+			}
+
+			#center_container {
+				height: 10em;
+				width: 15%;
+				order: 2;
+				text-align: center;
+				padding: 0vw 1vw 0vw 1vw;
+			}
+
+			#button_container {
+				display: flex;
+				align-items: center;
+				height: 40%;
+				justify-content: space-between;
+			}
+
+			#choose_container {
+				display: flex;
+				justify-content: space-between;
+			}
+
+			input[name="KEY"] {
+				height: 40%;
+				width: 100%;
+			}
+
+			button {
+				margin: auto;
+			}
+		</style>
+
+
+	</head>
+	<body>
+		<div id="overall_container">
+			<div id="headder">
+				基于JS的几种加密算法
+			</div>
+			<div id="UIcontainer">
+				<textarea rows="10" cols="60" name="Plaintext" id="Plaintext"></textarea>
+				<div id="center_container">
+					<input type="number" name="KEY" id="KEY" value="0" />
+
+					<div id="button_container">
+						<button type="button" onclick="encode()" class="btn btn-primary">加密</button>
+						<button type="button" onclick="decode()" class="btn btn-primary">解密</button>
+					</div>
+
+					<div id="choose_container">
+						<label class="checkbox-inline"><input value="凯撒" type="radio" name="optradio" checked="checked">替换</label>
+						<label class="checkbox-inline"><input value="滚筒" type="radio" name="optradio">换位</label>
+						<label class="checkbox-inline"><input value="异或" type="radio" name="optradio">异或</label>
+					</div>
+				</div>
+				<textarea rows="10" cols="60" name="Ciphertext" id="Ciphertext"></textarea>
+			</div>
+
+			<div id="rollingball_container">
+				<div id="rollingball">
+
+				</div>
+			</div>
+		</div>
+
+		<style type="text/css">
+			#rollingball {
+				height: 30px;
+				width: 30px;
+				border-radius: 99px;
+				background-color: #ffbb00;
+				transition-duration: 500ms;
+				position: absolute;
+				left: 0;
+				color: white;
+				font-size: 1.5vw;
+				text-align: center;
+				line-height: 30px;
+				font-weight: 700;
+			}
+
+			#rollingball_container {
+				width: 80%;
+				margin: auto;
+				position: relative;
+			}
+		</style>
+
+		<script type="text/javascript">
+			var ball = document.getElementById("rollingball");
+
+			function erroranimation() {
+				ball.style.width = "60px";
+				ball.innerHTML = "?";
+			}
+
+			function encodeanimation() {
+				ball.style.left = "100%";
+				ball.style.width = "30px"
+				ball.innerHTML = "";
+			}
+
+			function decodeanimation() {
+				ball.style.left = "0%";
+				ball.style.width = "30px"
+				ball.innerHTML = "";
+			}
+
+			function getfunctiontype() {
+				var functionsgroup = document.getElementsByName("optradio");
+				for (var i = 0; i < functionsgroup.length; i++) {
+					if (functionsgroup[i].checked) {
+						chosenfunction = functionsgroup[i].value;
+					}
+				}
+				return chosenfunction;
+			}
+
+			function encode() {
+				if (document.getElementById("Plaintext").value) {
+					encodeanimation();
+					var P = document.getElementById("Plaintext").value;
+					var C = encodefunction(P);
+					document.getElementById("Ciphertext").value = C;
+				} else {
+					erroranimation();
+				}
+			}
+
+			function decode() {
+				if (document.getElementById("Ciphertext").value) {
+					decodeanimation();
+					var C = document.getElementById("Ciphertext").value;
+					var P = decodefunction(C);
+					document.getElementById("Plaintext").value = P;
+				} else {
+					erroranimation();
+				}
+			}
+
+			function 凯撒加密函数(P) {
+				var i = 0;
+				var C = "";
+				var KEY = parseInt(document.getElementById("KEY").value);
+				for (i = 0; i < P.length; i++) {
+					var code = P.charCodeAt(i);
+					C += String.fromCharCode(code + KEY);
+				}
+				return C;
+			}
+
+			function 滚筒加密函数(P) {
+				var i = 0;
+				var j = 0;
+				C = "";
+				var KEY = parseInt(document.getElementById("KEY").value);
+				if (P.length < KEY) {
+					return P;
+				}
+				var newarray_height = Math.ceil(P.length / KEY);
+				var newarray_width = KEY;
+				for (i = 0; i < newarray_width; i++) {
+					for (j = 0; j < newarray_height; j++) {
+						if (P[j * newarray_width + i] != undefined) {
+							C += P[j * newarray_width + i];
+						}
+					}
+				}
+				return C;
+			}
+
+			function 异或加密函数(P) {
+				var C = "";
+				var KEY = document.getElementById("KEY").value;
+				for (var i = 0; i < P.length; i++) {
+					var text = P.charCodeAt(i) ^ KEY;
+					C += String.fromCharCode(text)
+				}
+				return C;
+			}
+
+			function encodefunction(P) {
+				var chosenfunction = getfunctiontype();
+				switch (chosenfunction) {
+					case "凯撒":
+						{
+							return 凯撒加密函数(P);
+						}
+						break;
+					case "滚筒":
+						{
+							return 滚筒加密函数(P);
+						}
+						break;
+					case "异或":
+						{
+							return 异或加密函数(P);
+						}
+					default:
+						console.log("为啥没有选择任何方法？");
+						break;
+				}
+			}
+
+			function 凯撒解密函数(C) {
+				var i = 0;
+				var P = "";
+				var KEY = parseInt(document.getElementById("KEY").value);
+				for (i = 0; i < C.length; i++) {
+					var code = C.charCodeAt(i);
+					P += String.fromCharCode(code - KEY);
+				}
+				return P;
+			}
+
+			function 滚筒解密函数(C) {
+				var i = 0;
+				var j = 0;
+				P = "";
+				var KEY = parseInt(document.getElementById("KEY").value);
+				if (C.length < KEY) {
+					return C;
+				}
+				var newarray_height = KEY;
+				var newarray_width = Math.ceil(C.length / KEY);
+
+				if (C.length % KEY) {
+					var addspace = (C.length % KEY) * newarray_width + newarray_width - 1 - 1;
+					console.log(addspace);
+					for (; addspace < newarray_height * newarray_width; addspace += newarray_width) {
+						var F = C.slice(0, addspace + 1);
+						var B = C.slice(addspace + 1, C.length);
+						C = F + "☆" + B;
+					}
+				}
+
+				for (i = 0; i < newarray_width; i++) {
+					for (j = 0; j < newarray_height; j++) {
+						if ((C[j * newarray_width + i] != undefined) && (C[j * newarray_width + i] != "☆")) {
+							P += C[j * newarray_width + i];
+						}
+					}
+				}
+				return P;
+			}
+
+			function 异或解密函数(C) {
+				var P = "";
+				var KEY = document.getElementById("KEY").value;
+				for (var i = 0; i < C.length; i++) {
+					var text = C.charCodeAt(i) ^ KEY;
+					P += String.fromCharCode(text);
+				}
+				return P;
+			}
+
+
+			function decodefunction(C) {
+				var chosenfunction = getfunctiontype();
+				switch (chosenfunction) {
+					case "凯撒":
+						{
+							return 凯撒解密函数(C);
+						}
+						break;
+					case "滚筒":
+						{
+							return 滚筒解密函数(C);
+						}
+						break;
+					case "异或":
+						{
+							return 异或解密函数(C);
+						}
+					default:
+						console.log("为啥没有选择任何方法？");
+						break;
+				}
+			}
+		</script>
+	</body>
+</html>
