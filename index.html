@@ -20,7 +20,7 @@
 				background-size: 100vh;
 				background-position-x: right;
 				background-repeat-x: no-repeat;
-				background-image: url(http://m.qpic.cn/psb?/V11F0U9a0bZGws/nO4Tz1BogSRnrrb8YnbN*pIvx03wjTZm5btxNs8rn1k!/b/dFMBAAAAAAAA&bo=KwTlBSsE5QURGS4!&rf=viewer_4);
+				background-image: url(http://r.photo.store.qq.com/psb?/V11F0U9a0bZGws/nO4Tz1BogSRnrrb8YnbN*pIvx03wjTZm5btxNs8rn1k!/r/dFMBAAAAAAAA);
 			}
 
 			#overallshadow {
@@ -30,7 +30,8 @@
 				box-shadow: 0px 0px 100px 180px inset rgba(0, 0, 0, 0.07);
 				z-index: 1;
 			}
-			#overallblink{
+
+			#overallblink {
 				position: absolute;
 				width: 100%;
 				height: 100%;
@@ -38,11 +39,13 @@
 				opacity: 0;
 				animation: blink 120ms infinite;
 			}
-			@keyframes blink{
-				0%{
+
+			@keyframes blink {
+				0% {
 					opacity: 0.01;
 				}
-				100%{
+
+				100% {
 					opacity: 0;
 				}
 			}
@@ -54,20 +57,24 @@
 				height: 100%;
 				z-index: 2;
 			}
-			#titlebox{
+
+			#titlebox {
 				position: relative;
 				height: 15vh;
 				width: 500px;
 			}
-			#titleboxtrigger{
+
+			#titleboxtrigger {
 				position: absolute;
 				width: 100%;
 				height: 100%;
 				z-index: 2;
 			}
-			#titleboxtrigger:hover{
+
+			#titleboxtrigger:hover {
 				cursor: pointer;
 			}
+
 			#title {
 				position: absolute;
 				z-index: 1;
@@ -75,7 +82,8 @@
 				text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 				font-size: 60px;
 			}
-			#time{
+
+			#time {
 				z-index: 1;
 				opacity: 0;
 				position: absolute;
@@ -116,8 +124,6 @@
 
 			a {
 				color: black;
-				display: inline-block;
-				white-space: nowrap;
 				text-decoration: none;
 			}
 		</style>
@@ -129,7 +135,7 @@
 
 			</div>
 			<div id="overallblink">
-				
+
 			</div>
 			<div id="contentbox">
 				<div id="titlebox">
@@ -139,55 +145,69 @@
 					<p id="time"></p>
 				</div>
 				<div id="showcasediv">
-					<div class="items">
-						<a href="Cateyes/Cateye_index.html">Cateye Eago</a>
-					</div>
-					<div class="items">
-						<a href="Safepedia/index_update.html">Safepedia</a>
-					</div>
+					<a href="Cateyes/Cateye_index.html">
+						<div class="items">
+							<p>Cateye Eago</p>
+						</div>
+					</a>
+					<a href="Safepedia/index_update.html">
+						<div class="items">
+							<p>Safepedia</p>
+						</div>
+					</a>
 					<div class="items">
 						按钮样式
-					</div>
 					</div>
 				</div>
 			</div>
 		</div>
+		</div>
 		<style type="text/css">
 			.items:after {
-			    content: "";
-			    display: block;
-			    position: absolute;
-			    width: 100%;
-			    height: 100%;
-			    top: 0;
-			    left: 0;
-			    pointer-events: none;
-			    background-image: radial-gradient(circle, #666 10%, transparent 10.01%);
-			    background-repeat: no-repeat;
-			    background-position: 50%;
-			    transform: scale(10, 10);
-			    opacity: 0;
-			    transition: transform .3s, opacity .5s;
+				content: "";
+				display: block;
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				left: 0;
+				pointer-events: none;
+				background-image: radial-gradient(circle, #666 10%, transparent 10.01%);
+				background-repeat: no-repeat;
+				background-position: 50%;
+				transform: scale(10, 10);
+				opacity: 0;
+				transition: transform .3s, opacity .5s;
 			}
-			
+
 			.items:active:after {
-			    transform: scale(0, 0);
-			    opacity: .3;
-			    transition: 0s;
+				transform: scale(0, 0);
+				opacity: .3;
+				transition: 0s;
 			}
 		</style>
 		<script type="text/javascript">
 			var CurrentTime = new Date().toLocaleString();
 			var TimeBox = document.getElementById("time");
 			var showing = 0;
-			TimeBox.innerText= CurrentTime;
-			document.getElementById("titleboxtrigger").addEventListener("click",function(){showing = showtime(showing);});
-			function showtime(showing){
-				if(showing == 0){TimeBox.style.opacity = "1";TimeBox.style.bottom = "0%"; return 1}
-				else {TimeBox.style.opacity = "0";TimeBox.style.bottom = "50%";return 0;}
+			TimeBox.innerText = CurrentTime;
+			document.getElementById("titleboxtrigger").addEventListener("click", function() {
+				showing = showtime(showing);
+			});
+
+			function showtime(showing) {
+				if (showing == 0) {
+					TimeBox.style.opacity = "1";
+					TimeBox.style.bottom = "0%";
+					return 1
+				} else {
+					TimeBox.style.opacity = "0";
+					TimeBox.style.bottom = "50%";
+					return 0;
+				}
 			}
 		</script>
-		
-		
+
+
 	</body>
 </html>
