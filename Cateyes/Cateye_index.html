@@ -581,17 +581,28 @@
 					margin-right: 5vw;
 					height: 6vh;
 					box-shadow: 0px 4px 5px 1px rgba(0, 0, 0, 0.1);
-					background: url(../Safepedia/imgs/background_2.png);
+					border-width: thick;
+					border-radius: 5px;
+					/* border-color: var(--theme_color_dark_1); */
+					border-style: solid;
+					/* border-image: linear-gradient(90deg, black, var(--theme_color_light_1)) 1; */
+					/* animation: borderchange 3s linear 0s infinite forwards; */
+					background-image: url(../Safepedia/imgs/background_2.png), linear-gradient(90deg, black, var(--theme_color_light_1));
 					background-size: 300%;
+					background-blend-mode: overlay;
+					
 					background-position: center center;
 					display: flex;
 					align-items: center;
 				}
+/* 				@keyframes borderchange{
+					from{border-image: linear-gradient(90deg, black, var(--theme_color_light_1)) 1;}
+					to{border-image: linear-gradient(90deg,var(--theme_color_light_1) , black) 1;}
+				} */
 
 				#coupon_left {
 					order: 1;
 					display: inline-block;
-					/* background: linear-gradient(90deg, var(--theme_color_dark_1), var(--theme_color_light_1)); */
 					height: 100%;
 					line-height: 6vh;
 					width: 70vw;
@@ -611,7 +622,6 @@
 					border-right-style: solid;
 					border-right-color: #FFFFFF;
 					height: 100%;
-					/* background: var(--theme_color_light_1); */
 					width: 19.5vw;
 					font-size: 3vw;
 					line-height: 6vh;
