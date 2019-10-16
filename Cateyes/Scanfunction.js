@@ -4,7 +4,8 @@ document.getElementById("headder_scaniconcontaier").addEventListener("click", fu
 			'titleNView': {
 				'backgroundColor': '#262930',
 				'titleText': '扫一扫',
-				'titleColor': '#FFFFFF'
+				'titleColor': '#FFFFFF',
+				autoBackButton: true
 			}
 		});
 		plus.webview.show(W, 'slide-in-right', '300ms');

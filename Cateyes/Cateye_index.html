@@ -391,7 +391,7 @@
 			}
 
 			#common_shower {
-				padding-top: 2vh;
+				padding-top: 1vh;
 				margin: auto;
 				margin-top: 6vh;
 				width: 98vw;
@@ -500,7 +500,7 @@
 					text-align: left;
 					box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.1);
 					margin: 1vw;
-					margin-top: 2vw;
+					margin-top: 1vw;
 					margin-bottom: 0;
 				}
 
@@ -579,9 +579,9 @@
 					overflow: hidden;
 					transition-duration: 400ms;
 					width: 90vw;
-					margin-bottom: 2vh;
 					margin-left: 5vw;
 					margin-right: 5vw;
+					margin-bottom: 2vh;
 					height: 9vh;
 					box-shadow: 0px 3px 5px 1px rgba(0, 0, 0, 0.1);
 					border-width: thick;
@@ -593,7 +593,6 @@
 					background-image: url(../Safepedia/imgs/background_2.png), linear-gradient(90deg, black, var(--theme_color_light_1));
 					background-size: 300%;
 					background-blend-mode: overlay;
-					
 					background-position: center center;
 					display: flex;
 					align-items: center;
@@ -648,9 +647,10 @@
 					var coupon = document.getElementById("coupon");
 
 					function disappear() {
-						coupon.style.setProperty("margin-left", "-100%")
+						coupon.style.setProperty("margin-left", "-100%");
 						setTimeout(function() {
-							coupon.style.setProperty("display", "none");
+							coupon.style.setProperty("height", "0");
+							coupon.style.marginBottom = 0;
 						}, 400);
 					}
 				</script>
