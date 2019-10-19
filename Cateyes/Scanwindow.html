@@ -36,9 +36,6 @@
 
 	</head>
 	<body>
-		<div id="scancontainer">
-			<div></div>
-		</div>
 		<div id="overall">
 			<img src="http://r.photo.store.qq.com/psb?/V11F0U9a0bZGws/z..2ovPn92RIwEnr6KLUAIVBbXP1AZcp0ZHTg9ov8Tw!/r/dL4AAAAAAAAA">
 		</div>
@@ -54,7 +51,7 @@
 
 			function plusready() {
 				setTimeout(function() {
-					scan = new plus.barcode.Barcode('scancontainer');
+					scan = new plus.barcode.Barcode('overall');
 					scan.start();
 					scan.onmarked = function(type, result) {
 						if (result) {
