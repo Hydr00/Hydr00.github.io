@@ -66,7 +66,7 @@
 
 			function plusready() {
 				setTimeout(function() {
-					scan = new plus.barcode.Barcode('overall');
+					scan = new plus.barcode.Barcode('scancontainer');
 					scan.start();
 					scan.onmarked = function(type, result) {
 						if (result) {
