@@ -2,23 +2,48 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>没有找到页面</title>
+		<title></title>
 		<style type="text/css">
-			#scancontainer{
-				height: 100vh;
-			}
-			*{
+			* {
 				margin: 0;
+				font: 12px Helvetica Neue, Helvetica, Arial, Microsoft Yahei, Hiragino Sans GB, Heiti SC, WenQuanYi Micro Hei, sans-serif;
+			}
+			body {
+				height: 100vh;
+				display: flex;
+				align-items: center;
+				background-color: #EDEDED;
+			}
+			#overall{
 				text-align: center;
+				width: 100%;
+			}
+			img {
+				animation: imganimation 2s infinite linear;
+			}
+
+			@keyframes imganimation {
+				from {
+					transform: rotate(0deg);
+				}
+
+				to {
+					transform: rotate(360deg);
+				}
 			}
 		</style>
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+
 	</head>
 	<body>
 		<div id="scancontainer">
-		        <div style="height:40%"><p>扫码功能加载中...☆</p></div>
+			<div></div>
 		</div>
-		
+		<div id="overall">
+			<img src="http://r.photo.store.qq.com/psb?/V11F0U9a0bZGws/z..2ovPn92RIwEnr6KLUAIVBbXP1AZcp0ZHTg9ov8Tw!/r/dL4AAAAAAAAA">
+		</div>
+
+
 		<script type="text/javascript">
 			var scan;
 			if (window.plus) {
@@ -26,7 +51,7 @@
 			} else {
 				document.addEventListener('plusready', plusready, false);
 			}
-			
+
 			function plusready() {
 				setTimeout(function() {
 					scan = new plus.barcode.Barcode('scancontainer');
@@ -44,13 +69,13 @@
 						}
 					};
 				}, 1000);
-			
+
 				//处理返回事件
 				plus.key.addEventListener('backbutton', function() {
 					plus.webview.currentWebview().close();
 				})
 			}
 		</script>
-		
+
 	</body>
 </html>
