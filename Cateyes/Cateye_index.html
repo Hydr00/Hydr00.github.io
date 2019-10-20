@@ -12,7 +12,9 @@
 				margin: 0;
 				font: 12px Helvetica Neue, Helvetica, Arial, Microsoft Yahei, Hiragino Sans GB, Heiti SC, WenQuanYi Micro Hei, sans-serif;
 			}
-
+			a:active{
+				
+			}
 			#cateye_top_dec {
 				height: 6vh;
 				background-color: #000000;
@@ -53,11 +55,6 @@
 				opacity: 1;
 				transition: 0s;
 			}
-
-
-
-
-
 
 			#headder_mask {
 				position: absolute;
@@ -180,7 +177,9 @@
 
 			/* ======================================================= */
 			#nav_overall_container {
-				position: relative;
+				position: sticky;
+				z-index: 999;
+				top: 0;
 				height: 5vh;
 				background-color: var(--theme_color_dark_headder_3);
 				box-shadow: -6px 5px 7px 0px var(--shadow_color) inset;
@@ -588,19 +587,13 @@
 					border-radius: 5px;
 					border-style: solid;
 					border-color: #FFFFFF;
-					/* border-image: linear-gradient(90deg, black, var(--theme_color_light_1)) 1; */
-					/* animation: borderchange 3s linear 0s infinite forwards; */
 					background-image: url(../Safepedia/imgs/background_2.png), linear-gradient(90deg, black, var(--theme_color_light_1));
-					background-size: 300%;
+					background-size: 300vw;
 					background-blend-mode: overlay;
 					background-position: center center;
 					display: flex;
 					align-items: center;
 				}
-/* 				@keyframes borderchange{
-					from{border-image: linear-gradient(90deg, black, var(--theme_color_light_1)) 1;}
-					to{border-image: linear-gradient(90deg,var(--theme_color_light_1) , black) 1;}
-				} */
 
 				#coupon_left {
 					order: 1;
