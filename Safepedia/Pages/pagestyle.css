@@ -1,0 +1,32 @@
+* {
+	margin: 0;
+}
+
+h1 {
+	color: #1860AC;
+}
+
+h2 {
+	margin-top: 7.5vh;
+}
+
+h3 {
+	margin-top: 2.5vh;
+	margin-bottom: 2.5vh;
+}
+
+p {
+	margin-top: 1.5vh;
+	margin-bottom: 1.5vh;
+}
+
+p:before {
+	content: "";
+	width: 2rem;
+	display: inline-block;
+}
+
+body {
+	padding: 3vw;
+	background-color: white;
+}
