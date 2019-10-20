@@ -4,6 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
 		<title>测试商品页面</title>
+		<link rel="stylesheet" type="text/css" href="Theme_color.css">
 		<style type="text/css">
 			* {
 				margin: 0;
@@ -31,8 +32,7 @@
 				height: 3vh;
 				line-height: 3vh;
 				width: 12vw;
-				background-color: #FF9646;
-				background: linear-gradient(90deg, rgb(251, 76, 1), rgb(255, 153, 85));
+				background: linear-gradient(90deg, var(--theme_color_dark_1),var(--theme_color_light_1));
 				border-radius: 99px;
 				margin-left: 2%;
 				margin-right: 2%;
@@ -46,7 +46,8 @@
 				/* 脱离文档流，保持与上面一致 */
 				position: absolute;
 				z-index: 1;
-				background: repeating-linear-gradient(45deg, rgb(10, 10, 10), rgb(10, 10, 10) 2vw, rgb(50, 50, 50) 2vw, rgb(50, 50, 50) 4vw);
+				background-image: repeating-linear-gradient(45deg, rgb(230, 230, 230), rgb(230, 230, 230) 4vw, rgb(245, 245, 245) 4vw, rgb(245, 245, 245) 8vw);
+				
 			}
 
 			#bigpiccontainer {
@@ -76,13 +77,13 @@
 					<div id="bigpiccontainer" class="bigpic-swiper-container">
 						<div id="bigpic_movecontainer" class="swiper-wrapper">
 							<div class="swiper-slide">
-								<img class="big_goods_pic" src="https://p.pstatp.com/origin/fe5a0000cdf745dd57d2">
+								<img class="big_goods_pic" src="http://r.photo.store.qq.com/psb?/V11F0U9a0bZGws/T48o8ajO6aW7GzS1k0.6PS7WSFUJQ5*M4pZkr9sf8uw!/r/dMMAAAAAAAAA">
 							</div>
 							<div class="swiper-slide">
-								<img class="big_goods_pic" src="https://p.pstatp.com/origin/fe5a0000cdf745dd57d2">
+								<img class="big_goods_pic" src="http://r.photo.store.qq.com/psb?/V11F0U9a0bZGws/T48o8ajO6aW7GzS1k0.6PS7WSFUJQ5*M4pZkr9sf8uw!/r/dMMAAAAAAAAA">
 							</div>
 							<div class="swiper-slide">
-								<img class="big_goods_pic" src="https://p.pstatp.com/origin/fe5a0000cdf745dd57d2">
+								<img class="big_goods_pic" src="http://r.photo.store.qq.com/psb?/V11F0U9a0bZGws/T48o8ajO6aW7GzS1k0.6PS7WSFUJQ5*M4pZkr9sf8uw!/r/dMMAAAAAAAAA">
 							</div>
 						</div>
 					</div>
@@ -95,7 +96,7 @@
 				}
 
 				#pricebox {
-					color: #f44336;
+					color: var(--theme_color_light_1);
 					font-size: 5vw;
 					font-weight: 500;
 				}
@@ -114,17 +115,17 @@
 				}
 
 				#firstcardoverall {
-					/* height: 90vh; */
 					background-color: #FFFFFF;
 				}
 
 				#actibox {
 					display: flex;
 					align-items: center;
-					/* margin-top: 1%; */
 					margin-bottom: 1%;
 					height: 4vh;
-					background: linear-gradient(90deg, #ef2626, #ff7105);
+					background: #000000;
+					color: #DAB86E;
+					/* background: linear-gradient(90deg, var(--theme_color_dark_1),var(--theme_color_light_1)); */
 				}
 
 				#actibox:before {
@@ -132,15 +133,13 @@
 					text-align: center;
 					padding-left: 2%;
 					padding-right: 2%;
-					border: 1px solid white;
-					color: white;
+					border: 1px solid #DAB86E;
 					font-size: 3vw;
 					border-radius: 99px;
 					content: "店内满99减5元";
 				}
 
 				#actibox:after {
-					color: white;
 					content: "查看>";
 					position: absolute;
 					right: 3%;
@@ -172,14 +171,18 @@
 					我是测试用商品名称我很长我是测试用商品名称我很长我是测试用
 				</div>
 			</div>
-			<!-- <div id="ratebox">
+			<br>
+			<div id="pesudohr"style="height: 1px;width: 100%;background-color: #D3D3D3;">
+				
+			</div>
+			<div id="ratebox">
 					<div class="info">
-						👨9999人买过
+						❤ 9999人买过
 					</div>
 					<div class="info">
-						⭐平均评分4.5
+						★ 平均评分4.5
 					</div>
-				</div> -->
+				</div>
 		</div>
 		<style type="text/css">
 			#chosecard {
@@ -228,30 +231,36 @@
 	#more_commit{
 		position: absolute;
 		right: 0;
-		color: #0000009c;
+		color: #DAB86E;
 		font-size: 4vw;
 		font-weight: 600;
-		mix-blend-mode:overlay ;
 		z-index: 3;
+	}
+	#commitnamecontainer{
+		position: absolute;
+		left: 0;
+		color: #DAB86E;
+		font-size: 4vw;
+		font-weight: 600;
+		z-index: 3;
+		margin-left: 3%;
+		padding-left: 2%;
+		padding-right: 2%;
+		border-radius: 99px;
+		border-color: #DAB86E;
+		border-width: 1px;
+		border-style: solid;
 	}
 	#commitcontainer{
 		height: 100%;
-		background: white;
+		background: black;
 		overflow: hidden;
 	}
-	.commitbox2{
-		color: white;
-		text-align: center;
-		background: #FFCA1D;
+	.commitbox{
 		line-height: 6vh;
-		font-size: 6vw;
-		background: linear-gradient(90deg,#ffa605,#FFCA1D);
-	}
-	.commitbox1{
-		line-height: 6vh;
-		color: white;
+		color: #DAB86E;
 		text-align: center;
-		background: #FFCA1D;
+		background: black;
 		font-size: 4vw;
 	}
 </style>
@@ -259,20 +268,22 @@
 	<div id="more_commit">
 		更多>
 	</div>
-	
+	<div id="commitnamecontainer">
+		评论
+	</div>
 	
 	<div id="commitcontainer" class="commit-swiper-container">
 		<div id="commit_movecontainer" class="swiper-wrapper">
-			<div class="swiper-slide commitbox1">
+			<div class="swiper-slide commitbox">
 				东西很好，快递很快，五星好评
 			</div>
-			<div class="swiper-slide commitbox2">
-				在？为什么迫害爽哥
+			<div class="swiper-slide commitbox">
+				在？为什么迫害爽哥？
 			</div>
-			<div class="swiper-slide commitbox1">
+			<div class="swiper-slide commitbox">
 				钢普拉天下第一
 			</div>
-			<div class="swiper-slide commitbox2">
+			<div class="swiper-slide commitbox">
 				我和CCTV贴贴
 			</div>
 		</div>
@@ -288,9 +299,9 @@
 		bottom: 0;
 		background-color: white;
 		height: 8vh;
-	}
+		z-index: 999;
+	}	
 	#buy_or_in{
-		/* background: linear-gradient(90deg, #ef2626, #ff7105); */
 		width: 60%;
 		height: 100%;
 		position: absolute;
@@ -332,10 +343,9 @@
 </style>
 
 <div id="belowcard">
-	<div id="buy_or_in">
-		<div id="init">加入购物车</div><div id="buyit">立即购买</div>
-		<!-- 他妈啥鬼 -->
-	</div>
+		<div id="buy_or_in">
+			<div id="init">加入购物车</div><div id="buyit">立即购买</div>
+		</div>
 </div>
 
 
