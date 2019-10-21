@@ -14,6 +14,15 @@
 				margin: 0;
 			}
 
+			a,
+			a:visited,
+			a:hover,
+			a:focus{
+				color: #1860AC;
+				text-decoration: none;
+			}
+
+
 			#leftnav {
 				width: 20%;
 				height: 100%;
@@ -134,31 +143,42 @@
 							概念页1
 						</div>
 					</div>
-						<div id="nav_list_container">
+					<div id="nav_list_container">
+						<ol>
+							<li>首页</li>
+							<a href="Pages/黑客.html" target="rightiframe">
+								<li>黑客</li>
+							</a>
+							<li>恶意代码与病毒
+								<ol>
+									<a href="Pages/恶意代码.html" target="rightiframe">
+										<li>恶意代码</li>
+									</a>
+									<a href="Pages/病毒.html" target="rightiframe">
+										<li>病毒</li>
+									</a>
+							</li>
+						</ol>
+						</li>
+						<li>密码
 							<ol>
-								<li>首页</li>
-								<a href="Pages/黑客.html" target="rightiframe"><li>黑客</li></a>
-								<li>恶意代码与病毒
-									<ol>
-										<a href="Pages/恶意代码.html" target="rightiframe"><li>恶意代码</li></a>
-										<a href="Pages/病毒.html" target="rightiframe"><li>病毒</li></a>
-										</li>
-									</ol>
-								</li>
-								<li>密码
-									<ol>
-										<a href="Pages/密码分析学.html" target="rightiframe">
-											<li>密码分析学</li>
-										</a>
-										<a href="Pages/密码疲劳.html" target="rightiframe">
-											<li>密码疲劳</li>
-										</a>
-									</ol>
-								</li>
-								<a href="Pages/灾备.html" target="rightiframe"><li>灾备</li></a>
+								<a href="Pages/密码分析学.html" target="rightiframe">
+									<li>密码分析学</li>
+								</a>
+								<a href="Pages/密码疲劳.html" target="rightiframe">
+									<li>密码疲劳</li>
+								</a>
 							</ol>
-						</div>
+						</li>
+						<a href="Pages/防火墙.html" target="rightiframe">
+							<li>防火墙</li>
+						</a>
+						<a href="Pages/灾备.html" target="rightiframe">
+							<li>灾备</li>
+						</a>
+						</ol>
 					</div>
+				</div>
 			</div>
 
 

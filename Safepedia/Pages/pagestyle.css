@@ -5,6 +5,11 @@
 h1 {
 	color: #1860AC;
 }
+h1:before{
+	content: "a";
+	display: inline-block;
+	background-color:#1860AC;
+}
 
 h2 {
 	margin-top: 7.5vh;
@@ -29,4 +34,21 @@ p:before {
 body {
 	padding: 3vw;
 	background-color: white;
+}
+
+a,a:visited,a:hover{
+	color: #1860AC;
+	text-decoration: none;
+}
+
+
+#listcontainer{
+	padding: 10px;
+	width: auto;
+	display:inline-block;
+	right: 0;
+	background-color: #EDEDED;
+	border-color: #A9A9A9;
+	border-width: 1px;
+	border-style: solid;
 }
