@@ -4,32 +4,40 @@
 	--themecolor_2:#0089ff;
 	--themecolor_light:#33d8f0;
 } */ 
-/* 青蓝配色
-/* :root {
+
+/* 青蓝配色 */
+
+
+
+
+
+
+:root {
     --themecolor_dark:#ff0071;
 	--themecolor_1:#00f6ff;
 	--themecolor_2:#ff00b6;
 	--themecolor_light:#33d8f0;
-} */
+}
+
 /* 粉青配色 */
-:root {
+
+
+
+
+
+
+/* :root {
     --themecolor_dark:#ffbb00 ;
 	--themecolor_1:#ffbb00;
 	--themecolor_2:#ffbb00;
 	--themecolor_light:#ffbb00;
-} 
+} */
+
 /* 纯黄配色 */
-*{
+
+
+
+
+/* *{
 	font-family: "宋体";
-}
-
-
-.level2_title{
-	color: #000000;
-	font-size: 1.5vw;
-	font-weight: 600;
-	display: block;
-}
-.level2_title:before{
-	content: "⚪";
-}
+} */
