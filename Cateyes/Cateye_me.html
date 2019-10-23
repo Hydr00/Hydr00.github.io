@@ -89,6 +89,45 @@
 					<div id="name_desc">一只蓝色的乌贼喷喷(inkling)</div>
 				</div>
 			</div>
+			<style type="text/css">
+				#assetcontainer {
+					margin-top: 3vh;
+					width: 100%;
+					height: 8vh;
+					display: flex;
+					justify-content: space-around;
+				}
+
+				#assetcontainer_items {
+					width: 49%;
+					text-align: center;
+					color: var(--theme_color_dark_1);
+					font-size: large;
+					font-weight: bold;
+					line-height: 4vh;
+					background-image: -webkit-gradient(linear, 0 0, 0 bottom, from(var(--theme_color_dark_1)), to(var(--theme_color_light_1)));
+					-webkit-background-clip: text;
+					-webkit-text-fill-color: transparent;
+				}
+/* 
+				#assetcontainer_items:after {
+					content: "999";
+					display: block;
+
+				} */
+			</style>
+
+
+			<div id="assetcontainer">
+				<div id="assetcontainer_items">
+					猫眼币<br>999
+				</div>
+				<div id="assetcontainer_items">
+					猫眼积分<br>999
+				</div>
+			</div>
+
+
 
 			<style type="text/css">
 				#statuecontainer {
@@ -124,15 +163,29 @@
 					text-align: center;
 					line-height: 10vh;
 				}
-				
-				#inventory{
-					margin-top: 5vh;
+
+				#myordercontainer {
+					margin-top: 3vh;
+					width: 100%;
+					height: 9vh;
+					display: flex;
+					justify-content: space-around;
 				}
-				#inventory_icons{
-					font-size: 2rem;
+
+				.myordercontainer_items {
+					width: 9vh;
+					padding-top: 1vh;
+					text-align: center;
+					background: linear-gradient(var(--theme_color_dark_1), var(--theme_color_light_1));
+					border-radius: 999px;
+					color: white;
 				}
-				#inventory_icons>p{
-					display: inline-block;
+
+				.myordercontainer_items:after {
+					content: "999";
+					font-size: large;
+					display: block;
+					font-weight: bold;
 				}
 			</style>
 
@@ -150,6 +203,7 @@
 					优惠券
 				</div>
 			</div>
+
 			<div id="otherfunctioncontainer">
 				<div class="otherfunctioncontainer_items">
 					猫眼社区
@@ -157,12 +211,55 @@
 				<div class="otherfunctioncontainer_items">
 					我的创作
 				</div>
-
 			</div>
+			<div id="myordercontainer">
+				<div class="myordercontainer_items">
+					待付款
+				</div>
+				<div class="myordercontainer_items">
+					待发货
+				</div>
+				<div class="myordercontainer_items">
+					待收货
+				</div>
+				<div class="myordercontainer_items">
+					待评价
+				</div>
+			</div>
+			<style type="text/css">
+				#deliveringbox {
+					margin-top: 3vh;
+					width: 100%;
+					height: 25vh;
+					background-image: url(onlineimgs/1200px-Inkling_SSBU.png), repeating-linear-gradient(45deg, rgb(230, 230, 230), rgb(230, 230, 230) 4vw, rgb(245, 245, 245) 4vw, rgb(245, 245, 245) 8vw);
+					background-size: 100%;
+					text-align: left;
+					text-shadow: 0 0 1px black;
+					color: white;
+					font-size: small;
+				}
+			</style>
+			<div id="deliveringbox">
+				<p>(1/2)当前递送中, 预计13.13到达</p>
+				<p>splatoon2 amibo</p>
+			</div>
+			<style type="text/css">
+				#inventory {
+					margin-top: 5vh;
+				}
+
+				#inventory_icons {
+					font-size: 2rem;
+				}
+
+				#inventory_icons>p {
+					display: inline-block;
+				}
+			</style>
 			<div id="inventory">
 				<p style="float: right;color: #A9A9A9;">管理</p>
 				<p>我的物品</p>
-				<hr >
+				<hr>
 				<div id="inventory_icons">
 					<p>🎁</p>
 					<p>🎂</p>
