@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+		<title>购物车</title>
+		<link rel="stylesheet" type="text/css" href="Theme_color.css" />
+		<style type="text/css">
+			* {
+				margin: 0;
+				font: 12px Helvetica Neue, Helvetica, Arial, Microsoft Yahei, Hiragino Sans GB, Heiti SC, WenQuanYi Micro Hei, sans-serif;
+			}
+
+			body {
+				background-color: #F8F8F8;
+			}
+
+			#overall {
+				width: 94vw;
+				margin: auto;
+			}
+
+			#top_dec {
+				height: 5vh;
+				font-size: large;
+				margin-top: 1vh;
+				font-weight: bold;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+			}
+
+			#top_dec_EX {
+				color: #A9A9A9;
+				font-size: small;
+			}
+
+			#mygoods {
+				position: relative;
+				height: 60vh;
+				text-align: center;
+			}
+
+			#mygoods img {
+				margin-top: 17%;
+				height: 40%;
+			}
+
+			#mygoods #kongde {
+				font-size: large;
+				margin-top: 1vh;
+			}
+
+			#mygoods #henmang {
+				font-size: small;
+				margin-top: 1vh;
+			}
+
+			#mygoods #qvguangguang {
+				height: 5vh;
+				width: 20vw;
+				border: 1px solid #D3D3D3;
+				border-radius: 5vw;
+				background-color: #EDEDED;
+				line-height: 5vh;
+				margin: auto;
+				margin-top: 4vh;
+
+			}
+		</style>
+	</head>
+	<body>
+		<div id="overall">
+			<div id="top_dec">
+				我的购物车
+				<div id="top_dec_EX">
+					管理
+				</div>
+			</div>
+			<div id="mygoods">
+				<img src="onlineimgs/emptycart.png">
+				<div id="kongde">
+					什么！购物车居然是空的
+				</div>
+				<div id="henmang">
+					再忙，也要记得买点东西犒赏自己
+				</div>
+				<a href="notfind.html">
+					<div id="qvguangguang">
+						去逛逛
+					</div>
+				</a>
+			</div>
+
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<style type="text/css">
+			.common_goods_movecontainer {
+				position: relative;
+				text-align: center;
+				transition-duration: 150ms;
+			}
+
+			.common_goods_shower {
+				width: 45vw;
+				height: 35vh;
+				background: white;
+				position: relative;
+				border-radius: 2vw;
+				overflow: hidden;
+				display: inline-block;
+				text-align: left;
+				box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.1);
+				margin: 1vw;
+				margin-top: 1vw;
+				margin-bottom: 0;
+			}
+
+			.common_goods_img {
+				display: block;
+				width: 100%;
+				height: 20vh;
+				background-image: url(onlineimgs/默认盒子.png);
+				background-size: 100%;
+				background-position-y: 30%;
+				background-position-x: center;
+			}
+
+			.common_goods_desbox {
+				width: 100%;
+				padding: 5%;
+			}
+
+			.common_goods_title {
+				display: block;
+				font-size: 3.5vw;
+				color: #000000;
+			}
+
+			.verygood_goods:after {
+				display: block;
+				width: 10vw;
+				font-size: 2vw;
+				padding-left: 2%;
+				padding-right: 2%;
+				border-radius: 5vw;
+				border-width: 1px;
+				border-color: #ff9646;
+				color: #ff9646;
+				border-style: solid;
+				content: "猫眼认证";
+				text-align: center;
+			}
+
+			.sellingwell_goods:after {
+				display: block;
+				width: 10vw;
+				font-size: 2vw;
+				padding-left: 2%;
+				padding-right: 2%;
+				border-radius: 5vw;
+				border-width: 1px;
+				border-color: #03c0d7;
+				color: #03c0d7;
+				border-style: solid;
+				content: "广受好评";
+				text-align: center;
+			}
+
+			.common_goods_price {
+				width: 100%;
+				position: absolute;
+				margin-bottom: 5%;
+				bottom: 0;
+				font-weight: 500;
+				display: block;
+				font-size: 5vw;
+				color: var(--theme_color_light_2);
+			}
+
+			.common_goods_price:after {
+				content: "999人付款";
+				font-size: 2vw;
+				color: #808080;
+				margin-left: 2%;
+			}
+
+			#youmaylike {
+				text-align: center;
+				color: var(--theme_color_dark_1);
+				background-image: -webkit-gradient(linear, 0 0, 0 bottom, from(var(--theme_color_dark_1)), to(var(--theme_color_light_1)));
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+				font-size: large;
+				margin-bottom: 2vh;
+				font-weight: 700;
+			}
+		</style>
+		<div id="youmaylike">------🔎你可能还喜欢------</div>
+		<div class="common_goods_movecontainer">
+
+			<a href="notfind.html">
+				<div class="common_goods_shower">
+					<div class="common_goods_img">
+					</div>
+					<div class="common_goods_desbox">
+						<div class="common_goods_title verygood_goods">
+							【完美填充用商品】超完美超灰度的全新正方体
+						</div>
+						<div class="common_goods_price">
+							$9999999
+						</div>
+					</div>
+				</div>
+			</a>
+			<a href="notfind.html">
+				<div class="common_goods_shower">
+					<div class="common_goods_img">
+					</div>
+					<div class="common_goods_desbox">
+						<div class="common_goods_title verygood_goods">
+							【完美填充用商品】超完美超灰度的全新正方体
+						</div>
+						<div class="common_goods_price">
+							$9999999
+						</div>
+					</div>
+				</div>
+			</a>
+
+
+
+			<a href="notfind.html">
+				<div class="common_goods_shower">
+					<div class="common_goods_img">
+					</div>
+					<div class="common_goods_desbox">
+						<div class="common_goods_title verygood_goods">
+							【完美填充用商品】超完美超灰度的全新正方体
+						</div>
+						<div class="common_goods_price">
+							$9999999
+						</div>
+					</div>
+				</div>
+			</a>
+			<a href="notfind.html">
+				<div class="common_goods_shower">
+					<div class="common_goods_img">
+					</div>
+					<div class="common_goods_desbox">
+						<div class="common_goods_title verygood_goods">
+							【完美填充用商品】超完美超灰度的全新正方体
+						</div>
+						<div class="common_goods_price">
+							$9999999
+						</div>
+					</div>
+				</div>
+			</a>
+
+
+
+
+
+			<a href="notfind.html">
+				<div class="common_goods_shower">
+					<div class="common_goods_img">
+					</div>
+					<div class="common_goods_desbox">
+						<div class="common_goods_title verygood_goods">
+							【完美填充用商品】超完美超灰度的全新正方体
+						</div>
+						<div class="common_goods_price">
+							$9999999
+						</div>
+					</div>
+				</div>
+			</a>
+			<a href="notfind.html">
+				<div class="common_goods_shower">
+					<div class="common_goods_img">
+					</div>
+					<div class="common_goods_desbox">
+						<div class="common_goods_title verygood_goods">
+							【完美填充用商品】超完美超灰度的全新正方体
+						</div>
+						<div class="common_goods_price">
+							$9999999
+						</div>
+					</div>
+				</div>
+			</a>
+
+
+
+
+
+			<a href="notfind.html">
+				<div class="common_goods_shower">
+					<div class="common_goods_img">
+					</div>
+					<div class="common_goods_desbox">
+						<div class="common_goods_title verygood_goods">
+							【完美填充用商品】超完美超灰度的全新正方体
+						</div>
+						<div class="common_goods_price">
+							$9999999
+						</div>
+					</div>
+				</div>
+			</a>
+			<a href="notfind.html">
+				<div class="common_goods_shower">
+					<div class="common_goods_img">
+					</div>
+					<div class="common_goods_desbox">
+						<div class="common_goods_title verygood_goods">
+							【完美填充用商品】超完美超灰度的全新正方体
+						</div>
+						<div class="common_goods_price">
+							$9999999
+						</div>
+					</div>
+				</div>
+			</a>
+
+
+		</div>
+	</body>
+</html>
