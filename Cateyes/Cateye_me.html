@@ -238,7 +238,7 @@
 				<p>splatoon2 amibo</p>
 			</div>
 			<style type="text/css">
-				#inventory {
+				.inventory {
 					margin-top: 5vh;
 				}
 
@@ -250,7 +250,7 @@
 					display: inline-block;
 				}
 			</style>
-			<div id="inventory">
+			<div class="inventory">
 				<p style="float: right;color: #A9A9A9;">管理</p>
 				<p>我的物品</p>
 				<hr>
@@ -263,6 +263,73 @@
 					<p>🥑</p>
 					<p>🍲</p>
 					<p>🌌</p>
+					<p>❄</p>
+					<p>💱</p>
+				</div>
+			</div>
+			
+			<style type="text/css">
+				#brand{
+					display: flex;
+					justify-content: space-between;
+					flex-wrap: wrap;
+				}
+				.brand_items{
+					width: 46.5vw;
+					margin-top: 0.5vh;
+					height: 6vh;
+					border-radius: 1vh;
+					line-height: 6vh;
+					text-align: center;
+					color: white;
+					text-shadow: 0px 0px 3px black;
+					font-size: large;
+				}
+				.black{
+					background: linear-gradient(135deg,rgb(0, 0, 0),rgb(142, 142, 142) 40%,rgb(0, 0, 0) 40%,rgb(123, 123, 123));
+				}
+				.orange{
+					background: linear-gradient(135deg,rgb(251, 186, 1),var(--theme_color_dark_1) 40%,rgb(244, 1, 1) 40%,var(--theme_color_dark_1));
+				}
+				.blue{
+					background: linear-gradient(135deg,rgb(67, 5, 255),rgb(1, 251, 239) 40%,rgb(255, 5, 174) 40%,rgb(251, 1, 1));
+				}
+				.red{
+					background: linear-gradient(135deg,rgb(255, 0, 0),rgb(251, 186, 1) 40%,rgb(255, 5, 174) 40%,rgb(251, 1, 1));
+				}
+				.red_normal{
+					background-color: #EF2626;
+				}
+				.gray_normal{
+					background-color: #D3D3D3;
+				}
+			</style>
+			<div class="inventory">
+				<p style="float: right;color: #A9A9A9;">管理</p>
+				<p>我的勋章</p>
+				<hr>
+				<div id="brand">
+					<div class="brand_items black" style="text-shadow: 0 0 6px #DAB86E;">
+						LV.10 猫眼会员
+					</div>
+					<div class="brand_items blue">
+						LV.5 社区贡献者
+					</div>
+					<div class="brand_items blue">
+						LV.4 塑料小人
+					</div>
+					<div class="brand_items red">
+						LV.4 卡面来打
+					</div>
+					<div class="brand_items red_normal">
+						LV.3 手办达人
+					</div>
+					<div class="brand_items gray_normal">
+						LV.3 诚信肥宅
+					</div>
+					<div class="brand_items gray_normal">
+						LV.1 技术控
+					</div>
 				</div>
 			</div>
 
