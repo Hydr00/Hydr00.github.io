@@ -368,6 +368,9 @@
 							<div class="swiper-slide">
 								<img class="recommanded_goods" id="recommanded_goods_4" src="onlineimgs/推送_奥德赛精酿.png">
 							</div>
+							<div class="swiper-slide">
+								<img class="recommanded_goods" id="recommanded_goods_5" src="onlineimgs/推送_miku.png">
+							</div>
 						</div>
 						<div class="swiper-pagination"></div>
 					</div>
@@ -425,6 +428,14 @@
 						background-image: url(onlineimgs/icons.png);
 						transform-origin: center;
 						transition-duration: 100ms;
+						filter: hue-rotate(0deg);
+						animation: 2s changehue linear infinite;
+					}
+					@keyframes changehue{
+						from{filter: hue-rotate(0deg);}
+						to{
+							filter: hue-rotate(360deg);
+						}
 					}
 
 					.functionicon:after {
