@@ -2,61 +2,61 @@
 <html>
 	<head>
 		<meta charset="utf-8" />
-		<title>认证</title>	
+		<title>Authentication</title>	
 <link rel="stylesheet" type="text/css" href="pagestyle.css"/>
 	</head>
 	<body>
-		<h1>认证</h1>
+		<h1>Authentication</h1>
 		<hr>
-		<p>认证(Authentication)</p>
-		<h2>身份认证</h2>
+		<p>Authentication</p>
+		<h2>Identity authentication</h2>
 		<hr>
-		<h3>定义</h3>
-		<p>	又称身份“验证”是指通过一定的手段，完成对用户身份的确认。身份验证的方法有很多，基本上可分为：基于共享密钥的身份验证、基于生物学特征的身份验证和基于公开密钥加密算法的身份验证。</p>
-		<p> 身份验证的目的是确认当前所声称为某种身份的用户，确实是所声称的用户。在日常生活中，身份验证并不罕见；比如，通过检查对方的证件，我们一般可以确信对方的身份。虽然日常生活中的这种确认对方身份的做法也属于广义的“身份验证”，但“身份验证”一词更多地被用在计算机、通信等领域</p>
-		<h3>方法</h3>
-		<p>身份验证的方法有很多，基本上可分为：基于共享密钥的身份验证、基于生物学特征的身份验证和基于公开密钥加密算法的身份验证。不同的身份验证方法，安全性也各有高低。</p>
-		<p>1.基于共享密钥</p>
-		<p>基于共享密钥的身份验证是指服务器端和用户共同拥有一个或一组密码。当用户需要进行身份验证时，用户通过输入或通过保管有密码的设备提交由用户和服务器共同拥有的密码。服务器在收到用户提交的密码后，检查用户所提交的密码是否与服务器端保存的密码一致，如果一致，就判断用户为合法用户。如果用户提交的密码与服务器端所保存的密码不一致时，则判定身份验证失败。</p>
-		<p>使用基于共享密钥的身份验证的服务有很多，如：绝大多数的网络接入服务、绝大多数的BBS以及维基百科等等。</p>
-		<p>2.基于生物学特征</p>
-		<p>基于生物学特征的身份验证是指基于每个人身体上独一无二的特征，如指纹、虹膜等。</p>
-		<p>例如Synaptics Natural ID指纹传感器解决方案，对指纹模板数据进行AES256位加密，对于在智能手机上快速部署生物识别身份验证技术，这种加密方法起到了关键作用。</p>
-		<p>3.基于公开密钥加密算法</p>
-		<p>基于公开密钥加密算法的身份验证是指通信中的双方分别持有公开密钥和私有密钥，由其中的一方采用私有密钥对特定数据进行加密，而对方采用公开密钥对数据进行解密，如果解密成功，就认为用户是合法用户，否则就认为是身份验证失败。</p>
-		<p>使用基于公开密钥加密算法的身份验证的服务有：SSL、数字签名等等。</p>
-		<h3>扫描方式</h3>
-		<p>1.事先知道身份验证进行扫描的系统</p>
-		<p>这可能包括所有Windows和基于Linux的系统，或者少数计算机部分（例如服务器或工作组）。此外，请务必考虑扫描Web应用、数据库以及允许或要求通过Telnet、FTP、SSH和SNMP等协议的身份验证的所有网络主机。很多商业漏洞扫描仪（例如Nexpose和LanGuard）提供了各种方法来进行扫描。如果你网络外部的黑客或者内部的恶意用户都开始使用身份验证扫描，那么你也需要这样做。/p>
-		<p>2.确定想要扫描何种用户角色水平</p>
-		<p>笔者建议至少使用管理员或根级登录凭证进行扫描；这样你将会发现大部分漏洞。然而，通过不同用户角色进行扫描（例如经理级别角色或基本用户角色），你可以更好地了解每个用户组可以看到和利用的资源。在一定程度上，你测试的用户角色越多，你得到的结果会越好（不过在某种情况下将会出现收效递减的规律）。当你看到你的结果不再根据权限而变化时，你会知道什么时候该适可而止。</p>
-		<p>3.为身份验证扫描设置用户账号</p>
-		<p>这样在首次登录时不会要求更改密码（这是Active Directory组策略和一些web应用的通用设置）。如果你忘记了这一点，你的扫描仪首次登录时将会提示你更改密码，当然这无法做到。你可能不知道这个情况，然后继续进行扫描。几分钟后（可能更长时间），你会意识到身份验证无法使用，你将需要重新开始进行扫描。通过web漏洞扫描仪，你可能需要创建一个登录宏以允许你测试。出于某种原因，大多数网络漏洞扫描仪不会提供选项以在你开始扫描前测试你的登录凭证。笔者所知道的唯一具有这种功能的两个扫描仪是老的Harris STAT扫描仪和Rapid7的Nexpose。这一点似乎是老生常谈，但从长期来看，这个功能可以为你节省大量时间和避免很多麻烦。</p>
-		<p>4.先确保对网络主机的身份验证漏洞扫描</p>
-		<p>这就是说，这可能会在生产环境产生问题，特别是当扫描web应用时。无论你在扫描什么，都会消耗CPU、磁盘和网络周期，日志文件和数据库可能会被填满，用户账号可能被锁定等。笔者建议首先在一个或两个系统上运行身份验证扫描，看看会带来什么副作用，再扩展到扫描成千上万个系统。</p>
-		<p>5.按照漏洞的排序方式来生成电子表格报告</p>
-		<p>在身份验证扫描期间发现的安全漏洞可能非常多，特别是当查看传统PDF报告中的结果时。笔者发现，按照漏洞的排序方式来生成HTML或电子表格报告是查看发现结果的最佳方法。当你整理漏洞结果时，你可以通过能够更简单更清楚地看清事物（例如每个漏洞所影响的主机或网页）而节省大量时间，并且可以更简单地生成最终报告或修复计划，而不是一次查看一台主机。</p>
-		<p>使用漏洞扫描仪来正确地执行漏洞扫描类似于使用数码单反相机拍摄照片。任何人都可以使用这个工具，但这并不意味着你知道如何有效地利用它，而且也不能保证取得积极的效果。</p>
-		<h2>消息认证</h2>
+		<h3>Definition</h3>
+		<p>	Also known as identity "authentication" refers to through certain means to complete the confirmation of the identity of the user. There are many methods of authentication, which can be divided into: authentication based on shared key, authentication based on biological characteristics and authentication based on public key encryption algorithm.</p>
+		<p> The purpose of authentication is to confirm that the user currently claimed to be an identity is indeed the claimed user. Authentication is not uncommon in daily life; for example, by checking the other person's identity, we can generally be sure of the other person's identity. Although this practice of identifying the other party in daily life also belongs to the broad sense of "authentication", the term "authentication" is more commonly used in the fields of computers, communications, and so on.</p>
+		<h3>Method</h3>
+		<p>There are many methods of authentication, which can be divided into: authentication based on shared key, authentication based on biological characteristics and authentication based on public key encryption algorithm. Different authentication methods, security also has its own high and low.</p>
+		<p>1.Based on shared key</p>
+		<p>Shared key-based authentication refers to the sharing of one or a set of passwords between the server and the user. When a user needs to authenticate, the user submits a password jointly owned by the user and the server by entering or through a device that holds the password. After receiving the password submitted by the user, the server checks whether the password submitted by the user is consistent with the password saved on the server side, and if so, determines that the user is a legitimate user. If the password submitted by the user does not match the password saved on the server side, authentication fails.</p>
+		<p>There are many services that use shared key-based authentication, such as the vast majority of network access services, the vast majority of BBS, Wikipedia and so on.</p>
+		<p>2.Based on biological characteristics</p>
+		<p>Authentication based on biological characteristics refers to the unique characteristics of each person, such as fingerprint, iris and so on.</p>
+		<p>For example, Synaptics Natural ID fingerprint sensor solution, AES256 bit encryption of fingerprint template data, plays a key role in the rapid deployment of biometric authentication technology on smartphones.</p>
+		<p>3.Encryption algorithm based on Public key</p>
+		<p>Authentication based on public key encryption algorithm means that both parties in communication hold public key and private key respectively, and one of them uses private key to encrypt specific data, while the other uses public key to decrypt the data. If decryption is successful, the user is considered a legitimate user, otherwise authentication fails.</p>
+		<p>Services that use authentication based on public key encryption algorithms are SSL, digital signatures, and so on.</p>
+		<h3>Scanning mode</h3>
+		<p>1.Know in advance the system in which authentication is scanned</p>
+		<p>This may include all Windows and Linux-based systems, or a small number of computer parts, such as servers or workgroups. In addition, it is important to consider scanning Web applications, databases, and all network hosts that allow or require authentication through protocols such as Telnet, FTP, SSH, and SNMP. Many commercial vulnerability scanners, such as Nexpose and LanGuard, provide a variety of ways to scan. If hackers outside your network or malicious users inside your network start using authentication scans, you need to do the same.</p>
+		<p>2.Determine what user role level you want to scan</p>
+		<p>The author recommends at least using administrator or root login credentials for scanning; you will find most of the vulnerabilities. However, by scanning different user roles (such as manager-level roles or basic user roles), you can better understand the resources that each user group can see and utilize. To some extent, the more user roles you test, the better the results will be (although in some cases there will be a pattern of diminishing results). When you see that your results no longer change according to permissions, you will know when to stop.</p>
+		<p>3.Set up a user account for authentication scanning</p>
+		<p>This does not require a password change on the first login (this is a common setting for Active Directory Group Policy and some web applications). If you forget this, your scanner will prompt you to change your password when you log in for the first time, which of course can't be done. You may not know this, and then continue with the scan. After a few minutes (perhaps longer), you will realize that authentication is not available and you will need to start scanning again. With the web vulnerability scanner, you may need to create a login macro to allow you to test. For some reason, most network vulnerability scanners do not offer the option to test your login credentials before you start scanning. The only two scanners I know that have this functionality are the old Harris STAT scanner and the Rapid7 Nexpose. This may seem like a clich é, but in the long run, this feature can save you a lot of time and trouble.</p>
+		<p>4.First ensure that authentication vulnerabilities are scanned for network hosts</p>
+		<p>That is to say, this can cause problems in the production environment, especially when scanning web applications. No matter what you are scanning, it will consume CPU, disk and network cycles, log files and databases may be filled, user accounts may be locked, and so on. The author recommends that you first run authentication scans on one or two systems to see what side effects will occur, and then expand to scan thousands of systems.</p>
+		<p>5.Generate spreadsheet reports by vulnerability sorting</p>
+		<p>Many security vulnerabilities can be found during authentication scans, especially when looking at the results in traditional PDF reports. The author found that generating HTML or spreadsheet reports by the way vulnerabilities are sorted is the best way to view the results of the findings. When you sort out vulnerability results, you can save a lot of time by being able to see things more easily and clearly, such as the host or web page affected by each vulnerability, and you can more easily generate a final report or repair plan. Instead of looking at one host at a time.</p>
+		<p>Using a vulnerability scanner to perform vulnerability scanning correctly is similar to using a digital SLR camera to take photos. Anyone can use this tool, but that doesn't mean you know how to use it effectively, and there's no guarantee of positive results.</p>
+		<h2>Message authentication</h2>
 		<hr>
-		<h3>定义</h3>
-		<p>消息认证是指通过对消息或者消息有关的信息进行加密或签名变换进行的认证，目的是为了防止传输和存储的消息被有意无意的篡改，包括消息内容认证（即消息完整性认证）、消息的源和宿认证（即身份认证0)、及消息的序号和操作时间认证等。它在票据防伪中具有重要应用（如税务的金税系统和银行的支付密码器）。</p>
-		<p>消息认证所用的摘要算法与一般的对称或非对称加密算法不同，它并不用于防止信息被窃取，而是用于证明原文的完整性和准确性，也就是说，消息认证主要用于防止信息被篡改。</p>
-		<h3>类型</h3>
-		<p>1.消息内容认证</p>
-		<p>消息内容认证常用的方法：消息发送者在消息中加入一个鉴别码（MAC、MDC等）并经加密后发送给接受者（有时只需加密鉴别码即可）。接受者利用约定的算法对解密后的消息进行鉴别运算，将得到的鉴别码与收到的鉴别码进行比较，若二者相等，则接收，否则拒绝接收。</p>
-		<p>2.源和宿的认证</p>
-		<p>在消息认证中，消息源和宿的常用认证方法有两种。</p>
-		<p>一种是通信双方事先约定发送消息的数据加密密匙，接收者只需要证实发送来的消息是否能用该密匙还原成明文就能鉴别发送者。如果双方使用同一个数据加密密匙，那么只需在消息中嵌入发送者识别符即可。</p>
-		<p>另一种是通信双方实现约定各自发送消息所使用的通行字，发送消息中含有此通行字并进行加密，接收者只需判别消息中解密的通行字是否等于约定的通行字就能鉴别发送者。为了安全起见，通行字应该是可变的。</p>
-		<p>3.消息序号和操作时间的认证</p>
-		<p>消息的序号和时间性的认证主要是阻止消息的重放攻击。常用的方法有消息的流水作业、链接认证符随机树认证和时间戳等。</p>
-		<h3>消息认证中常见的攻击和对策</h3>
-		<p>1.重放攻击：截获以前协议执行时传输的信息，然后在某个时候再次使用。对付这种攻击的一种措施是在认证消息中包含一个非重复值，如序列号、时戳、随机数或嵌入目标身份的标志符等。</p>
-		<p>2.冒充攻击：攻击者冒充合法用户发布虚假消息。为避免这种攻击可采用身份认证技术。</p>
-		<p>3.重组攻击：把以前协议执行时一次或多次传输的信息重新组合进行攻击。为了避免这类攻击，把协议运行中的所有消息都连接在一起。</p>
-		<p>4.篡改攻击：修改、删除、 [1]  添加或替换真实的消息。为避免这种攻击可采用消息认证码MAC或hash函数等技术。</p>
-		<script type="text/javascript" src="getindex.js"></script>
+		<h3>Definition</h3>
+		<p>Message authentication refers to authentication through encryption or signature transformation of messages or information related to messages, in order to prevent messages transmitted and stored from being intentionally or unintentionally tampered with. Including message content authentication (that is, message integrity authentication), message source and persistent authentication (that is, identity authentication 0), and message sequence number and operation time authentication and so on. It has important applications in bill anti-counterfeiting (such as tax gold tax system and bank payment cipher).</p>
+		<p>The digest algorithm used for message authentication is different from the general symmetric or asymmetric encryption algorithm. It is not used to prevent information from being stolen, but to prove the integrity and accuracy of the original text, that is to say, Message authentication is mainly used to prevent information from being tampered with.</p>
+		<h3>Type</h3>
+		<p>1.Message content authentication</p>
+		<p>A common method of message content authentication: the message sender adds an authentication code (MAC, MDC, etc.) to the message and sends it to the recipient (sometimes just an encrypted authentication code). The receiver uses the agreed algorithm to authenticate the decrypted message and compares the obtained authentication code with the received authentication code. If the two codes are equal, they are received, otherwise they are refused to receive.</p>
+		<p>2.Authentication of source and destination</p>
+		<p>In message authentication, there are two common authentication methods: message source and destination.</p>
+		<p>One is the data encryption key that the communication parties agree to send the message in advance. The receiver only needs to verify whether the sent message can be restored to plaintext with the key to identify the sender. If both parties use the same data encryption key, simply embed the sender identifier in the message.</p>
+		<p>The other is that the communication parties implement the agreement to send the message. The sending message contains the pass word and encrypts it. The receiver only needs to judge whether the decrypted pass word in the message is equal to the agreed pass word to identify the sender. To be on the safe side, passwords should be variable.</p>
+		<p>3.Authentication of message serial number and operation time</p>
+		<p>The serial number and temporal authentication of the message is mainly to prevent the replay attack of the message. Common methods include message pipelining, link authenticator random tree authentication, timestamp and so on.</p>
+		<h3>Common attacks and Countermeasures in message Authentication</h3>
+		<p>1.Replay attack: intercepts information transmitted during the execution of a previous protocol and then uses it again at some point. One way to deal with this attack is to include a non-repetitive value in the authentication message, such as a serial number, a timestamp, a random number, or an embedded target identity marker.</p>
+		<p>2.Impersonation attack: an attacker impersonates a legitimate user to publish false messages. Authentication techniques can be used to avoid such attacks.</p>
+		<p>3.Recombination attack: an attack that recombines information transmitted one or more times during the execution of a previous protocol. To avoid such attacks, all messages running the protocol are connected together.</p>
+		<p>4.Tampering attack: modify, delete, add or replace real messages. In order to avoid this attack, techniques such as message authentication code MAC or hash function can be used.</p>
+	<script type="text/javascript" src="getindex.js"></script>
 	</body>
 </html>
 

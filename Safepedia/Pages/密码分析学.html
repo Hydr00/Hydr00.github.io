@@ -9,56 +9,51 @@
 		
 		
 		
-		<h1>密码分析学</h1>
+		<h1>Cryptanalysis</h1>
 		<hr>
-		<p><b>密码分析学（Cryptanalysis）</b></p>
-		<h2>什么是密码分析学</h2>
+		<p><b>Cryptanalysis</b></p>
+		<h2>Definition</h2>
 		<hr>
-		<p>密码分析学是指研究密码、密文或密码系统（即秘密代码系统），着眼于找到其弱点，在不知道密钥和算法的情况下，从密文中得到原文的学科。这也被称作破解密码、密文或密码系统。破解有时可以与弱化胶体使用，它们通常指的是找到密码设计或执行上的弱点，以减少密钥的数量，以便进行暴力破解（简单的说，就是尝试每一个可能的密钥知道找到正确的那个）。例如，假设一个均衡的密码执行使用2^128位的密钥长度（2的128次幂）：这意味着暴力破解需要尝试2^128个可能的组合以确信找到正确的密钥（或者，平均有2^127个可能的组合），将密文转换成原委，这对于现在和未来的计算能力看起来都是不可能实现的。然而，密码分析学揭示了密码的加密技术，解出来原文只需要2^40次尝试。这对于现有的计算机资源来说，是很容易的。</p>
-		<p>虽然密码分析的目标在密码学的历史上从古至今都一样，实际使用的方法和技巧则随着密码学变得越来越复杂而日新月异。密码学算法和协议从古代只利用纸笔等工具，发展到第二次世界大战时的恩尼格玛密码机（又称谜，德语：Enigma），直到目前的基于电子计算机的方案。而密码分析也随之改变了。在上个世纪70年代中期，公钥密码学作为一个新兴的密码学分支发展起来了。而用来破解这些公钥系统的方法则和以住完全不同，通常需要解决精心构造出来的纯数学问题。其中最著名的就是大数的质因数分解。</p>
+		<p>Cryptanalysis refers to the study of cryptography, ciphertext or cryptographic system (that is, secret code system), focusing on finding its weakness, without knowing the key and algorithm, to get the original text from the ciphertext. This is also known as cracking passwords, ciphertext, or cryptographic systems. Cracking can sometimes be used with weakening colloids, which usually refer to finding weaknesses in password design or execution to reduce the number of keys in order to brutally crack (simply, Is to try every possible key to find the right one). For example, suppose an balanced password execution uses a key length of 2 ^ 128 bits (to the power of 2 to 128): this means that brute force cracking requires trying 2 ^ 128 possible combinations to be sure that the correct key is found (or, on average, 2 ^ 127 possible combinations). Converting ciphertext to the original seems impossible for both present and future computing power. However, cryptanalysis reveals the encryption of passwords, and it takes only 2 ^ 40 attempts to solve the original text. This is easy for existing computer resources.</p>
+		<p>Although the goal of cryptanalysis has been the same in the history of cryptography, the methods and techniques actually used are changing with each passing day as cryptography becomes more and more complex. Cryptography algorithms and protocols developed from ancient times using only pen and paper and other tools to the second World War Ennigma cryptography machine (also known as riddle, German: Enigma), until the current computer-based solutions. And cryptanalysis has changed. In the mid-1970s, public key cryptography developed as a new branch of cryptography. The methods used to crack these public key systems are completely different from those used to live in, and usually need to solve carefully constructed pure mathematical problems. The most famous of these is the prime factorization of large numbers.</p>
 
 
 
 
-		<h2>密码分析学的分类</h2>
+		<h2>Classification</h2>
 		<hr>
-		<p>在不知道关于密钥的任何信息这一情况下，利用各种技术手段，试图通过密文来得到明文或密钥的全部信息或部分信息。密码分析也称为对密码体制的攻击。</p>
-		<p>按照攻击者是否对通信作干扰，密码分析可分为被动攻击和主动攻击2类。所谓被动攻击是指，攻击者仅是利用截获的密文及公开的算法，分析明文或密钥，不对通信作干扰。所谓主动攻击是指，攻击者通过对通信线路进行干扰，如引入新的密文，重复传播旧的密文，替换合法密文等，再对截获的密文进行分析。</p>
-		<p>按照攻击者掌握的知识条件，密码分析可分为唯密文攻击、己知明文攻击、选择明文攻击和选择密文攻击4类。所谓唯密文攻击是指，攻击者只知道一个要攻击的密文(通常包含消息的上下文)。所谓己知明文攻击是指，攻击者知道一些明文/密文对，若一个密码系统能够抵抗这种攻击，合法的接收者就不需要销毁己解密的明文。所谓选择明文攻击是指，攻击者可以选择一些明文及对应的密文(公钥密码体制必需能够抵抗这种攻击)。所谓选择密文攻击是指，攻击者可以选择一些密文并得到相应的明文。</p>
+		<p>Without knowing any information about the key, a variety of technical means are used to obtain all or part of the information of the plaintext or key through ciphertext. Cryptanalysis is also known as an attack on cryptosystem.</p>
+		<p>According to whether the attacker interferes with communication or not, cryptanalysis can be divided into two types: passive attack and active attack. The so-called passive attack means that the attacker only uses the intercepted ciphertext and public algorithm to analyze the plaintext or key and interfere with the communication. The so-called active attack refers to the attacker through the interference of the communication line, such as the introduction of new ciphertext, repeated transmission of the old ciphertext, replacement of legitimate ciphertext, and then analyze the intercepted ciphertext.</p>
+		<p>According to the knowledge conditions of the attacker, cryptanalysis can be divided into four types: ciphertext only attack, known plaintext attack, selective plaintext attack and selective ciphertext attack. A ciphertext-only attack means that an attacker knows only one ciphertext to attack (usually containing the context of the message). The so-called known plaintext attack means that the attacker knows some plaintext / ciphertext pairs. If a cryptographic system can resist this attack, the legitimate receiver does not need to destroy the decrypted plaintext. The so-called selective plaintext attack means that the attacker can choose some plaintext and the corresponding ciphertext (the public key cryptosystem must be able to resist this attack). The so-called selective ciphertext attack means that the attacker can select some ciphertext and get the corresponding plaintext.</p>
 
 
 
 
-		<h2>密码分析学的发展</h2>
+		<h2>Development</h2>
 		<hr>
-		<p>密码分析和密码学是共同演化的。这从密码学史中可以看得很明显。总是有新的密码机被设计出来并取代已经被破解的设计，同时也总是有新的密码分析方法被发明出来以破解那些改进了的方案。事实上，密码和密码分析是同一枚硬币的正反两面：为了创建安全的密码，就必须考虑到可能的密码分析。</p>
-		<p><b>经典密码分析</b></p>
-		<p>尽管密码分析这个词是晚近出现的（1920年由William Friedman确立），但破解密码和密码机的方法却已经存在很久了。世界上最早的破解密码方法的文字记录可以追溯到九世纪阿拉伯通才Al Kindi所著《破解密码信息》（A
-			Manuscript on Deciphering Cryptographic Messages），这篇文章论述了一个频率分析的方法。</p>
-		<p>频率分析是破解经典密码的一个基本方法。在自然语言里，字母表里的有些字母比其它的字母出现得更频繁。例如，在英语里，字母E很有可能是在任何文字样本里出现频率都最高的字母。同样的，TH这两个字母连起来是最有可能出现的字母对。频率分析法假设密码没有隐藏这样的统计信息。例如，在简单的替换密码中，每个字母只是简单地被替换成另一个字母，那么在密文中出现频率最高的字母就最有可能是E。</p>
-		<p>频率分析法除了需要用到统计学外，也需要用到语言学。但随着密码算法的日渐复杂，密码分析也渐渐变得主要依赖数学方法。这个改变在第二次世界大战时最为明显。那时，为了破解轴心国的密码，需要发展更加复杂的数学方法。而且，自动计算也头一次被应用到密码分析中，如密码炸弹（Bomba）以及最早的计算机之一，巨人计算机（Colossus）。</p>
-		<p><b>现代密码分析</b></p>
-		<p>尽管第二次世界大战时计算机的运用使得密码分析更加容易，这同时也使得新的密码学方案的复杂程度上升了好几个数量级。总体来说，破解密码在现代比起只用纸和笔的年代来说要困难得多了。现在看来，似乎密码学对纯密码分析来说已经占了上风。美国历史学家卡恩（David
-			Kahn）这样说道：“今天，由数百个商家提供的很多密码系统都不能被已知的密码分析方法来破解。确实，在这样的密码系统中，即使用选择明文攻击，也就是攻击者可以选择明文并比对相应的密文，也不能找出可以用来解开其它加密信息的钥匙。从某种意义上来说，密码分析已经死了。但是，故事还没有结束。密码分析也许是死了，但是，打个不恰当的比方，其实条条大道通罗马。”（2002年11月1日在美国国家安全局50周年纪念会上的讲话）。卡恩接着又提到，其它的攻击方式的可能性增加了。例如拦截攻击，窃听，边信道攻击，以及用量子计算机来代替传统计算机做密码分析。</p>
-		<p>卡恩对于密码分析所作的论断也许还为时过早。不安全的密码并没有绝迹，美国国家情报机构的密码分析方法也没有公开过。在学术界，新的密码在不断地被设计出来，也经常地被破解。1984年，Madryga
-			分组密码被一种唯密文攻击破解。1998年，原本提出来要取代DES标准加密算法的分组密码
-			FEAL-4，也因为被学术界发现了很多类似而且实际可行的攻击而消亡。在工业界，很多密码也被发现有漏洞。例如，在手机中使用的A5/1，A5/2以及CMEA算法，用一般的计算工具可以在几小时，几分钟内，甚至是实时地被破解。2001年，用来保护无线Wi-Fi网络的有线等效加密协议（或称无线加密协议，即WEP）也可以用相关钥匙攻击来破解。</p>
-		<p><b>密码分析的后果</b></p>
-		<p>无疑，成功的密码分析影响了历史的进程。能够看懂别人本以为是秘密的想法或计划，这种能力可以成为决定性的优势。在战争期间尤其如此。例如，在第一次世界大战中，成功地破解齐默尔曼电报是促使美国参战的直接原因。在第二次世界大战中，对德国密码的成功破解，包括恩尼格玛密码机（Enigma）和洛仑兹密码机（Lorenz
-			Cipher），其后果从使欧洲战场早几个月结束，到对整个战争起决定性作用，各种说法都有（参见ULTRA）。美国也从对日本的PURPLE密码的密码分析中受益（参见MAGIC）。</p>
-		<p>一些国家的政府很早就已经意识到了密码分析对于情报收集的重要性，不管是对于军事还是外交都一样。这些国家还建立了专门破解密码的机构，如英国政府通讯总部（GCHQ），以及美国国家安全局（NSA）。这些机构在当今都非常活跃。2004年，有报道说美国成功破解了伊朗的密码。但这是纯粹的密码分析还是有其它因素，目前还不清楚。</p>
+		<p>Cryptanalysis and cryptography are co-evolved. This can be seen from the history of cryptography. New cryptographic machines are always designed to replace designs that have been cracked, and new cryptanalysis methods are always invented to crack improved solutions. In fact, cryptography and cryptanalysis are the pros and cons of the same coin: in order to create a secure password, possible cryptanalysis must be taken into account.</p>
+		<p><b>Classical cryptanalysis</b></p>
+		<p>Although the word cryptanalysis was coined by William Friedman in 1920, the way to crack passwords and ciphers has been around for a long time. The written record of the earliest password cracking method in the world can be traced back to the ninth century Arab generalist Al Kindi's "cracking password Information" (A Manuscript on Deciphering Cryptographic Messages), which discusses a method of frequency analysis.</p>
+		<p>Frequency analysis is a basic method to crack classical passwords. In natural language, some letters in the alphabet appear more frequently than others. For example, in English, the letter E is probably the letter that appears most frequently in any sample of text. Similarly, the combination of the letters TH is the most likely pair of letters. Frequency analysis assumes that passwords do not hide such statistics. For example, in a simple replacement password, where each letter is simply replaced with another letter, the letter that appears most frequently in the ciphertext is most likely to be E.</p>
+		<p>Frequency analysis not only needs to use statistics, but also needs to use linguistics. However, with the increasing complexity of cryptographic algorithms, cryptanalysis has gradually become mainly dependent on mathematical methods. This change was most evident during World War II. At that time, in order to crack the password of the Axis Power, more complex mathematical methods needed to be developed. Moreover, automatic computing has been applied to cryptanalysis for the first time, such as the password bomb (Bomba) and one of the earliest computers, the giant computer (Colossus).</p>
+		<p><b>Modern cryptanalysis</b></p>
+		<p>Although the use of computers during World War II made cryptanalysis easier, it also increased the complexity of the new cryptography scheme by several orders of magnitude. In general, cracking passwords is much more difficult in modern times than it was in the age of paper and pen. It now seems that cryptography has gained the upper hand over pure cryptanalysis. American historian David Kahn said: "Today, many cryptographic systems provided by hundreds of merchants cannot be cracked by known methods of cryptanalysis. Indeed, in such a cryptosystem, even if the attack is attacked with selected plaintext, that is, the attacker can select the plaintext and compare the corresponding ciphertext, he cannot find the key that can be used to unlock other encrypted information. In a sense, cryptanalysis is dead. But the story is not over yet. Cryptanalysis may be dead, but, for example, all roads lead to Rome. " (speech at the 50th Anniversary of the National Security Agency on 1 November 2002). Mr Strauss-Kahn went on to say that other forms of attack were more likely. Examples include intercepting attacks, eavesdropping, side channel attacks, and using quantum computers instead of traditional computers for cryptanalysis.</p>
+		<p>Mr Strauss-Kahn's judgment on cryptanalysis may be too early. Unsafe passwords are not extinct, and the methods of cryptanalysis by the National Intelligence Agency have not been made public. In academia, new passwords are constantly being designed and often cracked. In 1984, Madryga block cipher was cracked by a ciphertext-only attack. In 1998, the block cipher FEAL-4, which was originally proposed to replace the DES standard encryption algorithm, also died out because of a lot of similar and feasible attacks discovered by the academic circles. In industry, many passwords have also been found to have vulnerabilities. For example, the A5, A5, and CMEA algorithms used in mobile phones can be cracked in hours, minutes, or even in real time with general computing tools. In 2001, the Wired equivalent encryption Protocol (or Wireless encryption Protocol, or WEP), which is used to protect wireless Wi-Fi networks, can also be cracked with related key attacks.</p>
+		<p><b>Consequences of cryptanalysis</b></p>
+		<p>There is no doubt that successful cryptanalysis has affected the course of history. The ability to understand what others think is a secret idea or plan can be a decisive advantage. This is especially true during the war. For example, in World War I, the successful deciphering of the Zimmerman Telegraph was the direct cause of the United States' participation in the war. In World War II, the successful cracking of German passwords, including the Enigma and Lorentz ciphers, ranged from bringing the European battlefield to an end a few months earlier to playing a decisive role in the war as a whole. There are various statements (see ULTRA). The United States also benefits from cryptanalysis of PURPLE passwords in Japan (see MAGIC).</p>
+		<p>Some governments have long recognized the importance of cryptanalysis for intelligence gathering, both militarily and diplomatically. These countries have also set up institutions that specialize in password cracking, such as (GCHQ), the UK government communications headquarters, and (NSA), the US national security agency. These institutions are very active today. In 2004, it was reported that the United States had successfully cracked the Iranian code. But it is not clear whether this is pure cryptanalysis or whether there are other factors.</p>
 
 
 
 
-		<h2>密码分析学的分析类型</h2>
+		<h2>Analytical types of cryptanalysis</h2>
 		<hr>
-		<p>1、强力攻击</p>
-		<p>强力攻击包括查表攻击，时间-存储权衡攻击，字典攻击以及穷举搜索攻击。对于任何一种分组密码来说，强力攻击都是适用的。特别地，这种攻击方法的复杂度仅仅取决于密钥和分组的长度。更严格地讲，这种攻击技术的时间复杂度只取决于分组密码算法的效率，如存储大小，密钥扩展速度，加密和解密的速度等。</p>
-		<p>2、线性密码分析</p>
-		<p>作为一种己知明文攻击方法，线性密码分析方法叫的本质思想在于，通过将一个给定的密码算法有效且线性近似地表示出来以实现破译。现有密码分析技术也得到了一定的推广。目前，利用己知明文，16轮DES系统己可以通过线性密码分析进行破译，在某些情况下甚至可以实现唯密文攻击。针对数据加密标准DES系统的主要攻击包括强力攻击手段，差分密码分析等。就16轮DES密码系统而言，不管是差分密码分析还是线性密码分析方法，需要用到的明文太多，因此效率比较低。为了提高攻击效率，可以结合差分密码分析和线性密码分析技术，即差分-线性密码分析技术。</p>
-		<p>3、差分密码分析</p>
-		<p>1990年，以色列密码学家Biham和Shamir提出了差分密码分析技术。差分密码分析特别适用于迭代密码。差分密码分析的本质思想在于，通过分析相应明文对差值和密文对差值之间的相互影响关系，来得到密钥的一些比特信息。对于差分密码分析也有很多推广，其中比较常见的包括高阶差分密码分析等。</p>
+		<p>1、Brute force attack</p>
+		<p>Brute force attacks include table lookup attacks, time-storage tradeoff attacks, dictionary attacks, and exhaustive search attacks. For any kind of block cipher, brute force attack is applicable. In particular, the complexity of this attack method depends only on the length of the key and packet. More strictly speaking, the time complexity of this attack technique only depends on the efficiency of the block cipher algorithm, such as storage size, key expansion speed, encryption and decryption speed and so on.</p>
+		<p>2、Linear cryptanalysis</p>
+		<p>As a known plaintext attack method, the essential idea of linear cryptanalysis method is to decipher it by expressing a given cryptographic algorithm effectively and linearly. The existing cryptographic analysis technology has also been popularized to some extent. At present, using known plaintext, 16-round DES systems can be deciphered by linear cryptanalysis, and in some cases can even implement ciphertext-only attacks. The main attacks against the data encryption standard DES system include brute force attack, differential cryptanalysis and so on. As far as the 16-round DES cryptosystem is concerned, whether it is differential cryptanalysis or linear cryptanalysis, too much plaintext is needed, so the efficiency is low. In order to improve the attack efficiency, differential cryptanalysis and linear cryptanalysis can be combined.</p>
+		<p>3、Differential cryptanalysis</p>
+		<p>In 1990, Israeli cryptographers Biham and Shamir proposed differential cryptanalysis. Differential cryptanalysis is particularly suitable for iterative cryptography. The essential idea of differential cryptanalysis is to obtain some bit information of the key by analyzing the relationship between the difference of the corresponding plaintext and the difference of the ciphertext. There are also a lot of generalizations for differential cryptanalysis, among which the more common ones include high-order differential cryptanalysis and so on.</p>
 		
 		
 		<script type="text/javascript" src="getindex.js"></script>
