@@ -1006,14 +1006,20 @@
 	var flag = 1;
 	document.getElementById("cateye_top_dec").addEventListener("click", move);
 
-	function move() {
-		console.log("触发")
-		if (flag) {
-			document.getElementById("mainshower_movecontainer").style.cssText = 'left:-100vw';
-			flag = 0;
-		} else {
-			document.getElementById("mainshower_movecontainer").style.cssText = 'left:0vw';
-			flag = 1;
-		}
+	// function move() {
+	// 	console.log("触发")
+	// 	if (flag) {
+	// 		document.getElementById("mainshower_movecontainer").style.cssText = 'left:-100vw';
+	// 		flag = 0;
+	// 	} else {
+	// 		document.getElementById("mainshower_movecontainer").style.cssText = 'left:0vw';
+	// 		flag = 1;
+	// 	}
+	// }
+	
+	if(window.localStorage){
+	 alert('This browser supports localStorage');
+	}else{
+	 alert('This browser does NOT support localStorage');
 	}
 </script>
