@@ -13,7 +13,12 @@
 				font: 12px Helvetica Neue, Helvetica, Arial, Microsoft Yahei, Hiragino Sans GB, Heiti SC, WenQuanYi Micro Hei, sans-serif;
 			}
 
-			a:active {}
+			a,
+			a:visited,
+			a:hover,
+			a:focus {
+				text-decoration: none;
+			}
 
 			#cateye_top_dec {
 				height: 6vh;
@@ -346,10 +351,8 @@
 
 
 		<!-- =======================================第一页内容=========================================== -->
-		<!-- <div class="infooverallaontainer" style="width: 100vw;height: 200vh;position:relative;overflow-x: hidden;"> -->
 		<div class="infooverallaontainer">
 			<!-- 注意内置样式表，上是窗口，下是移动容器 -->
-			<!-- <div id="mainshower_movecontainer"> -->
 			<div class="mainshower">
 				<div id="recommanded">
 					<div id="recommanded_stylediv">
@@ -431,15 +434,19 @@
 						filter: hue-rotate(0deg);
 						animation: 2s changehue linear infinite;
 					}
-					@keyframes changehue{
-						from{filter: hue-rotate(0deg);}
-						to{
+
+					@keyframes changehue {
+						from {
+							filter: hue-rotate(0deg);
+						}
+
+						to {
 							filter: hue-rotate(360deg);
 						}
 					}
 
 					.functionicon:after {
-						content: "快乐功能";
+						/* content: "快乐功能"; */
 						display: block;
 						width: 130%;
 						font-size: 3.3vw;
@@ -457,20 +464,60 @@
 						background-position: 0px -50px;
 						order: 1;
 					}
+					#function1:after{
+						content: "心愿单";
+					}
 
 					#function2 {
 						background-position: 0px -100px;
 						order: 2;
+					}
+					#function2:after{
+						content: "猫眼潮流";
 					}
 
 					#function3 {
 						background-position: 0px -150px;
 						order: 3;
 					}
+					#function3:after{
+						content: "猫眼优选";
+					}
 
 					#function4 {
 						background-position: 0px -200px;
 						order: 4;
+					}
+					#function4:after{
+						content: "剁手好货";
+					}
+					#function5 {
+						background-position: 0px -300px;
+						order: 1;
+					}
+					#function5:after{
+						content: "我的标记";
+					}
+					#function6 {
+						background-position: 0px -350px;
+						order: 2;
+					}
+					#function6:after{
+						content: "赚猫眼币";
+					}
+					#function7 {
+						background-position: 0px -250px;
+						order: 3;
+					}
+					#function7:after{
+						content: "猫眼观测";
+					}
+					#function8 {
+						background-position: 0px 0px;
+						order: 4;
+					}
+					#function8:after{
+						content: "猫眼祭典";
 					}
 				</style>
 
@@ -489,16 +536,16 @@
 					</div>
 				</div>
 				<div class="main_functions_showcase">
-					<div id="function1" class="functionicon">
+					<div id="function5" class="functionicon">
 
 					</div>
-					<div id="function2" class="functionicon">
+					<div id="function6" class="functionicon">
 
 					</div>
-					<div id="function3" class="functionicon">
+					<div id="function7" class="functionicon">
 
 					</div>
-					<div id="function4" class="functionicon">
+					<div id="function8" class="functionicon">
 
 					</div>
 				</div>
@@ -536,8 +583,9 @@
 					}
 
 					.common_goods_desbox {
-						width: 100%;
-						padding: 5%;
+						width: 94%;
+						padding: 3%;
+						padding-top: 5%;
 					}
 
 					.common_goods_title {
@@ -585,6 +633,9 @@
 						display: block;
 						font-size: 5vw;
 						color: var(--theme_color_light_2);
+					}
+					.common_goods_price:before{
+						content: "￥";
 					}
 
 					.common_goods_price:after {
@@ -680,7 +731,7 @@
 									万代假面骑士Build腰带 DX驱动器兔子坦克
 								</div>
 								<div class="common_goods_price">
-									$458
+									458
 								</div>
 							</div>
 						</div>
@@ -695,7 +746,7 @@
 									F:NEX 初音未来 Magical Mirai 2019Ver.
 								</div>
 								<div class="common_goods_price">
-									$998
+									998
 								</div>
 							</div>
 						</div>
@@ -709,7 +760,7 @@
 									【完美填充用商品】超完美超灰度的全新正方体
 								</div>
 								<div class="common_goods_price">
-									$9999999
+									9999999
 								</div>
 							</div>
 						</div>
@@ -723,7 +774,7 @@
 									【完美填充用商品】超完美超灰度的全新正方体
 								</div>
 								<div class="common_goods_price">
-									$9999999
+									9999999
 								</div>
 							</div>
 						</div>
@@ -736,7 +787,7 @@
 								【完美填充用商品】超完美超灰度的全新正方体
 							</div>
 							<div class="common_goods_price">
-								$9999999
+								9999999
 							</div>
 						</div>
 					</div>
@@ -748,7 +799,7 @@
 								【完美填充用商品】超完美超灰度的全新正方体
 							</div>
 							<div class="common_goods_price">
-								$9999999
+								9999999
 							</div>
 						</div>
 					</div>
@@ -760,7 +811,7 @@
 								【完美填充用商品】超完美超灰度的全新正方体
 							</div>
 							<div class="common_goods_price">
-								$9999999
+								9999999
 							</div>
 						</div>
 					</div>
@@ -772,7 +823,7 @@
 								【完美填充用商品】超完美超灰度的全新正方体
 							</div>
 							<div class="common_goods_price">
-								$9999999
+								9999999
 							</div>
 						</div>
 					</div>
@@ -784,7 +835,7 @@
 								【完美填充用商品】超完美超灰度的全新正方体
 							</div>
 							<div class="common_goods_price">
-								$9999999
+								9999999
 							</div>
 						</div>
 					</div>
@@ -796,189 +847,13 @@
 								【完美填充用商品】超完美超灰度的全新正方体
 							</div>
 							<div class="common_goods_price">
-								$9999999
+								9999999
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 			<!-- =======================================第二页内容=========================================== -->
-			<!-- 				<div class="mainshower">
-					<div class="common_shower" style="margin-top: 0;">
-
-
-						<a href="notfind.html">
-							<div class="common_goods_shower">
-								<div class="common_goods_img">
-								</div>
-								<div class="common_goods_desbox">
-									<div class="common_goods_title verygood_goods">
-										【完美填充用商品】超完美超灰度的全新正方体
-									</div>
-									<div class="common_goods_price">
-										$9999999
-									</div>
-								</div>
-							</div>
-						</a>
-
-						<a href="Cateye_goods.html">
-							<div class="common_goods_shower">
-								<div class="common_goods_img">
-								</div>
-								<div class="common_goods_desbox">
-									<div class="common_goods_title sellingwell_goods">
-										【完美填充用商品】超完美超灰度的全新正方体
-									</div>
-									<div class="common_goods_price">
-										$9999999
-									</div>
-								</div>
-							</div>
-						</a>
-						<a href="notfind.html">
-							<div class="common_goods_shower">
-								<div class="common_goods_img">
-								</div>
-								<div class="common_goods_desbox">
-									<div class="common_goods_title verygood_goods">
-										【完美填充用商品】超完美超灰度的全新正方体
-									</div>
-									<div class="common_goods_price">
-										$9999999
-									</div>
-								</div>
-							</div>
-						</a>
-
-						<a href="Cateye_goods.html">
-							<div class="common_goods_shower">
-								<div class="common_goods_img">
-								</div>
-								<div class="common_goods_desbox">
-									<div class="common_goods_title sellingwell_goods">
-										【完美填充用商品】超完美超灰度的全新正方体
-									</div>
-									<div class="common_goods_price">
-										$9999999
-									</div>
-								</div>
-							</div>
-						</a>
-						<a href="notfind.html">
-							<div class="common_goods_shower">
-								<div class="common_goods_img">
-								</div>
-								<div class="common_goods_desbox">
-									<div class="common_goods_title verygood_goods">
-										【完美填充用商品】超完美超灰度的全新正方体
-									</div>
-									<div class="common_goods_price">
-										$9999999
-									</div>
-								</div>
-							</div>
-						</a>
-
-						<a href="Cateye_goods.html">
-							<div class="common_goods_shower">
-								<div class="common_goods_img">
-								</div>
-								<div class="common_goods_desbox">
-									<div class="common_goods_title sellingwell_goods">
-										【完美填充用商品】超完美超灰度的全新正方体
-									</div>
-									<div class="common_goods_price">
-										$9999999
-									</div>
-								</div>
-							</div>
-						</a>
-						<a href="notfind.html">
-							<div class="common_goods_shower">
-								<div class="common_goods_img">
-								</div>
-								<div class="common_goods_desbox">
-									<div class="common_goods_title verygood_goods">
-										【完美填充用商品】超完美超灰度的全新正方体
-									</div>
-									<div class="common_goods_price">
-										$9999999
-									</div>
-								</div>
-							</div>
-						</a>
-						
-						<a href="Cateye_goods.html">
-							<div class="common_goods_shower">
-								<div class="common_goods_img">
-								</div>
-								<div class="common_goods_desbox">
-									<div class="common_goods_title sellingwell_goods">
-										【完美填充用商品】超完美超灰度的全新正方体
-									</div>
-									<div class="common_goods_price">
-										$9999999
-									</div>
-								</div>
-							</div>
-						</a>
-						<a href="notfind.html">
-							<div class="common_goods_shower">
-								<div class="common_goods_img">
-								</div>
-								<div class="common_goods_desbox">
-									<div class="common_goods_title verygood_goods">
-										【完美填充用商品】超完美超灰度的全新正方体
-									</div>
-									<div class="common_goods_price">
-										$9999999
-									</div>
-								</div>
-							</div>
-						</a>
-						
-						<a href="Cateye_goods.html">
-							<div class="common_goods_shower">
-								<div class="common_goods_img">
-								</div>
-								<div class="common_goods_desbox">
-									<div class="common_goods_title sellingwell_goods">
-										【完美填充用商品】超完美超灰度的全新正方体
-									</div>
-									<div class="common_goods_price">
-										$9999999
-									</div>
-								</div>
-							</div>
-						</a>
-						<div class="common_goods_shower">
-							<div class="common_goods_img">
-							</div>
-							<div class="common_goods_desbox">
-								<div class="common_goods_title">
-									【完美填充用商品】超完美超灰度的全新正方体
-								</div>
-								<div class="common_goods_price">
-									$9999999
-								</div>
-							</div>
-						</div>
-						<div class="common_goods_shower">
-							<div class="common_goods_img">
-							</div>
-							<div class="common_goods_desbox">
-								<div class="common_goods_title">
-									【完美填充用商品】超完美超灰度的全新正方体
-								</div>
-								<div class="common_goods_price">
-									$9999999
-								</div>
-							</div>
-						</div>
-					</div>
-				</div> -->
-			<!-- </div> -->
 
 
 
@@ -1016,10 +891,10 @@
 	// 		flag = 1;
 	// 	}
 	// }
-	
-	if(window.localStorage){
-	 alert('This browser supports localStorage');
-	}else{
-	 alert('This browser does NOT support localStorage');
-	}
+
+	// if (window.localStorage) {
+	// 	alert('This browser supports localStorage');
+	// } else {
+	// 	alert('This browser does NOT support localStorage');
+	// }
 </script>
