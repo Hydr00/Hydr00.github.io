@@ -100,12 +100,17 @@
 
 			#nav_list_container {
 				height: 67.5vh;
-				overflow: auto;
+				overflow-y: auto;
+				overflow-x: 
 			}
 
 			ol {
 				list-style: none;
 				counter-reset: a;
+				padding-right: 5px;
+			}
+			li{
+				word-break: break-word;
 			}
 
 			li:before {
@@ -146,52 +151,65 @@
 					<div id="nav_list_container">
 						<ol>
 							<a href="welcome.html" target="rightiframe">
-								<li>首页</li>
+								<li>Welcome</li>
 							</a>
-							<a href="Pages/黑客.html" target="rightiframe">
-								<li>黑客</li>
+							<a href="Pages/Hacker.html" target="rightiframe">
+								<li>Hacker</li>
 							</a>
 							<li>恶意代码与病毒
 								<ol>
-									<a href="Pages/恶意代码.html" target="rightiframe">
-										<li>恶意代码</li>
+									<a href="Pages/Malicious Code.html" target="rightiframe">
+										<li>Malicious Code</li>
 									</a>
-									<a href="Pages/病毒.html" target="rightiframe">
-										<li>病毒</li>
+									<a href="Pages/Computer Virus.html" target="rightiframe">
+										<li>Computer Virus
+											<ol>
+												<a href="pages/Worm.WhBoy.cw.html" target="rightiframe">
+													<li>Worm.WhBoy.cw</li>
+												</a>
+												<a href="pages/Iloveyou.html"target="rightiframe">
+													<li>I Love You</li>
+												</a>
+											</ol>
+
+										</li>
 									</a>
 							</li>
 						</ol>
 						</li>
 						<li>密码
 							<ol>
-								<a href="Pages/密码分析学.html" target="rightiframe">
-									<li>密码分析学</li>
+								<a href="Pages/Cryptanalysis.html" target="rightiframe">
+									<li>Cryptanalysis</li>
 								</a>
-								<a href="Pages/密码疲劳.html" target="rightiframe">
-									<li>密码疲劳</li>
+								<a href="Pages/Password Fatigue.html" target="rightiframe">
+									<li>Password Fatigue</li>
 								</a>
 							</ol>
 						</li>
-						<a href="Pages/认证.html" target="rightiframe">
-							<li>认证</li>
+						<a href="Pages/Authentication.html" target="rightiframe">
+							<li>Authentication</li>
 						</a>
-						<a href="Pages/防火墙.html" target="rightiframe">
-							<li>防火墙</li>
+						<a href="Pages/Firewall.html" target="rightiframe">
+							<li>Firewall</li>
 						</a>
-						<li><a href="Pages/社会工程学.html" target="rightiframe">社会工程学</a>
+						<li><a href="Pages/Social Engineering.html" target="rightiframe">Social Engineering</a>
 							<ol>
-								<a href="Pages/社会工程攻击.html" target="rightiframe">
-									<li>社会工程攻击</li>
+								<a href="Pages/Social Engineering Attack.html" target="rightiframe">
+									<li>Social Engineering Attack</li>
 								</a>
 							</ol>
 						</li>
-						
-						
-						<a href="Pages/灾备.html" target="rightiframe">
-							<li>灾备</li>
+
+
+						<a href="Pages/Disaster Recovery.html" target="rightiframe">
+							<li>Disaster Recovery</li>
+						</a>
+						<a href="Pages/Safety economics.html" target="rightiframe">
+							<li>Safety economics</li>
 						</a>
 						<a href="Pages/MOOC.html" target="rightiframe">
-							<li>慕课课程</li>
+							<li>MOOC(Chinese)</li>
 						</a>
 						</ol>
 					</div>
@@ -289,7 +307,7 @@
 				</div>
 
 				<div id="iframediv">
-					
+
 				</div>
 
 			</div>
