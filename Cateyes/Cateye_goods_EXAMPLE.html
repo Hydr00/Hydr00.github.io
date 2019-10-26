@@ -290,17 +290,19 @@
 
 
 		<style type="text/css">
-			#goods_shop_info table{
+			#goods_shop_info table {
 				width: 100%;
 			}
 
 			tr:nth-child(odd) {
-				background: rgba(0,0,0,0.1);
+				background: rgba(0, 0, 0, 0.1);
 			}
-			th:nth-child(1){
+
+			th:nth-child(1) {
 				font-weight: 700;
 			}
-			tr{
+
+			tr {
 				height: 5vh;
 			}
 		</style>
@@ -326,7 +328,7 @@
 		</div>
 
 
-<link rel="stylesheet" type="text/css" href="GoodsBelowCardCSS.css"/>
+		<link rel="stylesheet" type="text/css" href="GoodsBelowCardCSS.css" />
 
 		<div id="belowcard">
 			<div id="belowcard_others">
@@ -345,9 +347,154 @@
 				<div id="buyit">立即购买</div>
 			</div>
 		</div>
+		<div id="buyboxbackground">
+		</div>
+		<div id="buybox">
+			<div id="buyboxoverall">
+				<div id="closeX">
+					✖
+				</div>
+				<div id="buygoodinfobox">
+					<img src="goodsimgs/宝箱/宝箱.jpg" style="height: 100%;border-radius: 10px;"> </img>
+					<div style="display: inline-block;height: 100%;margin:2%;">
+						<p style="font-size: larger">【购买示例】黄金盒子谜之黄金盒子示例用</p>
+						<p style="font-size: small;color: #A9A9A9;">剩余9999件</p>
+						<p style="font-size: x-large;color: var(--theme_color_dark_1);">￥400</p>
+					</div>
+				</div>
+				<div style="text-align: center;height: 40vh;color: #A9A9A9;line-height: 37vh;">
+					此商品么有客制化选项哦
+				</div>
+				<div style="background-color: #A9A9A9;height: 1px;">
+
+				</div>
+				<div style="margin-top: 1vh; display: flex;justify-content: space-between;height: 9vh;">
+					<div id="counters" style="height:7vh;width: 49%;display: flex;">
+						<p id="sub">－</p>
+						<p id="number">1</p>
+						<p id="add">＋</p>
+					</div>
+					<div id="confirmtobuy" style="border-radius: 10px; color: white; font-size: 2.5vh; text-align: center;line-height:7vh ; height:7vh;width: 49%;background-image: linear-gradient(90deg,var(--theme_color_dark_1),var(--theme_color_light_1));">
+						确定
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<style type="text/css">
+			#counters p:nth-child(odd) {
+				color: #A9A9A9;
+			}
+
+			#counters p {
+				line-height: 8vh;
+				font-size: xx-large;
+				font-weight: 700;
+				margin-left: 5%;
+			}
+
+			#number {
+				color: var(--theme_color_dark_1);
+			}
+
+			#buygoodinfobox {
+				height: 20%;
+				display: flex;
+				justify-content: space-between;
+			}
+
+			#buybox {
+				position: fixed;
+				background-color: white;
+				border-radius: 20px;
+				height: 80vh;
+				width: 100vw;
+				top: 100vh;
+				z-index: 1001;
+				transition-duration: 150ms;
+			}
+
+			#buyboxbackground {
+				position: fixed;
+				z-index: 1000;
+				background-color: rgba(0, 0, 0, 0.5);
+				height: 100vh;
+				width: 100vw;
+				display: none;
+				top: 0;
+			}
+
+			#closeX {
+				width: 100%;
+				text-align: right;
+				font-size: 20px;
+				color: #808080;
+
+			}
+
+			#buyboxoverall {
+				width: 94%;
+				height: 100%;
+				margin: auto;
+				margin-top: 1%;
+			}
+		</style>
+
+
 
 
 		<script type="text/javascript">
+			var model = -999;
+			//模式为1表明加入购物车
+			//模式为2表明直接购买
+			document.getElementById("init").addEventListener("click", function(){model =1;openbuybox();});
+			document.getElementById("buyit").addEventListener("click", function(){model =2;openbuybox();});
+			document.getElementById("closeX").addEventListener("click", closebuybox);
+
+			function openbuybox() {
+				console.log("开启购买");
+				num = 1;
+				number.innerText = num;
+				document.getElementById("buybox").style.top = "30vh";
+				document.getElementById("buyboxbackground").style.display = "block"
+			}
+
+			function closebuybox() {
+				console.log("关闭购买")
+				document.getElementById("buybox").style.top = "100vh";
+				document.getElementById("buyboxbackground").style.display = "none"
+			}
+
+			var num = 1;
+			var number = document.getElementById("number");
+			var add = document.getElementById("add");
+			var sub = document.getElementById("sub");
+			add.addEventListener("click", function() {
+				num += 1;
+				number.innerText = num;
+			})
+			sub.addEventListener("click", function() {
+				if (num >= 1) {
+					num -= 1;
+					number.innerText = num;
+				}
+			})
+			
+			document.getElementById("confirmtobuy").addEventListener("click",addinfo);
+			function addinfo(){
+				console.log("确认购买");
+				localStorage.number = num;
+				if (model == 1) {
+					closebuybox();
+				}
+				if(model ==2){
+					closebuybox();
+					window.open("Buy_Confirmorder.html","_self");
+				}
+			}
+			
+			
+
 			var bigpic_swiper = new Swiper('.bigpic-swiper-container', {
 				pagination: {
 					el: '.swiper-pagination',
