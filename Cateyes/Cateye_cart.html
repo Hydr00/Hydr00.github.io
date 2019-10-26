@@ -109,9 +109,9 @@
 					再忙，也要记得买点东西犒赏自己
 				</div>
 				<a href="Cateye_index.html">
-					<div id="qvguangguang">
+<!-- 					<div id="qvguangguang">
 						去逛逛
-					</div>
+					</div> -->
 				</a>
 					<div id="fresh">
 						已经加入了商品？尝试刷新
@@ -329,6 +329,10 @@
 						var buynumber = localStorage.number
 						document.getElementById("buynumberdom").innerText = "x"+buynumber;
 						document.getElementById("sumnumberdom").innerText = "￥"+(buynumber*400 - 5);
+					}
+					else{
+						document.getElementsByClassName("kongdegouwuchediv")[0].style.display = "block";
+						document.getElementById("bukongdegouwuchediv").style.display = "none";
 					}
 				}
 				init();
