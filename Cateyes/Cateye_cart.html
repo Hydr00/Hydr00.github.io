@@ -310,7 +310,7 @@
 
 			<script type="text/javascript">
 				function init() {
-					if (localStorage.number!=null) {
+					if (localStorage.number!=-999) {
 						document.getElementsByClassName("kongdegouwuchediv")[0].style.display = "none";
 						document.getElementById("bukongdegouwuchediv").style.display = "block";
 						var buynumber = localStorage.number
@@ -319,7 +319,7 @@
 					}
 				}
 				init();
-				document.getElementById("clearstorage").addEventListener("click",function(){localStorage.removeItem("number");window.location.reload();})
+				document.getElementById("clearstorage").addEventListener("click",function(){localStorage.number = -999;window.location.reload();})
 			</script>
 
 	</body>
