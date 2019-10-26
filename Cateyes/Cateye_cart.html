@@ -80,6 +80,16 @@
 				margin-top: 4vh;
 
 			}
+			#fresh{
+				height: 5vh;
+				width: 45vw;
+				border: 1px solid #D3D3D3;
+				border-radius: 5vw;
+				background-color: #EDEDED;
+				line-height: 5vh;
+				margin: auto;
+				margin-top: 1vh;
+			}
 		</style>
 	</head>
 	<body>
@@ -98,11 +108,14 @@
 				<div id="henmang">
 					再忙，也要记得买点东西犒赏自己
 				</div>
-				<a href="notfind.html">
+				<a href="Cateye_index.html">
 					<div id="qvguangguang">
 						去逛逛
 					</div>
 				</a>
+					<div id="fresh">
+						已经加入了商品？尝试刷新
+					</div>
 			</div>
 			
 			<style type="text/css">
@@ -320,6 +333,7 @@
 				}
 				init();
 				document.getElementById("clearstorage").addEventListener("click",function(){localStorage.number = -999;window.location.reload();})
+				document.getElementById("fresh").addEventListener("click",function(){window.location.reload();})
 			</script>
 
 	</body>
