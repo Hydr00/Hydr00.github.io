@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
-		<title>测试商品页面</title>
+		<title>【购买示例】黄金盒子谜之黄金盒子示例用</title>
 		<link rel="stylesheet" type="text/css" href="Theme_color.css">
 		<style type="text/css">
 			* {
@@ -32,7 +32,7 @@
 				height: 3vh;
 				line-height: 3vh;
 				width: 12vw;
-				background: linear-gradient(90deg, var(--theme_color_dark_1),var(--theme_color_light_1));
+				background: linear-gradient(90deg, var(--theme_color_dark_1), var(--theme_color_light_1));
 				border-radius: 99px;
 				margin-left: 2%;
 				margin-right: 2%;
@@ -47,16 +47,17 @@
 				position: absolute;
 				z-index: 1;
 				background-image: repeating-linear-gradient(45deg, rgb(230, 230, 230), rgb(230, 230, 230) 4vw, rgb(245, 245, 245) 4vw, rgb(245, 245, 245) 8vw);
-				
+
 			}
 
 			#bigpiccontainer {
 				height: 100%;
 				width: 100vw;
 			}
-			
+
 			.big_goods_pic {
 				width: 100vw;
+				height: 100%;
 			}
 		</style>
 		<link href="https://cdn.bootcss.com/Swiper/4.5.0/css/swiper.min.css" rel="stylesheet">
@@ -77,13 +78,7 @@
 					<div id="bigpiccontainer" class="bigpic-swiper-container">
 						<div id="bigpic_movecontainer" class="swiper-wrapper">
 							<div class="swiper-slide">
-								<img class="big_goods_pic" src="onlineimgs/商品图片.png">
-							</div>
-							<div class="swiper-slide">
-								<img class="big_goods_pic" src="onlineimgs/商品图片.png">
-							</div>
-							<div class="swiper-slide">
-								<img class="big_goods_pic" src="onlineimgs/商品图片.png">
+								<img class="big_goods_pic" src="goodsimgs/宝箱/宝箱.jpg">
 							</div>
 						</div>
 					</div>
@@ -164,24 +159,24 @@
 			</div>
 			<div id="infobox">
 				<div id="pricebox">
-					1000 - 26000
+					400
 				</div>
 				<div id="namebox">
-					我是测试用商品名称我很长我是测试用商品名称我很长我是测试用
+					【购买示例】黄金盒子谜之黄金盒子示例用
 				</div>
 			</div>
 			<br>
-			<div id="pesudohr"style="height: 1px;width: 100%;background-color: #D3D3D3;">
-				
+			<div id="pesudohr" style="height: 1px;width: 100%;background-color: #D3D3D3;">
+
 			</div>
 			<div id="ratebox">
-					<div class="info">
-						❤ 9999人买过
-					</div>
-					<div class="info">
-						⭐ 平均评分4.5
-					</div>
+				<div class="info">
+					❤ 9999人买过
 				</div>
+				<div class="info">
+					⭐ 平均评分4.5
+				</div>
+			</div>
 		</div>
 		<style type="text/css">
 			#chosecard {
@@ -196,119 +191,160 @@
 				font-size: 4vw;
 				line-height: 5vh;
 			}
-			.chosebox:before{
+
+			.chosebox:before {
 				content: "参数";
 				color: #A9A9A9;
-				display:inline-block;
+				display: inline-block;
 				width: 15%;
 				height: 100%;
 				line-height: 5vh;
 				text-align: center;
 				font-size: 4vw;
 			}
-			
 		</style>
 
-		<div id="chosecard">
+		<!-- 		<div id="chosecard">
 			<div class="chosebox">
 					选择尺码、颜色分类
 			</div>
 			<div class="chosebox">
 					品牌、材质
 			</div>
+		</div> -->
+
+
+		<style type="text/css">
+			#commit_overall {
+				margin-top: 1vh;
+				height: 6vh;
+				position: relative;
+				display: flex;
+				align-items: center;
+			}
+
+			#more_commit {
+				position: absolute;
+				right: 0;
+				color: #DAB86E;
+				font-size: 4vw;
+				font-weight: 600;
+				z-index: 3;
+			}
+
+			#commitnamecontainer {
+				position: absolute;
+				left: 0;
+				color: #DAB86E;
+				font-size: 4vw;
+				font-weight: 600;
+				z-index: 3;
+				margin-left: 3%;
+				padding-left: 2%;
+				padding-right: 2%;
+				border-radius: 99px;
+				border-color: #DAB86E;
+				border-width: 1px;
+				border-style: solid;
+			}
+
+			#commitcontainer {
+				height: 100%;
+				background: black;
+				overflow: hidden;
+			}
+
+			.commitbox {
+				line-height: 6vh;
+				color: #DAB86E;
+				text-align: center;
+				background: black;
+				font-size: 4vw;
+			}
+		</style>
+		<div id="commit_overall">
+			<div id="more_commit">
+				更多>
+			</div>
+			<div id="commitnamecontainer">
+				评论
+			</div>
+
+			<div id="commitcontainer" class="commit-swiper-container">
+				<div id="commit_movecontainer" class="swiper-wrapper">
+					<div class="swiper-slide commitbox">
+						我买了，你呢
+					</div>
+					<div class="swiper-slide commitbox">
+						我买了，你呢
+					</div>
+					<div class="swiper-slide commitbox">
+						我买了，你呢
+					</div>
+					<div class="swiper-slide commitbox">
+						我买了，你呢
+					</div>
+				</div>
+			</div>
 		</div>
 
 
-<style type="text/css">
-	#commit_overall{
-		margin-top: 1vh;
-		height: 6vh;
-		position: relative;
-		display: flex;
-		align-items: center;
-	}
-	#more_commit{
-		position: absolute;
-		right: 0;
-		color: #DAB86E;
-		font-size: 4vw;
-		font-weight: 600;
-		z-index: 3;
-	}
-	#commitnamecontainer{
-		position: absolute;
-		left: 0;
-		color: #DAB86E;
-		font-size: 4vw;
-		font-weight: 600;
-		z-index: 3;
-		margin-left: 3%;
-		padding-left: 2%;
-		padding-right: 2%;
-		border-radius: 99px;
-		border-color: #DAB86E;
-		border-width: 1px;
-		border-style: solid;
-	}
-	#commitcontainer{
-		height: 100%;
-		background: black;
-		overflow: hidden;
-	}
-	.commitbox{
-		line-height: 6vh;
-		color: #DAB86E;
-		text-align: center;
-		background: black;
-		font-size: 4vw;
-	}
-</style>
-<div id="commit_overall">
-	<div id="more_commit">
-		更多>
-	</div>
-	<div id="commitnamecontainer">
-		评论
-	</div>
-	
-	<div id="commitcontainer" class="commit-swiper-container">
-		<div id="commit_movecontainer" class="swiper-wrapper">
-			<div class="swiper-slide commitbox">
-				东西很好，快递很快，五星好评
-			</div>
-			<div class="swiper-slide commitbox">
-				在？为什么迫害爽哥？
-			</div>
-			<div class="swiper-slide commitbox">
-				钢普拉天下第一
-			</div>
-			<div class="swiper-slide commitbox">
-				我和CCTV贴贴
-			</div>
-		</div>
-	</div>
-</div>
+		<style type="text/css">
+			#goods_shop_info table{
+				width: 100%;
+			}
 
+			tr:nth-child(odd) {
+				background: rgba(0,0,0,0.1);
+			}
+			th:nth-child(1){
+				font-weight: 700;
+			}
+			tr{
+				height: 5vh;
+			}
+		</style>
+		<div id="goods_shop_info">
+			<table>
+				<tr>
+					<th>尺寸</th>
+					<th>高约500mm</th>
+				</tr>
+				<tr>
+					<th>系列</th>
+					<th>宝箱、测试用商品</th>
+				</tr>
+				<tr>
+					<th>主题</th>
+					<th>深海豪华、幽灵</th>
+				</tr>
+				<tr>
+					<th>内容物</th>
+					<th>不明</th>
+				</tr>
+			</table>
+		</div>
 
 
 <link rel="stylesheet" type="text/css" href="GoodsBelowCardCSS.css"/>
 
-<div id="belowcard">
-	<div id="belowcard_others">
-		<div class="othericons" style="background-image:url(onlineimgs/heart-fill.png) ;">
-			<p>心愿</p>
+		<div id="belowcard">
+			<div id="belowcard_others">
+				<div class="othericons" style="background-image:url(onlineimgs/heart-fill.png) ;">
+					<p>心愿</p>
+				</div>
+				<div class="othericons" style="background-image:url(onlineimgs/tag-fill.png) ;">
+					<p>标记</p>
+				</div>
+				<div class="othericons" style="background-image:url(onlineimgs/headset-fill.png) ;">
+					<p>客服</p>
+				</div>
+			</div>
+			<div id="buy_or_in">
+				<div id="init">加入购物车</div>
+				<div id="buyit">立即购买</div>
+			</div>
 		</div>
-		<div class="othericons" style="background-image:url(onlineimgs/tag-fill.png) ;">
-			<p>标记</p>
-		</div>
-		<div class="othericons" style="background-image:url(onlineimgs/headset-fill.png) ;">
-			<p>客服</p>
-		</div>
-	</div>
-		<div id="buy_or_in">
-			<div id="init">加入购物车</div><div id="buyit">立即购买</div>
-		</div>
-</div>
 
 
 		<script type="text/javascript">
@@ -319,8 +355,8 @@
 				},
 			});
 			var commit_swiper = new Swiper('.commit-swiper-container', {
-				effect : "flip",
-				loop:true,
+				effect: "flip",
+				loop: true,
 				autoplay: true,
 				autoplay: {
 					delay: 2500,

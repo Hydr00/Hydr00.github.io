@@ -360,66 +360,20 @@
 			</table>
 		</div>
 
-
-
-
-
-
-
-		<style type="text/css">
-			#belowcard {
-				width: 100%;
-				position: fixed;
-				bottom: 0;
-				background-color: white;
-				height: 8vh;
-				z-index: 999;
-			}
-
-			#buy_or_in {
-				width: 60%;
-				height: 100%;
-				position: absolute;
-				right: 0;
-				display: flex;
-				align-items: center;
-				color: white;
-
-			}
-
-			#init {
-				margin: 0;
-				width: 50%;
-				height: 85%;
-				display: inline-block;
-				background: #ff7105;
-				border-top-left-radius: 99px;
-				border-bottom-left-radius: 99px;
-				background: linear-gradient(90deg, #ffca1d, #ff8a12);
-				font-size: 4vw;
-				text-align: center;
-				line-height: 6.8vh;
-				font-weight: 600;
-				padding-left: 3%;
-			}
-
-			#buyit {
-				margin: 0;
-				width: 50%;
-				height: 85%;
-				display: inline-block;
-				background: linear-gradient(90deg, #ff7105, #ef2626);
-				border-top-right-radius: 99px;
-				border-bottom-right-radius: 99px;
-				font-size: 4vw;
-				text-align: center;
-				line-height: 6.8vh;
-				font-weight: 600;
-				padding-right: 3%;
-			}
-		</style>
+<link rel="stylesheet" type="text/css" href="GoodsBelowCardCSS.css"/>
 
 		<div id="belowcard">
+			<div id="belowcard_others">
+				<div class="othericons" style="background-image:url(onlineimgs/heart-fill.png) ;">
+					<p>心愿</p>
+				</div>
+				<div class="othericons" style="background-image:url(onlineimgs/tag-fill.png) ;">
+					<p>标记</p>
+				</div>
+				<div class="othericons" style="background-image:url(onlineimgs/headset-fill.png) ;">
+					<p>客服</p>
+				</div>
+			</div>
 			<div id="buy_or_in">
 				<div id="init">加入购物车</div>
 				<div id="buyit">立即购买</div>

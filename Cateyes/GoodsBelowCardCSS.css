@@ -1,0 +1,67 @@
+	#belowcard{
+		width: 100%;
+		position: fixed;
+		bottom: 0;
+		background-color: white;
+		height: 8vh;
+		z-index: 999;
+	}	
+	#buy_or_in{
+		width: 60%;
+		height: 100%;
+		position: absolute;
+		right: 0;
+		display: flex;
+		align-items: center;
+		color: white;
+
+	}
+	#init{
+		margin: 0;
+		width: 50%;
+		height: 85%;
+		display: inline-block;
+		background: #ff7105;
+		border-top-left-radius: 99px;
+		border-bottom-left-radius: 99px;
+		background: linear-gradient(90deg, #ffca1d, #ff8a12);
+		font-size: 4vw;
+		text-align: center;
+		line-height: 6.8vh;
+		font-weight: 600;
+		padding-left: 3%;
+	}
+	#buyit{
+		margin: 0;
+		width: 50%;
+		height: 85%;
+		display: inline-block;
+		background: linear-gradient(90deg, #ff7105, #ef2626);
+		border-top-right-radius: 99px;
+		border-bottom-right-radius: 99px;
+		font-size: 4vw;
+		text-align: center;
+		line-height: 6.8vh;
+		font-weight: 600;
+		padding-right: 3%;
+	}
+	#belowcard_others{
+		position: absolute;
+		left: 5%;
+		height: 85%;
+		bottom: 0;
+		width: 30%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.othericons{
+		height: 100%;
+		background-size: 100%;
+		background-position: center;
+		background-repeat: no-repeat;
+		opacity: 0.3;
+	}
+	.othericons>p{
+		margin-top: -20%;
+	}
