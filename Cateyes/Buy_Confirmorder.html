@@ -54,14 +54,15 @@
 	<body>
 		<div id="overall">
 			<p>确认订单</p>
-			<div id="buygoodinfobox" style="height: 10vh;margin-top: 5vh;">
-				<img src="goodsimgs/宝箱/宝箱.jpg" style="height: 100%;border-radius: 10px;"> </img>
-				<div style="display: inline-block;height: 100%;margin:2%;font-size: 12px;">
+			<div id="buygoodinfobox" style="display: flex;height: 10vh;margin-top: 5vh;">
+				<img src="goodsimgs/宝箱/宝箱.jpg" style="display: inline-block;height: 100%;border-radius: 10px;"> </img>
+				<div style="display: inline-block; width: 60%;height: 100%;margin:2%;font-size: 12px;">
 					<p style="font-size: larger">【购买示例】黄金盒子谜之黄金盒子示例用</p>
 					<p style="font-size: small;color: #A9A9A9;">剩余9999件</p>
-					<p style="font-size: x-large;color: var(--theme_color_dark_1);">￥400</p>
 				</div>
 			</div>
+			<p>单件价格</p>
+			<p style="text-align: right;color: var(--theme_color_dark_1);">￥400</p>
 			<p>购买数量</p>
 			<p id="buynumber" style="text-align: right;color: var(--theme_color_dark_1);"></p>
 			<p>优惠总计</p>
@@ -117,6 +118,7 @@
 			document.getElementById("confirmtobuy").addEventListener("click",function(){
 				document.getElementById("2dimsbox").style.bottom = "0vh"
 			})
+			
 		</script>
 	</body>
 </html>
