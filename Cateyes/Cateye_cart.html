@@ -146,7 +146,7 @@
 				<hr >
 				<p  style="font-size: large ;text-align: left; color: var(--theme_color_dark_1);">总计</p>
 				<p id="sumnumberdom" style="font-size: x-large ;font-weight: 700; text-align: right;margin-right: 1%; color: var(--theme_color_dark_1);">总计数字</p>
-				<div style="margin: auto; margin-top: 10%;border-radius: 10px; color: white; font-size: 2.5vh; text-align: center;line-height:7vh ; height:7vh;width: 49%;background-image: linear-gradient(90deg,var(--theme_color_dark_1),var(--theme_color_light_1));">
+				<div id="submit" style="margin: auto; margin-top: 10%;border-radius: 10px; color: white; font-size: 2.5vh; text-align: center;line-height:7vh ; height:7vh;width: 49%;background-image: linear-gradient(90deg,var(--theme_color_dark_1),var(--theme_color_light_1));">
 					提交订单
 				</div>
 				<p id="clearstorage" style="text-align: center;">(后门)清空存储</p>
@@ -338,6 +338,7 @@
 				init();
 				document.getElementById("clearstorage").addEventListener("click",function(){localStorage.number = -999;window.location.reload();})
 				document.getElementById("fresh").addEventListener("click",function(){window.location.reload();})
+				document.getElementById("submit").addEventListener("click",function(){window.open("Buy_Confirmorder.html",false);})
 			</script>
 
 	</body>
