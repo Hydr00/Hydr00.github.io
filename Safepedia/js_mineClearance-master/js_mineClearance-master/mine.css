@@ -148,8 +148,11 @@
 	position: absolute;
 	width: 50%;
 	margin: auto;
+	background-color: rgba(0,0,0,0.5);
+	padding: 1%;
 }
 #infobox p{
 	color: white;
-	text-shadow: 0px 0px 5px black;
+	/* text-shadow: 0px 0px 5px black; */
+	font-weight: 700;
 }

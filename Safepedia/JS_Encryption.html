@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>JS加密</title>
+		<title>Encryption / Decryption</title>
 		<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="css/theme_colors.css"/>
 		<style type="text/css">
@@ -50,12 +50,15 @@
 				display: flex;
 				align-items: center;
 				height: 40%;
-				justify-content: space-between;
+				justify-content: center;
 			}
 
 			#choose_container {
 				display: flex;
-				justify-content: space-between;
+				justify-content: space-around;
+				width: 40%;
+				margin: auto;
+				margin-top: 30px;
 			}
 
 			input[name="KEY"] {
@@ -73,7 +76,12 @@
 	<body>
 		<div id="overall_container">
 			<div id="headder">
-				基于JS的几种加密算法
+				Encryption / Decryption
+			</div>
+			<div id="choose_container">
+				<label class="checkbox-inline"><input value="凯撒" type="radio" name="optradio" checked="checked">Replacement</label>
+				<label class="checkbox-inline"><input value="滚筒" type="radio" name="optradio">Transposition</label>
+				<label class="checkbox-inline"><input value="异或" type="radio" name="optradio">XOR</label>
 			</div>
 			<div id="UIcontainer">
 				<textarea rows="10" cols="60" name="Plaintext" id="Plaintext"></textarea>
@@ -81,19 +89,13 @@
 					<input type="number" name="KEY" id="KEY" value="0" />
 
 					<div id="button_container">
-						<button type="button" onclick="encode()" class="btn btn-primary">加密</button>
-						<button type="button" onclick="decode()" class="btn btn-primary">解密</button>
+						<button type="button" style="font-size: small;" onclick="encode()" class="btn btn-primary">Encode</button>
+						<button type="button" style="font-size: small;" onclick="decode()" class="btn btn-primary">Decode</button>
 					</div>
-
-					<div id="choose_container">
-						<label class="checkbox-inline"><input value="凯撒" type="radio" name="optradio" checked="checked">替换</label>
-						<label class="checkbox-inline"><input value="滚筒" type="radio" name="optradio">换位</label>
-						<label class="checkbox-inline"><input value="异或" type="radio" name="optradio">异或</label>
-					</div>
+					
 				</div>
 				<textarea rows="10" cols="60" name="Ciphertext" id="Ciphertext"></textarea>
 			</div>
-
 			<div id="rollingball_container">
 				<div id="rollingball">
 

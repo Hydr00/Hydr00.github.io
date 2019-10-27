@@ -114,20 +114,20 @@
 	<body>
 		<div id="headder">
 			<div id="title">
-				百科综合查询页面
+				Muti-Encyclopedia Search
 			</div>
 			<div id="search">
 				<div id = "searchtext_container"><input type="text" class="form-control" id="searchtext"></div>
 				<div id="engine_container">
-					<p>选择调用的搜索引擎</p>
-					<label><input type="checkbox" name="engine" value="百度" checked="checked" id="baidu">百度百科</label>
-					<label><input type="checkbox" name="engine" value="维基" checked="checked" id="wiki">维基百科</label>
-					<label><input type="checkbox" name="engine" value="MBA" checked="checked" id="MBA">MBA百科</label>
+					<p>Choose Encyclopedia</p>
+					<label><input type="checkbox" name="engine" value="百度" checked="checked" id="baidu">Baidu</label>
+					<label><input type="checkbox" name="engine" value="维基" checked="checked" id="wiki">Wiki</label>
+					<label><input type="checkbox" name="engine" value="MBA" checked="checked" id="MBA">MBA</label>
 				</div>
 
 				<div id="choose_container">
-					<p>选择搜索结果打开的方式</p>
-					<label class="checkbox-inline"><input value="0" type="radio" name="optradio">新标签页</label>
+					<p>Choose Open Mode</p>
+					<label class="checkbox-inline"><input value="0" type="radio" name="optradio">__blank</label>
 					<label class="checkbox-inline"><input id="iframeinput" value="1" type="radio" name="optradio" checked="checked">iframe</label>
 				</div>
 				<button type="button" onclick="search()" style="height: 60px;width: 160px;font-size: 20px;">GetThemAll!</button>
