@@ -323,6 +323,7 @@
 
 			<script type="text/javascript">
 				function init() {
+					console.log("自动刷新")
 					if (localStorage.number!=-999) {
 						document.getElementsByClassName("kongdegouwuchediv")[0].style.display = "none";
 						document.getElementById("bukongdegouwuchediv").style.display = "block";
@@ -336,6 +337,7 @@
 					}
 				}
 				init();
+				setInterval("init()",1000);
 				document.getElementById("clearstorage").addEventListener("click",function(){localStorage.number = -999;window.location.reload();})
 				document.getElementById("fresh").addEventListener("click",function(){window.location.reload();})
 				document.getElementById("submit").addEventListener("click",function(){window.open("Buy_Confirmorder.html",false);})
