@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Ransomware</title>
+		<link rel="stylesheet" type="text/css" href="pagestyle.css" />
+	</head>
+	<body>
+		<h1>Ransomware</h1>
+		<hr />
+		<p>Ransomware is a popular Trojan horse, through harassment, intimidation and even the use of kidnapping user files, so that user data assets or computing resources can not be used normally, and as a condition to extort money from users. Such user data assets include documents, mail, databases, source code, pictures, compressed files, and so on. Ransom forms include real currency, bitcoin or other virtual currency.</p>
+		<p>In general, blackmail software authors also set a time limit for payment, and sometimes ransoms rise over time. Sometimes, even if the user pays the ransom, the system will not work properly and the encrypted file will not be restored.</p>
+		
+		<h2>Means of Communication</h2>
+		<hr />
+		<p>The means of transmission of extortion software are very similar to common Trojans, mainly the following:</p>
+		<p>1. With the help of web Trojan horse spread, when the user accidentally visits the malicious website, the blackmail software will be automatically downloaded by the browser and run in the background.</p>
+		<p>2. Bundled with other malware.</p>
+		<p>3. Spread as an email attachment.</p>
+		<p>4. Propagation with removable storage media.</p>
+		
+		<h2>Manifestation</h2>
+		<hr />
+		<p>Once a user is infected with extortion software, it usually takes the following forms, including:</p>
+		<p>1. Lock the computer or mobile terminal screen.</p>
+		<p>2. In the name of antivirus software, falsely claiming to have found a security threat in the user system, causing users to panic, thus buying the so-called "anti-virus software."</p>
+		<p>3. A prompt message similar to the following pops up on the computer screen, saying that the user file is encrypted and asking for a ransom payment.</p>
+		
+		<h2>Classification</h2>
+		<hr />
+		<p>According to the extortion methods used in extortion software, it can be divided into the following three categories:</p>
+		<p>1. Affect the normal use of the user system. For example, PC Cyborg, QiaoZhaz (Trojan/Win32.QiaoZhaz) and so on, will use the lock system screen and so on, forces the system user to pay, in exchange for the normal use of the system.</p>
+		<p>2. Intimidate users. For example, FakeAV (Trojan [Ransom] / Win32.FakeAV), disguised as anti-virus software, falsely claims to find viruses in the user's system, deceiving users to pay for their "anti-virus software." Another example is Reveton (Trojan [Ransom] / Win32.Foreign), which disguises itself as a local law enforcement agency depending on where the user is located, claiming that the user violates the law and forces the user to pay a ransom.</p>
+		<p>3. The number of households used for tying racks. This is a common form of extortion recently, the most typical of which is the CTB-Locker family (Trojan [Ransom] / Win32.CTBLocker), which uses a high-intensity encryption algorithm to encrypt user documents and provides a way to decrypt documents only after the user pays the ransom.</p>
+		
+		<h2>Typical Family</h2>
+		<hr />
+		<p>The earliest known extortion software appeared in 1989, called "AIDS Information Trojan Horse" (Trojan/DOS.AidsInfo, also known as "PC Cyborg Trojan Horse"), its author is Joseph Popp. The Trojan program enters the system in the form of "AIDS information boot disk" and replaces AUTOEXEC.BAT (DOS system files), which are located in the root directory of the boot disk and are in the file format. Used to describe the way in which commands are automatically loaded and executed when the system starts, enabling counting at boot time. Once the system boots up to 90 times, the Trojan hides multiple directories on the disk, and all filenames on disk C are encrypted (causing the system to fail to boot). At this point, the screen displays a message claiming that the user's software license has expired and asking the user to send $189 to PC Cyborg's mailbox in Panama to unlock the system. The author defended himself when he was sued, claiming that his illegal income was used for AIDS research. In 2001, the malicious code family (Trojan [Ransom] / Win32.FakeAV), which specializes in counterfeiting antivirus software, appeared and became popular abroad around 2008. The interface content of the malicious code family is English, and because some domestic anti-virus manufacturers have begun to use free pricing strategy, so the malicious code family is not easy to succeed in China, the impact on the domestic is relatively small. The form title used by FakeAV in the process of deceiving users disguised as antivirus software is extremely confusing. According to Antian CERT statistics, there are hundreds of titles, and the common titles are shown in the following table:</p>
+		<p>AntiSpyWare2008 anti-spyware 2008;</p>
+		<p>AntiVirus2013 antivirus software 2013;</p>
+		<p>Security Defender Security Guard;</p>
+		<p>ScannRepair scanning repair tool;</p>
+		<p>Doctor of Virus Doctor virus;</p>
+		<p>Spyware Cleaner spyware remover / Terminator;</p>
+		<p>System Care Antivirus system nursing and antivirus;</p>
+		<p>Data Recovery data recovery;</p>
+		<p>AVDefender 2014 Antivirus Guard 2014;</p>
+		<p>AVSecurity 2015 antivirus security 2015;</p>
+		<p>Adware Checker adware remover / Terminator.</p>
+		<p>In 2005, a Trojan horse (Trojan/Win32.GPcode) for encrypting user files appeared. The Trojan generates a warning txt file in the directory of the encrypted file, requiring the user to purchase a decryption program. The encrypted file types include: .doc, .html, .jpg, .xls, .zip, and .rar. The Redplus extortion Trojan Horse (Trojan/Win32.Pluder), which appeared in 2006, is the first extortion software in China. The Trojan hides user documents and package files, and then a pop-up window asks the user to remit the ransom to the specified bank account. According to the statistics of the National computer virus Emergency treatment Center, 581 cases of infection of the virus and its variants have been reported from all over the country. In 2007, another domestic extortion software, QiaoZhaz, appeared. After the Trojan horse ran, it would pop up. "it is found that pirated software has been used in your hard disk, so move some of your files to the locked sector. To unlock and release the file, Please email liugongs19670519@yahoo.com.cn to purchase the appropriate software dialog box.</p>
+		
+		<h2>Ransom Payment Method</h2>
+		<hr />
+		<p>Early extortion software used traditional mail to receive ransoms (such as Trojan/DOS.AidsInfo), requiring victims to send a certain amount of ransom to a designated mailbox. We also found extortion software that requires victims to remit money to designated bank accounts (such as Trojan/Win32.Pluder) and send high-cost text messages to designated numbers (such as Trojan [rog,sys,fra] / Android.Koler). Until Bitcoin, a P2P form of digital currency that can be converted into the currency of most countries, emerged as a form of virtual currency payment, because it could provide more covert ransom access to extortion software. Since 2013, extortion software has gradually adopted the payment method of virtual currency represented by Bitcoin. It can be said that the emergence of virtual currency has accelerated the proliferation of extortion software.</p>
+		
+		<h2>Threat Trend</h2>
+		<hr />
+		<p>In January 2015, a new variant of the Cryptowall family was discovered using I2P anonymous network communications, infecting 288 users in one day, and the variant extorted bitcoin from the victim after encrypting the victim's files. At the same time, there is the act of stealing bitcoin directly from users. The newly emerged extortion software families Tesla Crypt and Alpha Crypt, in February and April were found to have exploited Adobe's newly fixed Flash security vulnerabilities. Also exploiting these vulnerabilities are the CTB-Locker, CryptoWall, TorrentLocker, BandarChor, Angler and other families. One of the most noteworthy is CTB-Locker, which uses advanced escape technology to avoid the detection of some security software. On April 30, 2015, Antian CERT received an email attachment containing CTB-Locker from users, who said they had submitted the attachment to a third party open sandbox and suspected that it had specifically attacked domestic office systems. Antian CERT analysis confirmed that no attack capability against domestic office environment was found in the sample. However, with the continuous proliferation of extortion software and the renovation of attack means, it can not be ruled out that there will be extortion software specifically for the office environment of our country in the future. Judging from the new family of extortion software currently acquired, most of them still use social workers to send emails in groups, but these emails tend to follow the trend and are unpreventable. For example, according to threatpost, the CTB_Locker family has begun to use social worker emails with the title "Windows 10 free upgrade" (Upgrade to Windows 10 for free).</p>
+	
+		<script type="text/javascript" src="getindex.js"></script>
+	</body>
+</html>

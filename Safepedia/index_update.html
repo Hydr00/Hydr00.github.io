@@ -98,16 +98,22 @@
 				display: block;
 			}
 
-			#nav_list_container {
+
+			#nav_list_container_container {
+				display: flex;
+				width: 200%;
+				transition-duration: 200ms;
+			}
+
+			.nav_list_container {
 				height: 67.5vh;
 				overflow-y: auto;
-				overflow-x:
+				max-width: 20vw;
 			}
 
 			ol {
 				list-style: none;
 				counter-reset: a;
-				padding-right: 5px;
 			}
 
 			li {
@@ -144,25 +150,50 @@
 
 				<div id="nav">
 					<div id="nav_buttom_container">
-						<div class="nav_buttom">
+						<div class="nav_buttom" id="page1">
 							Page1
 						</div>
-						<div class="nav_buttom">
+						<div class="nav_buttom" id="page2">
 							Page2
 						</div>
 					</div>
-					<div id="nav_list_container">
-						<ol>
-							<a href="welcome.html" target="rightiframe">
-								<li>Welcome</li>
-							</a>
-							<a href="Pages/Hacker.html" target="rightiframe">
-								<li>Hacker</li>
-							</a>
-							<li>恶意代码与病毒
+
+					<style type="text/css">
+						#nav_list_window {
+							overflow: hidden;
+							transition-duration: 200ms;
+						}
+					</style>
+					<div id="nav_list_window">
+						<div id="nav_list_container_container">
+							<div class="nav_list_container">
 								<ol>
+									<a href="welcome.html" target="rightiframe">
+										<li>Welcome</li>
+									</a>
+									<a href="Pages/Hacker.html" target="rightiframe">
+										<li>Hacker
+											<ol>
+												<a href="Pages/White Hat Hacker.html" target="rightiframe">
+													<li>White Hat Hacker</li>
+												</a>
+												<a href="Pages/Black Hat Hacker.html" target="rightiframe">
+													<li>Black Hat Hacker</li>
+												</a>
+
+											</ol>
+										</li>
+									</a>
 									<a href="Pages/Malicious Code.html" target="rightiframe">
-										<li>Malicious Code</li>
+										<li>Malicious Code
+											<ol><a href="Pages/Trojan.html" target="rightiframe">
+													<li>Trojan</li>
+												</a>
+												<a href="Pages/Ransomware.html" target="rightiframe">
+													<li>Ransomware</li>
+												</a>
+											</ol>
+										</li>
 									</a>
 									<a href="Pages/Computer Virus.html" target="rightiframe">
 										<li>Computer Virus
@@ -173,55 +204,70 @@
 												<a href="Pages/Iloveyou.html" target="rightiframe">
 													<li>I Love You</li>
 												</a>
+												<a href="Pages/Huigezi.html" target="rightiframe">
+													<li>Huigezi</li>
+												</a>
 											</ol>
 
 										</li>
 									</a>
-							</li>
-						</ol>
-						</li>
-						<li>密码
-							<ol>
-								<a href="Pages/Cryptanalysis.html" target="rightiframe">
-									<li>Cryptanalysis</li>
-								</a>
-								<a href="Pages/Password.html" target="rightiframe">
-									<li>Password</li>
-								</a>
-								<a href="Pages/Password Fatigue.html" target="rightiframe">
-									<li>Password Fatigue</li>
-								</a>
-							</ol>
-						</li>
-						<a href="Pages/Authentication.html" target="rightiframe">
-							<li>Authentication</li>
-						</a>
-						<a href="Pages/Firewall.html" target="rightiframe">
-							<li>Firewall</li>
-						</a>
-						<a href="Pages/Social Engineering.html" target="rightiframe">
-							<li>Social Engineering
-								<ol>
-									<a href="Pages/Social Engineering Attack.html" target="rightiframe">
-										<li>Social Engineering Attack</li>
+									</li>
+									<a href="Pages/Password.html" target="rightiframe">
+										<li>Password
+											<ol>
+												<a href="Pages/Cryptanalysis.html" target="rightiframe">
+													<li>Cryptanalysis</li>
+												</a>
+												<a href="Pages/Password Fatigue.html" target="rightiframe">
+													<li>Password Fatigue</li>
+												</a>
+											</ol>
+										</li>
+									</a>
+									<a href="Pages/Authentication.html" target="rightiframe">
+										<li>Authentication</li>
+									</a>
+									<a href="Pages/Firewall.html" target="rightiframe">
+										<li>Firewall</li>
+									</a>
+									<a href="Pages/Social Engineering.html" target="rightiframe">
+										<li>Social Engineering
+											<ol>
+												<a href="Pages/Social Engineering Attack.html" target="rightiframe">
+													<li>Social Engineering Attack</li>
+												</a>
+											</ol>
+										</li>
 									</a>
 								</ol>
-							</li>
-						</a>
+							</div>
+							<!-- =============================================== -->
+							<style type="text/css">
+							</style>
+							
+							
+							
+							<div class="nav_list_container">
+								<ol id="Modified">
+									
+									<a href="Pages/Disaster Recovery.html" target="rightiframe">
+										<li>Disaster Recovery</li>
+									</a>
+									<a href="Pages/Safety economics.html" target="rightiframe">
+										<li>Safety economics</li>
+									</a>
+									<a href="Pages/Information Security.html" target="rightiframe">
+										<li>Information Security</li>
+									</a>
+									<a href="Pages/MOOC.html" target="rightiframe">
+										<li>MOOC(Chinese)</li>
+									</a>
+								</ol>
+							</div>
+						</div>
 
-						<a href="Pages/Disaster Recovery.html" target="rightiframe">
-							<li>Disaster Recovery</li>
-						</a>
-						<a href="Pages/Safety economics.html" target="rightiframe">
-							<li>Safety economics</li>
-						</a>
-						<a href="Pages/Information Security.html" target="rightiframe">
-							<li>Information Security</li>
-						</a>
-						<a href="Pages/MOOC.html" target="rightiframe">
-							<li>MOOC(Chinese)</li>
-						</a>
-						</ol>
+
+
 					</div>
 				</div>
 			</div>
@@ -346,6 +392,17 @@
 					iframediv.appendChild(iframe);
 					console.log("iframe加载");
 				})();
+				document.getElementById("page1").addEventListener("click", page1);
+				document.getElementById("page2").addEventListener("click", page2);
+				var nav = document.getElementById("nav_list_container_container");
+
+				function page1() {
+					nav.style.marginLeft = "0";
+				}
+
+				function page2() {
+					nav.style.marginLeft = "-100%";
+				}
 			</script>
 	</body>
 </html>

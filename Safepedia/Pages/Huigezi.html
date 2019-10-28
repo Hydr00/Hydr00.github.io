@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Huigezi</title>
+		<link rel="stylesheet" type="text/css" href="pagestyle.css" />
+	</head>
+	<body>
+		<h1>Huigezi Virus</h1>
+		<hr />
+		<p>Huigezi, was originally suitable for corporate and home management, its function is very powerful, not only can monitor cameras, keyboard records, monitoring desktops, file operations and so on. It also provides hacker-specific functions, such as camouflage system icons, arbitrary change of startup item names and expressions, random replacement of ports, self-deletion after operation, installation without prompts, etc., and adopts the defect design of rebound link. Allows the user to have the highest permissions, once cracked, can not be controlled. Eventually led to malicious use by hackers. The original author's gray pigeon is defined as a Trojan horse program that integrates a variety of control methods.</p>
+		
+		<h2>Virus mechanism</h2>
+		<hr />
+		<h3>Virus composition</h3>
+		<p>The configured server file name is G_Server.exe (this is the default and, of course, can be changed). Hackers then use every means to trick users into running G_Server.exe programs.</p>
+		<h3>Running process</h3>
+		<p>After running, G_Server.exe copies itself to the Windows directory (the windows directory of the system disk under 98/xp and the Winnt directory of the system disk under 2k/NT), and then releases G_Server.dll and G_Server_Hook.dll from the body to the windows directory. G_Server.exe, G_Server.dll and G_Server_Hook.dll cooperate with each other to form the gray pigeon server, G_Server_Hook.dll is responsible for hiding gray pigeons. Hide the gray pigeon file, the registry key of the service, and even the module name in the process by intercepting the process's API call. The intercepted functions are mainly used to traverse files, registry keys, and process modules. As a result, sometimes the user feels poisoned, but a careful examination does not find anything unusual. Some gray pigeons release an extra file called G_ServerKey.dll to record keyboard operations. Note that the name G_Server.exe is not fixed, it is customizable, for example, when the custom server file name is A.exe, the generated files are A.exe, A.dll, and A_Hook.dll.</p>
+		<p>The G_Server.exe file in the Windows directory registers itself as a service (the 9X system writes the registry startup key), runs automatically each time it boots, starts G_Server.dll and G_Server_Hook.dll after running, and automatically exits. The G_Server.dll file implements the backdoor function and communicates with the control client; G_Server_Hook.dll hides the virus by intercepting API calls. Therefore, after poisoning, we do not see the virus file, nor can we see the service items of the virus registration. Depending on the settings of the gray pigeon server files, G_Server_Hook.dll is sometimes attached to the Explorer.exe process space and sometimes to all processes.</p>
+		
+		<h2>Virus development</h2>
+		<hr />
+		<h3>Birth period</h3>
+		<p>Since the birth of the gray pigeon in 2001, it has been judged by antivirus professionals as the most dangerous backdoor program, and has aroused great concern in the field of security. In 2004, 2005, 2006, gray pigeon Trojan horse has been selected as the top ten viruses of the year by major anti-virus manufacturers in China for three consecutive years. Grey pigeon has also become the focus of attention of the media and netizens.</p>
+		<p>Since its emergence in 2001, grey pigeons have mainly experienced three stages: the period of imitation, the period of rapid development and the era of national hackers.</p>
+		<p>Grey pigeon 2011 has a variety. After the server was shelled, it was only 70 kb, nearly 10 times smaller than GE Jun's gray pigeons. National multithreaded online grouping. Visual remote account opening. Can avoid the mainstream administrator's detection way, the concealment is strong.</p>
+		<h3>Imitation period</h3>
+		<p>Huigezi appeared in 2001 and was written in Delphi. It was not first released as a finished product, but more importantly, it appeared on the Internet in the form of source code sharing in the form of technical research. You can still search for the source code for earlier versions of Grey Pigeon. "Grey Pigeon" appeared using the most discussed "bounce port" connection to avoid the interception of most personal network firewalls. "Grey pigeons" were not as famous as "glaciers" at the time, so there were only a small number of infections, but their open source approach also allowed "gray pigeons" to gradually increase the amount of transmission. Grey pigeons appear after the source code open, so there are a variety of different versions, because the server are started in a hidden way, established its malicious backdoor Trojan status.</p>
+		<h3>Rapid development period</h3>
+		<p>Between 2004 and 2005, gray pigeons gradually entered a mature state, due to the release of source code, a large number of variants were derived in the Internet. In 2004, more than 1000 varieties of gray pigeons were found, and in 2005, the number rose rapidly to more than 3000. The biggest harm of "gray pigeon" is that it is lurking in the user system. Because of the principle of "bounce port" used by it, some users in the local area network (enterprise network) have also been infringed by "gray pigeon". As a result, the number of injured users has been greatly increased. The number of infections was 103483 in 2004 and climbed to 890321 in 2005. The functions of "Grey Pigeon" itself, such as keyboard recording, screen capture, file upload, download and running, camera control, and so on, will make users have no privacy to speak of, and what is even more terrible is that the server highly hides itself. So that the victim could not know that he was infected with the virus.</p>
+		
+		<h2>Transmission mode</h2>
+		<hr />
+		<p>Huigezi themselves do not have the ability to spread, generally through the way of bundling to spread. There are four ways for Huigezi to spread: Web page dissemination, mail dissemination, IM chat tool dissemination, and illegal software dissemination.</p>
+		<p>	1. Web page spread: the virus maker inserts the gray pigeon virus into the web page, the user browses to infect.</p>
+		<p>	2. Email dissemination: grey pigeons are bundled in email attachments for dissemination.</p>
+		<p>	3. Chat tool dissemination: spread links or files to web pages that carry gray pigeons through live chat tools.</p>
+		<p>	4. Illegal software transmission: the virus maker bundles the gray pigeon virus into a variety of illegal software, the user downloads the decompression installs to infect.</p>
+		
+		<h2>Removal and prevention</h2>
+		<hr />
+		<h3>Manual detection</h3>
+		<p>Because the gray pigeon intercepts API calls, the server program files and the service entries it registers are hidden in normal mode, which means that you can't see them even if you set up "Show all hidden files." In addition, the file name of the gray pigeon server can also be customized, which brings some difficulties to manual detection.</p>
+		<p>However, through careful observation, we found that the detection of gray pigeons is still regular. From the above analysis of how it works, you can see that no matter what the custom server-side file name is, a file ending in "_ hook.dll" is usually generated in the operating system installation directory. Through this, we can more accurately and manually detect the gray pigeon server.</p>
+		<p>Because gray pigeons hide themselves in normal mode, the detection of gray pigeons must be done in safe mode. The way to enter safe mode is to start the computer, press the F8 key (or hold down the CTRL key while starting the computer) before the system enters the Windows startup screen, and select "Safe Mode" or "safe mode" in the startup options menu that appears.</p>
+		<p>1. Because the gray pigeon file itself has hidden properties, set Windows to display all files. Open my computer, select the menu tools-folder options, click View, and uncheck the check box before hide protected operating system files. And in the hide Files and folders item, select Show all Files and folders, and then click OK.</p>
+		<p>2. Open the "search file" of Windows, enter "* _ hook.dll" for the file name, and select the installation directory of Windows for the search location (default 98/xp is C:\ windows,2k/NT is C:\ Winnt).</p>
+		<p>3. After searching, we found a file called Game_Hook.dll under the Windows directory (which does not contain subdirectories).</p>
+		<p>4. According to the grey pigeon principle analysis, we know that if Game_Hook.DLL is a gray pigeon file, there will also be Game.exe and Game.dll files in the operating system installation directory. Open the Windows directory, and sure enough, there are these two files, as well as a GameKey.dll file for recording keyboard operations.</p>
+		<p>After these steps we can basically determine that these files are gray pigeon server, the following can be manually cleared.</p>
+		
+		<h3>Manual removal</h3>
+		<p>The removal of gray pigeons still has to be done in safe mode, with two main steps:</p>
+		<p>1. Services for the removal of grey pigeons;</p>
+		<p>2. Delete the gray pigeon program file.</p>
+		<p><b>Note</b>: In order to prevent misoperation, be sure to make a good backup before cleaning.</p>
+		<p>(1) the service of clearing gray pigeons pay attention to the service of clearing grey pigeons must be completed in the registry. Netizens who are not familiar with the registry please ask familiar people to help operate, and the service of clearing grey pigeons must first back up the registry. Or go to the pure DOS to change the name of the registry file, and then go to the registry to delete the gray pigeon service. Because the virus is associated with the EXE file.</p>
+		<p>(2) deletion of grey pigeon program files</p>
+		<p>Deleting the gray pigeon program file is very simple, simply delete the Game.exe, Game.dll, Game_Hook.dll, and Gamekey.dll files in the Windows directory in safe mode, and then restart the computer. At this point, the gray pigeon VIP 2005 server has been cleared.</p>
+		<p>The method described above is suitable for most of the gray pigeon Trojans and their varieties we see, but there are still a few varieties that can not be detected and eliminated by this method. At the same time, with the continuous introduction of the new version of gray pigeon, the author may add some new hiding methods and anti-deletion means, and it will be more and more difficult to detect and remove it manually.</p>
+		
+		<h3>Virus prevention</h3>
+		<p>1. Install patches to the system. Install system patches (critical updates, security updates, and Service pack),) through Windows Update, in which MS04-011, MS04-012, MS04-013, MS03-001, MS03-007, MS03-049, MS04-032, etc., are widely used by viruses. Is a very necessary patch to set the system administrator account complex enough strong password, preferably more than 10 digits, letters + numbers + other symbols combination; You can also disable / delete accounts that are not in use.</p>
+		<p>2. Update the antivirus software (virus library) regularly, and the allowed settings can be set to update automatically at a regular time every day. Install and use the network firewall software reasonably, the network firewall can also play a vital role in the process of anti-virus, and can effectively prevent the attack of the self-coming network and the invasion of the virus. Some pirated Windows users can not install patches normally, which is also more helpless, this part of users may wish to use the network firewall for some protection.</p>
+		<p>3. Close some unneeded services, conditions allow you to close unnecessary shares, including C$, D$ and other administrative shares. Users who are completely stand-alone can turn off the Server service directly.</p>
+		
+		<h2>Related report</h2>
+		<hr />
+		<p>On March 21, 2007, Grey Pigeon Studios decided to completely stop the development, updating and registration of grey pigeon remote management software and resist this illegal use of grey pigeon remote management software with practical action and firm attitude. And sincerely accept the supervision of the majority of netizens. " In addition, Grey Pigeon Studio also released the Grey Pigeon server uninstall program.</p>
+		
+		<script type="text/javascript" src="getindex.js"></script>
+	</body>
+</html>
