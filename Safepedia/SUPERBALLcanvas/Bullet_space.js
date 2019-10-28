@@ -13,7 +13,6 @@ Bullet.prototype = {
 		if (!Hyper_Muteki) {
 			if (!(selfplaneBottom < this.top || selfplane.left > bulletRight || selfplane.top > bulletBottom || selfplaneRight <
 					this.left)) {
-				console.log("被子弹击中！");
 				selfplane.velocityX += this.velocityX;
 				selfplane.velocityY += this.velocityY;
 				lifedata -= 100;
