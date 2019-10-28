@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Encryption algorithm</title>
+		<link rel="stylesheet" type="text/css" href="pagestyle.css"/>
+	</head>
+	<h1>Encryption algorithm</h1>
+	<hr>
+	<p>The basic process of data encryption is to process files or data that were originally plain text according to some algorithm, so that a piece of code that is unreadable is "ciphertext" so that it can only be displayed after entering the corresponding key. Through this way to achieve the purpose of protecting data from being stolen and read by non-legal persons. The inverse process of this process is decryption, which converts the encoded information into its original data. </p>
+	<p>By modifying the MD5 value of the file, the "illegal file scanning mechanism" of some network disks can be bypassed because the MD5 value of the known illegal file is stored in the network disk server. When the file is uploaded, it automatically matches the server md5 database to determine if the violation is violated.</p>
+	<h2>Related profile</h2>
+	<hr>
+	<p>According to records, in 400 BC, the ancient Greeks invented the replacement code. The world's first patent for telephone secrecy appeared in 1881. During the second World War, the German military used the "Enigma" cipher machine, cryptography played a very important role in the war. </p>
+	<p>With the development of information and digital society, people's understanding of the importance of information security and confidentiality is increasing, so in 1997, the National Bureau of Standards announced the implementation of the American data encryption Standard (DES).Folk forces began to be fully involved in the research and application of cryptography, using encryption algorithms such as DES, RSA, SHA and so on. With the continuous improvement of the demand for encryption strength, AES, ECC and so on have appeared recently.  </p>
+	<p>The following goals can be achieved by using cryptography: </p>
+	<p>Confidentiality: prevents the user's identity or data from being read. </p>
+	<p>Data integrity: prevents data from being changed. </p>
+	<p>Authentication: ensure that the data is sent to a specific party.</p>
+	<h2>classification</h2>
+	<hr>
+	<p>Encryption techniques are usually divided into two categories: "symmetric" and "asymmetric". </p>
+	<h3>Symmetric encryption technology. </h3>
+	<p>Symmetric encryption is the use of the same key for encryption and decryption, commonly known as "Session Key". This encryption technology is widely used today. For example, the DES encryption standard adopted by the US government is a typical "symmetric" encryption method. Its Session Key length is 56bits. </p>
+	<h3>Asymmetric encryption technology. </h3>
+	<p>Asymmetric encryption is that encryption and decryption do not use the same key, there are usually two keys, called "public key" and "private key", they must be paired, otherwise the encrypted file can not be opened. In this case, the "public key" means that it can be published, while the "private key" cannot be known only by the holder. Its advantage lies in this, because if the symmetric encryption method is to transfer encrypted files over the network, it is difficult not to tell each other the key, no matter what method is likely to be overheard. The asymmetric encryption method has two keys, and the "public key" can be made public, so it is not afraid that others will know that when the recipient decrypts it, all he has to do is use his own private key. In this way, the security problem of key transmission is well avoided.</p>
+	<h2>Algorithm</h2>
+	<hr>
+	<p>An encryption system S can be described by mathematical symbols as follows: </p>
+	<p>S = {P, C, K, E, D}. </p>
+	<p>Of which. </p>
+	<p>P-plaintext space, which represents a collection of plaintext that may appear as a whole, </p>
+	<p>C-ciphertext space, which represents a collection of ciphertext that may appear as a whole, </p>
+	<p>K-key space, where the key is a variable parameter in the encryption algorithm. </p>
+	<p>E-encryption algorithm, consisting of formulas, rules, or programs, </p>
+	<p>D-decryption algorithm, which is the inverse of E. </p>
+	<p>When the key k is given, there is the following relationship between the symbols: </p>
+	<p>C = Ek (P), encrypts plaintext P to get ciphertext C. </p>
+	<p>P = Dk (C) = Dk (Ek (P)), decrypts ciphertext C and obtains plaintext P. </p>
+	<p>If you use E-1 for the inverse of E and D-1 for the inverse of D, there are: </p>
+	<p>Ek = Dk-1 and Dk = Ek-1. </p>
+	<p>Therefore, the encryption design is mainly to determine E, D, K. </p>
+	<p>RSA is an encryption algorithm based on number theory asymmetry (public key) proposed by Rivest, Shamir and Adleman. The difficult decomposition of prime factors of large integers is the basis of RSA algorithm. </p>
+	<p>RSA has already entered the practical stage in foreign countries, and a variety of high-speed RSA special chips have been developed. Although many of the features of RSA are not very ideal, due to the actual needs of information security, many important information systems still use RSA as the basic encryption mechanism. Not long after RSA was put forward, the relevant departments in our country have been studying it. From the point of view of application, the RSA implemented by software has been used in computer network encryption to complete the functions of key distribution, digital signature and so on. </p>
+	<p>In addition to RSA, there is DES (data encryption Standard). Although DES disclosed its encryption algorithm and was listed as a "standard" in the United States, it was quickly discarded. Encryption technology has returned to the tradition of "algorithm confidentiality".</p>
+	<h2>Other algorithm</h2>
+	<hr>
+	<p>Such as ElGamal, Diffie-Hellman, new elliptic curve algorithm ECC and so on. </p>
+	<h2>Category of encryption algorithm</h2>
+	<hr>
+	<p>In today's field of information security, there are a variety of encryption algorithms that embody the wisdom of computer scientists. From a macro point of view, these encryption algorithms can be divided into three categories: hash algorithm, symmetric encryption algorithm, asymmetric encryption algorithm. </p>
+<script type="text/javascript" src="getindex.js"></script>
+	</body>
+</html>
