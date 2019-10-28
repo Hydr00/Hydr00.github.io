@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Vigenère cipher</title>
+	</head>
+	<body>
+		<h1>Vigenère cipher</h1>
+		<hr>
+		<h2>Introduction</h2>
+		<hr>
+		<p>Virginia password is a simple form of multi-table password, which uses a series of Caesar passwords to form the alphabet of passwords. </p>
+		<p>The Virginia code has been invented many times. This method was first recorded in the book "the password of Mr. Giovan Batista Belasso" (: La cifra del., Italian), written by (Giovan Battista Bellaso) in 1553. Sig. In Giovan Battista Bellaso). However, in the 19th century, it was misunderstood to have been created by the French diplomat Bryce de Virginia (Blaise De Vigenre), so it is now known as the "Virginia Code". </p>
+		<p>Virginia passwords are known for their ease of use and are often difficult for beginners to crack, so they are also known as "undecipherable passwords" (French: le chiffre de d é chiffrable). This has also led many people to use the Virginia password to encrypt it in order to crack it.</p>
+		<h2>History</h2>
+		<p>The multi-meter password was first proposed by Leon Batista Alberti around 1467. He used a metal password disk to switch the password table, but the system can only do some limited conversion. Later, in 1508, the tabular method (tabula recta), invented in Johannes Tritmius "steganography" (Steganographia), became a key part of the Virginia code. However, at that time, this method can only do some simple and predictable switching to the password table. This encryption technique is also known as the Tritemius password. </p>
+		<p>This method really appeared in Giovan Batista Bellasso's book, "the arithmetic of Mr. Giovan Batista Bellasso," written in 1553. He is based on the tabular method of Tritmius and introduces the concept of key. </p>
+		<p>Bryce de Virginia invented the simpler but more efficient automatic key cryptography (autokey cipher) during Henry III in 1586. Later, in the 19th century, Bellasso's method was mistaken for being first invented by Virginia. David Strauss-Kahn expressed regret in the translator (The Codebreakers), writing that "history ignores this important contribution and attributes it to Virginia, although he does not know it". 
+Because of the difficulty of deciphering, the Virginia code has gained a high reputation. The well-known writer and mathematician Charles Lutevich Dodgson (pseudonym Louis Carol) called it undecipherable in his 1868 Alphabet password (The Alphabet Cipher), which was compiled in a children's magazine. In 1917, Scientific American called the Virginia code "untranslatable." The Virginia code, however, does not deserve such a title. Charles Babbage finished the deciphering, but he did not publish it. After that, Friedrich Kasich (Friedrich Kasiski) completely cracked and published his method in the 19th century. Even before that, some senior cryptanalysts were able to crack it occasionally in the 16th century. </p>
+		<p>The Virginia password is easy enough to use as a field password. For example, the Confederate Army used brass disks to generate Virginia codes during the Civil War. The Confederate army was often able to decipher the Confederate code. From the beginning to the end of the war, the Confederate army mainly used three keys, namely "Manchester Bluff (Manchester bluff", "Complete Victory (complete victory" and "Come Retribution (retribution" in the later period of the war). </p>
+		<p>Gilbert Vernan (Gilbert Vernam) tried to fix the password that had been deciphered (the Vernan-Virgiya code was created in 1918), but it didn't work. But Vernan's invention eventually led to the birth of a disposable codebook, a theoretically unbreakable code.</p>
+		<h2>Description </h2>
+		<hr>
+		<p>In a Caesar code, each letter in the alphabet is offset, for example, when the offset is 3, A is converted to D, B to E. The Virginia code, on the other hand, consists of Caesar codes with different offsets. </p>
+		<p>In order to generate a password, you need to use the table method. This table (shown in figure 1) consists of 26 lines of the alphabet, each of which is offset one bit from the previous row to the left. Which row alphabet is compiled based on the key and is constantly transformed during the process.</p>
+		<p>For example, suppose the plaintext is: </p>
+		<p>ATTACKATDAWN. </p>
+		<p>Select a keyword and repeat it to get the key. For example, when the keyword is LEMON, the key is: </p>
+		<p>LEMONLEMONLE. </p>
+		<p>For the first letter A of the plaintext, it corresponds to the first letter L of the key, so the L line alphabet in the table is encrypted to get the first letter L of the ciphertext. Similarly, the second letter of plaintext is T, and the corresponding line E is encrypted in the table to get the second letter X of the ciphertext. And so on, you can get: </p>
+		<p>Plaintext: ATTACKATDAWN key: LEMONLEMONLE ciphertext: LXFOPVEFRNHR. </p>
+		<p>The process of decryption is the opposite of encryption. For example, according to the L-line alphabet corresponding to the first letter L of the key, it is found that the first letter L of the ciphertext is in column A, so the first letter of the plaintext is A. The second letter E of the key corresponds to the E line alphabet, while the second letter X of the ciphertext is in the T column of this line, so the second letter of the plaintext is T. And so on, you can get the plaintext. </p>
+		<p>Using the number 0-25 instead of the letter AZ, the encrypted grammar of the Virginia password can be written in the form of congruence: </p>
+		<p>Ci = Pi + Ki (mod 26)</p>
+		<p>The decryption method can be written as:</p>
+		<p>Pi = Ci - Ki (mod 26) </p>
+		<h2>Password decipher</h2>
+		<hr>
+		<p>The decoding of all multi-table passwords, including Virginia passwords, is based on alphabetical frequency, but direct frequency analysis is not applicable. For example, if P is the letter that appears most frequently in ciphertext, P is likely to correspond to E (provided that the language of plaintext is English). The reason is that E is the most frequently used letter in English. However, since E can be encrypted into different ciphertexts in Virginia passwords, simple frequency analysis is not useful here. </p>
+		<p>The key to deciphering the Virginia password is that its keys are iterated over and over again. If we know the length of the key, the ciphertext can be regarded as an intertwined Caesar password, each of which can be cracked separately. The length of the key is obtained by using the Kaspersky test and the Friedman test.</p>
+		<h3>Kasysky test. </h3>
+		<p>Friedrich Kaszynski first published a complete method of deciphering the Virginia code in 1863, called the Kaspersky experiment (Kasiski examination). Some of the previous decryptions were based on the understanding of plaintext or the use of recognizable words as keys. Kasysky's approach does not have these limitations. Before that, however, some people had realized this approach. In 1854, Charles Babbage deciphered the Virginia code, inspired by Svitis (John Hall Brock Thwaites) 's claim in the Art Association Magazine (Journal of the Society of the Arts) that he had invented a "new password." Babbage found that Svitis's password was just a variant of Virginia's password, and Svitis challenged him to try to decipher ciphertext encrypted with two different lengths of keys. Babbage succeeded in deciphering it and got the plaintext of Tennyson's poem "the Evil Imagination" (The Vision of Sin), used the key of Tennyson's wife's name Emily (Emily). Babbage never explained his method. In the study of Babbage's notes during his lifetime, it was found that Babbage used this method as early as 1846, the same method that was later published by Kasysky. </p>
+		<p>The Kaspersky experiment is based on the fact that common words such as the are likely to be encrypted by the same key letters, which can be repeated in ciphertext.</p>
+		<h3>Frequency analysis. </h3>
+		<p>Once the length of the key can be determined, the ciphertext can be rewritten into multiple columns, the number of columns corresponding to the length of the key. So each column is actually a Caesar password, and the key (offset) of this password corresponds to the corresponding letter of the Virginia password key. In a similar way to deciphering Caesar's code, the ciphertext can be deciphered. </p>
+		<p>Kirkhoff method, as an improvement of Kaspersky test, was proposed by Auguste Kirkhoff (Auguste Kerckhoffs). It corresponds the letter frequency of each column to the converted plaintext frequency to obtain the key letters of each column. Once each letter in the key can be determined, the ciphertext can be easily deciphered to get the plaintext. If the Virginia alphabet itself is cluttered rather than in the usual alphabetical order, the Kirkhoff method will not work, but the Kaspersky experiment and repetition index are still valid for determining key length.</p>
+		<h2>Variant</h2>
+		<hr>
+		<p>The rolling key password, a variant of the Virginia password, was once considered undecipherable. The key of this variant is the same as the length of the ciphertext, so the Kaspersky test and Friedman test become invalid. In 1920, Friedman first discovered the weakness of this method. Because the key of the rolling key password is a real language, the translator can understand the statistical information of the key text, and this information will also be reflected in the ciphertext. </p>
+		<p>If the key is completely random, consistent in length with plaintext, and used only once, Virginia cryptography is theoretically undecipherable. In this case, however, the key itself, rather than the ciphertext, is key, which is called a one-time codebook. </p>
+		<p>Virginia itself did invent a stronger variant of Virginia cryptography-automatic key cryptography. What Babbage deciphers is actually this kind of automatic key cipher, while Kasich is usually thought to be the first to publish a way to decipher fixed-key multi-table passwords. </p>
+		<p>There is also a simple variant that uses Virginia's decoding method for encryption and decryption using Virginia's encryption method, known as the variant Beaufort password. This method is different from the Beaufort password created by Francis Beaufort, which is similar to the Virginia password, but uses a modified encryption method and table, which is a peer-to-peer encryption. </p>
+		<p>The apparent strength of the Virginia code has not made it widely used in Europe. The Gronsfeld password created by the Earl of Gronsfeld is basically the same as the Virginia password, but it uses only 10 different password alphabets (corresponding to letters 0 to 9). The Gronsfeld password is strong because its key is not a word, but the disadvantage is that there are too few alphabets. In spite of this, Gronsfeld password is still widely used in Germany and the whole of Europe.</p>
+	</body>
+</html>

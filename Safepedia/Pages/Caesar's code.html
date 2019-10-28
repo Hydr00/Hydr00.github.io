@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Caesar's code</title>
+	</head>
+	<body>
+	<h1>Caesar's code</h1>
+	<hr>
+	<p>In cryptography, Caesar cipher (English: Caesar cipher), Caesar transform, transform encryption) is one of the simplest and most widely known encryption techniques. 
+It is an alternative encryption technique in which all letters in plaintext are offset backward (or forward) on the alphabet and replaced with ciphertext. 
+For example, when the offset is 3, all the letters A will be replaced with D, B with E, and so on. 
+The encryption method was named after Caesar during the Roman Republic, which Caesar used to contact his generals.</p>
+	<h2>History</h2>
+	<hr></hr>
+	<p>According to Suvitonius, Caesar used this method to encrypt important military information:</p>
+	<p>If secrecy is required, the letter uses a code, that is, to change the alphabetical order so that outsiders cannot form a word. If you want to read and understand what they mean, you have to replace the first letter with the fourth letter, that is, D for A, and so on. 
+Similarly, Augustus used a similar approach, except that he moved the letter one bit to the right and did not fold it back at the end. Whenever he writes in secret, he uses B for A, C for B, and the rest of the letters follow the same rule; he uses AA for Z. </p>
+	<p>In addition, there is evidence that Caesar used a more complex cryptosystem: grammatist Probbs wrote a unique and innovative manuscript of letters containing secret information in Caesar's letters. </p>
+	<p>It is now impossible to figure out how effective the Caesar code was at the time, but there is reason to believe that it is secure. For most of Caesar's enemies were illiterate, and the rest might regard the news as an unknown foreign language. Even if an enemy obtained Caesar's encrypted information, according to existing records, there was no technology that could solve the most basic and simplest alternative password. The earliest existing methods of cracking are recorded in the 9th century AD Arab Alkendi's work on the frequency analysis of discoveries.</p>
+	<h2>Concept</h2>
+	<hr>
+	<p>In cryptography, Caesar cipher (English: Caesar cipher), Caesar transform, transform encryption) is one of the simplest and most widely known encryption techniques. It is an alternative encryption technique in which all letters in plaintext are offset backward (or forward) on the alphabet and replaced with ciphertext. For example, when the offset is 3, all the letters A will be replaced with D, B with E, and so on. The encryption method was named after Caesar during the Roman Republic, which Caesar used to contact his generals. </p>
+	<p>The Caesar password is usually used as a step in other more complex encryption methods, such as the Virginia password. Caesar cipher is also used in modern ROT13 systems. But like all encryption techniques that use alphabets to replace Caesar passwords are very easy to crack and can not guarantee communication security in practical applications.</p>
+	<h2>Specific Caesar password name</h2>
+	<hr>
+	<p>Depending on the offset, there are several specific Caesar password names: </p>
+	<p>Offset is 10:Avocat (A offset K). </p>
+	<p>Offset is 13:ROT13. </p>
+	<p>Offset is-5:Cassis (K6). </p>
+	<p>Offset is-6:Cassette (K7)</p>
+	<h2>Password cracking</h2>
+	<hr>
+	<p>Even with ciphertext-only attacks, Caesar cipher is a very easy way to crack encryption. There may be two situations to consider: </p>
+	<p>(1) the attacker knows (or guesses) that a simple alternative encryption method is used in the password, but it is uncertain that it is the Caesar password; </p>
+	<p>(2) the attacker knows (or guesses) that the Caesar password is used, but does not know its offset. </p>
+	<p>In the first case, by using methods such as frequency analysis or style word analysis, [3] it is immediately possible to see the pattern from the analysis results and conclude that the encryptor used the Caesar password.</p>
+	<p>For the second case, the solution is simpler. Because the language in which Caesar passwords are encrypted is generally an alphabetical system, the offsets that may be used in passwords are also limited, such as the use of 26 letters of English. The maximum offset is 25 (the offset 26 is equal to the offset 0, that is, plaintext; The offset exceeds 26, which is equivalent to the offset 1-25). Therefore, through the exhaustive method, it can be easily cracked. One way is to write down in the table a small fragment of the ciphertext that is decrypted using all possible offsets, called candidate plaintext, and then analyze whether the candidate plaintext in the table has actual meaning, and get the correct offset. Decrypt the entire ciphertext. For example, the selected ciphertext fragment is "EXXEGOEXSRGI," and from the candidate plaintext in the right table, we can quickly see that the correct offset is 4. You can also write down the entire alphabet and other letters vertically under each letter of each ciphertext word, and then through analysis, you can conclude that one of these lines is plaintext. </p>
+	<p>Another attack method is through frequency analysis. When the length of the ciphertext is large enough, we can first analyze the frequency of each letter in the ciphertext, and then compare this frequency with the frequency of all the letters in the alphabet of the language. In English, for example, the letters E and T appear particularly frequently in plain text, while the letters Q and Z appear particularly low, while the letters E and K and W appear most frequently in French. Through this characteristic, the frequency of ciphertext letters can be analyzed, and the correct offset can be estimated. In addition, it is sometimes possible to extend frequency analysis from letters to words, such as English, where the most frequent word is: the, of, and, a, to, in.. We can analyze it by compiling all the possible 25 sets of ciphertext from the most common words into a dictionary. For example, QEB may be the,MPQY or the word know (or, of course, aden). However, frequency analysis also has its limitations, it is not suitable for short or deliberately omitting vowels or other abbreviations of plaintext encrypted ciphertext.</p>
+	<p>In addition, encryption by using the Caesar password multiple times does not achieve greater security, because the result of using offset A encryption is encrypted with offset B, which is equivalent to the result of encryption using the offset of offset B.</p>
+	<h2>Example</h2>
+	<hr>
+	<p>Caesar passwords are replaced by arranging plaintext and ciphertext alphabets, which indicate a fixed number of positions by moving the plaintext alphabet to the left or right.</p>
+	<p>For example, when the offset is 3 to the left (the key at decryption is 3): </p>
+	<p>Plain alphabet: ABCDEFGHIJKLMNOPQRSTUVWXYZ; </p>
+	<p>Ciphertext alphabet: DEFGHIJKLMNOPQRSTUVWXYZABC. </p>
+	<p>When used, the encryptor finds the location of each letter in the message that needs to be encrypted in the plaintext alphabet and writes down the corresponding letters in the ciphertext alphabet. The person who needs to decrypt it will operate in reverse according to the known key to get the original plaintext. </p>
+	<p>For example: Plaintext: THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG; </p>
+	<p>Ciphertext: WKH TXLFN EURZQ IRA MXPSV RYHU WKH ODCB GRJ. </p>
+	<p>The encryption and decryption of Caesar cipher can also be calculated by the mathematical method of congruence. First of all, replace the letters with numbers. 0, 1, 25. The encryption method with an offset of n is:</p>
+	</body>
+</html>
